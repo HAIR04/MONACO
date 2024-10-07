@@ -1,4 +1,4 @@
-import * as Images from "../../assets/images";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
 
@@ -16,7 +16,7 @@ const Banner = () => {
         </p>
         <div className="w-full 2xl:w-[50%] rounded-3xl box-border relative overflow-hidden block md:hidden">
         <a href="#">
-          <img className="2xl:w-[80%] xl:w-[90%]" src={Images.Image_3d} alt="3D Image" />
+          <img className="2xl:w-[80%] xl:w-[90%]" src="https://cdn.animaapp.com/projects/6357ce7c8a65b2f16659918c/files/heroanimationtransparentbck-2.gif" alt="3D Image" />
         </a>
       </div>
         <button
@@ -51,7 +51,7 @@ const Banner = () => {
 
       <div className="w-full 2xl:w-[50%] rounded-3xl box-border relative overflow-hidden hidden md:block xl">
         <a href="#">
-          <img className="2xl:w-[80%] xl:w-[90%]" src={Images.Image_3d} alt="3D Image" />
+          <img className="2xl:w-[80%] xl:w-[90%]" src="https://cdn.animaapp.com/projects/6357ce7c8a65b2f16659918c/files/heroanimationtransparentbck-2.gif" alt="3D Image" />
         </a>
       </div>
     </div>
