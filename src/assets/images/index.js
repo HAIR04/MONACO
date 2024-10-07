@@ -1,4 +1,4 @@
-import { faExchange } from '@fortawesome/free-solid-svg-icons'
+
 
 export {default as logo} from './android-chrome-192x192.png'
 export {default as banner} from './bcf2d5507a81254146143702cd71f923.png'
