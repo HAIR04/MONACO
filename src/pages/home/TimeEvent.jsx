@@ -9,7 +9,7 @@ const TimeEvent = () => {
           src={Images.Bgr}
           className="2xl:w-[100%] h-[600px] absolute bottom-28  "
         ></img>
-        <div className="mx-auto flex justify-between">
+        <div className="mx-auto flex md:flex-row flex-col  justify-center md:justify-between items-center ">
           <div
             className="px-12 bottom-[450px] 2xl:px-56 flex flex-col gap-8 absolute  md:bottom-40 left-0 
                           xl:px-28"
@@ -40,7 +40,7 @@ const TimeEvent = () => {
           <div
             className="px-12 2xl:px-56
                         xl:px-28 
-                        flex flex-col gap-8 absolute md:bottom-40 bottom-36 right-0"
+                        flex flex-col gap-8 absolute md:bottom-40 bottom-36 md:right-0"
           >
             <div className="flex flex-col gap-2 rounded-3xl  p-6  bg-purple-950 bg-opacity-25">
               <h1 className="text-sm text-white">Auction ends in:</h1>

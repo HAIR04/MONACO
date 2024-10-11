@@ -70,15 +70,15 @@ const TrendingCollection = () => {
 
   return (
     <div className="w-full bg-header py-10">
-      <div className="w-[75%] md:w-[80%] lg:w-[70%] mx-auto py-5 mb-10 ">
-        <span className="text-3xl lg:text-4xl text-white font-semibold leading-loose ">
+      <div className="w-[75%] sm:w-[80%] lg:w-[70%] mx-auto py-5 mb-10 ">
+        <span className="text-3xl sm:text-4xl text-white font-semibold leading-loose ">
           Trending Collection
         </span>
         <p className="text-base lg:text-2xl text-white font-normal ">
           Checkout our weekly updated trending collection.
         </p>
       </div>
-      <div className="w-[75%] md:w-[80%] lg:w-[70%] mx-auto flex gap-7 xl:gap-0 justify-between ">
+      <div className="w-[75%] md:w-[80%] sm:w-[70%] mx-auto flex gap-7 xl:gap-0 justify-between ">
         {Images.slice(0, visibleImagesCount).map((item, index) => (
           <React.Fragment key={index}>
             <div className="w-full xl:w-[31.5%] flex flex-col gap-5">
@@ -101,7 +101,7 @@ const TrendingCollection = () => {
                   className="bg-popular w-[31%] flex justify-center items-center rounded-3xl
                 hover:scale-[0.9] transition-all duration-500"
                 >
-                  <h1 className="text-2xl text-white font-semibold ">1025+</h1>
+                  <h1 className="text-xl sm:text-2xl text-white font-semibold ">1025+</h1>
                 </div>
               </div>
               <p className="text-2xl text-white font-semibold">{item.name}</p>

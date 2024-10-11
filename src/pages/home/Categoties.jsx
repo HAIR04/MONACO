@@ -92,16 +92,16 @@ const Category = () => {
                 className=" 2xl:w-[23%] md:w-[100%] border border-opacity-5 border-white lg:w-[48%] xl:w-[23%] bg-footer rounded-3xl overflow-hidden
                 hover:scale-[0.95] transition-transform duration-500"
               >
-                <div className="relative">
+                <div className="relative w-[100%] mx-auto flex  justify-center items-center ">
                   <img
                     src={item.url}
                     className="w-full blur-xl"
                     alt={item.name}
                   />
-                  <div className="absolute flex inset-10 justify-center items-center z-20 ">
+                  <div className="absolute   z-20 ">
                     {item.sub_images.map((sub_item, sub_index) => (
                       <div
-                        className="w-full  lg:w-[45%] "
+                        className="w-[75%] md:w-full mx-auto "
                         key={sub_index}
                       >
                         <img src={sub_item.url} alt={`Sub ${sub_index}`} />
@@ -110,7 +110,7 @@ const Category = () => {
                   </div>
                 </div>
                 <div className=" relative bg-footer">
-                  <p className="text-white text-base md:text-xl text-left p-5 font-semibold">
+                  <p className="text-white text-base lg:text-xl text-left p-4 lg:p-5 font-semibold">
                     {item.name}
                   </p>
                 </div>
