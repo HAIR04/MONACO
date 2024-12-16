@@ -49,7 +49,7 @@ const DetailSercive = () => {
                   <img
                     src={subImage.url}
                     alt={`${product.name} - Ảnh phụ ${subIndex + 1}`}
-                    className="w-full object-cover h-[150px] transition-transform transform hover:scale-110 duration-300 ease-in-out"
+                    className="w-full hover:cursor-pointer object-cover h-[150px] transition-transform transform hover:scale-110 duration-300 ease-in-out"
                   />
                 </div>
               ))}
