@@ -1,84 +1,100 @@
 import { logo } from "../../assets/images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord,faYoutube,faXTwitter,faInstagram} from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faYoutube,
+  
+  faInstagram,
+  faTiktok,
+} from "@fortawesome/free-brands-svg-icons";
 import Subscribe from "../subscribe/Subscribe";
 import Subscribe_Responsive from "../subscribe/Subscribe_Responsive";
 const Footer = () => {
   return (
     <div className="w-full bg-footer">
-    <div className=" mx-auto py-10
-    w-[70%]
-    2xl:w-[65%]
-    xl:w-[75%]">
-    <div className="flex flex-col 2xl:flex-row xl:flex-row ">
-      <div className=" flex flex-col gap-5
-      2xl:w-[35%]
-      xl:w-[40%]">
-        <a
-          href="#"
-          className=" flex items-center gap-3
-          
-             2xl:w-full 
-             xl:w-full"
-        >
-          <img src={logo} className="2xl:w-[10%] md:w-[7%] xl:w-[12%] w-[12%]"></img>
-          <h1 className="text-white text-xl font-semibold xl:font-semibold tracking-wider">NFT Marketplace</h1>
-        </a>
-        <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide 
-        w-full
-        2xl:w-[80%]
-        xl:w-[70%]">NFT marketplace UI created with Anima for Figma.</p>
-        <div>
-          <p className=" text-white opacity-80 font-normal text-sm md:text-base tracking-wide">Join our community</p>
-          <ul className="flex text-white opacity-30 text-2xl xl:text-3xl leading-loose gap-3 ">
-            <li>
-              <a href="#">
-                <FontAwesomeIcon icon={faDiscord} />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <FontAwesomeIcon icon={faYoutube} />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <FontAwesomeIcon icon={faXTwitter} />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <FontAwesomeIcon icon={faInstagram} />
-              </a>
-            </li>
-          </ul>
+      <div className="mx-auto py-10 w-[90%] 2xl:w-[90%] xl:w-[90%]">
+        <div className="flex flex-col 2xl:flex-row xl:flex-row justify-between gap-8">
+          <div className="flex flex-col gap-5 2xl:w-[30%] xl:w-[35%]">
+            <a href="#" className="flex items-center gap-3 2xl:w-full xl:w-full">
+              <img
+                src="https://s.pro.vn/mSxg"
+                className="2xl:w-[20%] md:w-[7%] xl:w-[15%] rounded-full w-[20%]"
+              />
+              <h1 className="text-white text-xl font-semibold xl:font-semibold tracking-wider">
+                MONACO - MASSAGE QUÝ ÔNG
+              </h1>
+            </a>
+            <p className="text-white font-semibold text-sm md:text-base tracking-wide w-full 2xl:w-[90%] xl:w-[90%]">
+              NÂNG TẦM QUÝ ÔNG - KHẲNG ĐỊNH PHONG ĐỘ.
+            </p>
+            <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide w-full 2xl:w-[90%] xl:w-[90%]">
+              Địa chỉ : Số 28 – 30 Lê Đức Thọ, Mỹ Đình, Nam Từ Liêm, Hà Nội
+            </p>
+            <div>
+              <p className="text-white opacity-80 mb-5 font-normal text-sm md:text-base tracking-wide">
+                Các phương tiện truyền thông
+              </p>
+              <ul className="flex text-white gap-5 opacity-30 text-2xl xl:text-3xl leading-loose">
+                <li>
+                  <a href="https://s.net.vn/5eJU">
+                    <FontAwesomeIcon icon={faFacebook} />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://s.net.vn/t17R">
+                    <FontAwesomeIcon icon={faYoutube} />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://s.net.vn/ZYO7">
+                    <FontAwesomeIcon icon={faTiktok} />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://s.net.vn/Ar0E">
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="w-full xl:w-[30%] flex flex-col gap-3 ml-10 xl:gap-5 tracking-wide">
+            <h1 className="text-white text-xl font-extrabold tracking-wider">LIÊN HỆ</h1>
+            <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide">
+              Hotline : +84964445201
+            </p>
+            <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide">
+              Facebook : Massa Quý Ông
+            </p>
+            <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide">
+              Zalo : +84912302830
+            </p>
+            <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide">
+              Telegram : +84912302830
+            </p>
+          </div>
+
+          <div className="w-full xl:w-[40%] mt-5 xl:mt-0 flex flex-col gap-5">
+            <h1 className="text-white text-xl font-extrabold tracking-wider">Vị trí trên Google Map</h1>
+            <iframe
+              src="https://s.net.vn/XRVt"
+              className="h-[220px]"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
       </div>
-
-      <div className="w-full xl:w-[25%] flex flex-col gap-3 xl:gap-5 tracking-wide">
-        <h1 className="text-white text-xl font-extrabold tracking-wider">Explore</h1>
-        <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide  ">Marketplace</p>
-        <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide  ">Rankings</p>
-        <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide  ">Connect a wallet</p>
+      <div className="w-[80%] 2xl:w-[80%] xl:w-[80%] mx-auto pb-5">
+        <hr className="opacity-70" />
+        <p className="text-white opacity-70 text-xs font-light tracking-wider mt-5">
+          © Bản quyền thuộc về MONACO - Massage Quý Ông
+        </p>
       </div>
-
-      <div className=" w-full mt-5 xl:mt-0 xl:w-[45%] flex flex-col gap-5">
-        <h1 className="text-white text-xl font-extrabold tracking-wider">Join Our Weekly Digest</h1>
-        <p className="text-white opacity-80 font-normal text-sm md:text-base 
-        2xl:w-[80%]
-        xl:w-[80%]">Get exclusive promotions & updates straight to your inbox.</p>  
-        <div className="md:block hidden md:w-[70%] lg:w-full"><Subscribe/></div>
-        <div className="md:hidden block"><Subscribe_Responsive/></div>
-        
-      </div>
-    </div>
-   
-    </div>
-    <div className="w-[70%] 2xl:w-[70%] xl:w-[80%] mx-auto pb-5"> 
-   <hr className="opacity-70"></hr>
-   <p className="text-white opacity-70 text-xs font-light tracking-wider mt-5">Ⓒ NFT Market. Use this template freely.</p>
-   </div>
     </div>
   );
 };
+
 export default Footer;

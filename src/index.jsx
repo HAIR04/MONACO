@@ -1,44 +1,40 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/home/Home.jsx";
-import Marketplace from "./pages/marketplace/MarketPlace.jsx";
-import Rankings from "./pages/rankings/Rankings.jsx";
-import Wallet from "./pages/wallet/Wallet.jsx";
-import Login from "./pages/login/Login.jsx";
+import Home from "./pages/home/Home";
+import ServicePR from "./pages/service/Service";
+import Rankings from "./pages/rankings/Rankings";
+import Wallet from "./pages/wallet/Wallet";
+import Login from "./pages/login/Login";
+import ServiceDetail from "./pages/service/ServiceDetail";
+import TreatM from "./pages/treatment/TreatMent";
+import Girl_Detail from "./pages/member/Member";
+import ScrollToTop from "./components/Scroll/Scroll";
 import "./styles/index.css";
+
+// Tạo router
 const router = createBrowserRouter([
   {
-    //Tất cả nằm trong này sẽ được kế thừa những thứ dùng chung như header , footer
     path: "/",
-    element: <App />,
+    element: <App />, // App là nơi chứa Header, Outlet và Footer
     children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: "/marketplace",
-        element: <Marketplace />,
-      },
-      {
-        path: "/rankings",
-        element: <Rankings />,
-      },
-      {
-        path: "/wallet",
-        element: <Wallet />,
-      },
-      {
-        path : '/login',
-        element :<Login/>
-      }
+      { index: true, element: <Home /> },
+      { path: "/service", element: <ServicePR /> },
+      { path: "/rankings", element: <Rankings /> },
+      { path: "/wallet", element: <Wallet /> },
+      { path: "/login", element: <Login /> },
+      { path: "/service/:id", element: <ServiceDetail /> },
+
+      { path: "/treat/:id", element: <TreatM /> },
+      { path: "/girl/:id", element: <Girl_Detail /> },
     ],
   },
-  //năm ngoài phạm vi này sé không thừa hưởng thứ gì
 ]);
 
+// Render ứng dụng với RouterProvider và ScrollToTop
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <RouterProvider router={router}>
+    <App />
+  </RouterProvider>
 );

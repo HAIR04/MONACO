@@ -1,99 +1,119 @@
 import { Link } from "react-router-dom";
 import { logo } from "../../assets/images";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faBarsStaggered ,faRankingStar , faCircleNodes} from "@fortawesome/free-solid-svg-icons";
-import { faSpaceAwesome } from "@fortawesome/free-brands-svg-icons";
+import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
-const Header = () => {
-  const [open, setOpen] = useState(false);
-  return (
-    <div
-      className="mx-auto py-5 flex justify-between border-white border-b border-opacity-15 
-   w-[95%] md:w-[90%] 2xl:w-[93%] xl:w-[93%]"
-    >
-      <Link
-        to="/"
-        className=" flex items-center 
-             gap-2
-             2xl:w-[63%] 2xl:gap-3
-             xl:w-[63%] xl:gap-3"
-      >
-        <img
-          src={logo}
-          className="2xl:w-[5%] w-[8%]
-                                   xl:w-[5%]"
-        ></img>
-        <h1 className="text-white text-sm xl:text-xl font-semibold tracking-wide">
-          NFT Marketplace
-        </h1>
-      </Link>
-      <ul
-        className="2xl:w-[35%] hidden justify-around items-center   xl:flex
-                    text-white text-base font-semibold
-                    xl:w-[35%] "
-      >
-        <li>
-          <Link
-            to="/marketplace"
-            className="hover:text-sm hover:mr-3 transition-all duration-700"
-          >
-            Marketplace
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/rankings"
-            className="hover:text-sm hover:mr-3 transition-all duration-700"
-          >
-            Rankings
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/wallet"
-            className="hover:text-sm hover:mr-3 transition-all duration-700"
-          >
-            Connect a wallet
-          </Link>
-        </li>
-      </ul>
-      <Link
-        to="/login"
-        className="hidden justify-center items-center gap-3 rounded-3xl py-5 mx-auto   xl:flex
-                  2xl:w-[12%] 2xl:py-5
-                  xl:w-[12%] xl:py-3
-                 bg-popular text-white 
-                 active:opacity-90 transition-all
-                 hover:scale-[0.9] duration-500
-                 
-                 "
-      >
-        <FontAwesomeIcon icon={faUser} />
-        <p
-          className=" text-base font-medium 
-        "
-        >
-          Sign Up
-        </p>
-      </Link>
+import Subscribe_Responsive from "../subscribe/Subscribe_Responsive";
+import ContactInfo from "./ContactInfo";
 
-      <button
-        onClick={() => setOpen(!open)}
-        className="xl:hidden text-2xl text-white  "
-      >
-        <FontAwesomeIcon icon={faBarsStaggered} />
-        {open && 
-        <div className="fixed top-0 left-0 right-0 bottom-0 bg-body z-50 flex flex-col ">
-          <Link to="/marketplace" className="text-sm border-b border-white border-opacity-30 p-2 w-full text-left font-medium"><FontAwesomeIcon icon={faSpaceAwesome} /> Marketplace</Link>
-          <Link to="/rankings" className="text-sm border-b border-white border-opacity-30 p-2 w-full text-left font-medium"><FontAwesomeIcon icon={faRankingStar} /> Rankings</Link>
-          <Link to="/wallet" className="text-sm border-b border-white border-opacity-30 p-2 w-full text-left font-medium"><FontAwesomeIcon icon={faCircleNodes} /> Connect a wallet</Link>
-          <Link to="/login" className="mt-5 text-lg bg-popular flex justify-center items-center gap-2 w-[40%] mx-auto p-3 rounded-3xl 
-          active:opacity-50 transition-all duration-500"><FontAwesomeIcon icon={faUser} />Login</Link>
+const Header = () => {
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+
+  const toggleOverlay = () => {
+    setIsOverlayVisible(!isOverlayVisible);
+  };
+
+  return (
+    <div className="mx-auto justify-between bg-black border-opacity-15 w-[95%] md:w-[90%] 2xl:w-[100%] xl:w-[93%]">
+      <ContactInfo/>
+
+      <div className="w-[90%]  mx-auto flex justify-between items-center">
+        <div className="w-[15%]">
+          <Link
+            to="/"
+            className="flex items-center gap-2 2xl:w-[63%] 2xl:gap-3 xl:w-[63%] xl:gap-3"
+          >
+            <img
+              src="https://s.pro.vn/mSxg"
+              className="w-full rounded-full "
+              alt="logo"
+            />
+          </Link>
         </div>
-           
-        }
-      </button>
+
+        <div className="w-[70%]">
+          <ul className="2xl:w-[100%] hidden justify-around items-center xl:flex text-white text-2xl font-semibold xl:w-[100%]">
+            <li>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+                className="relative inline-block text-red-700"
+              >
+                <Link
+                  to="/"
+                  className="relative inline-block after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-red-700 hover:after:w-full  hover:mr-3 transition-all duration-700"
+                >
+                  TRANG CHỦ
+                </Link>
+              </motion.div>
+            </li>
+            <li>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+                className="relative inline-block text-yellow-600"
+              >
+                <Link
+                  to="/service"
+                  className="relative inline-block after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-yellow-600 hover:after:w-full  hover:mr-3 transition-all duration-700"
+                >
+                  DỊCH VỤ
+                </Link>
+              </motion.div>
+            </li>
+            <li>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+                className="relative inline-block text-yellow-600"
+              >
+                <Link
+                  to="/rankings"
+                  className="relative inline-block after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-yellow-600 hover:after:w-full  hover:mr-3 transition-all duration-700"
+                >
+                  KỸ THUẬT VIÊN
+                </Link>
+              </motion.div>
+            </li>
+            <li>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+                className="relative inline-block text-yellow-600"
+              >
+                <Link
+                  to="/wallet"
+                  className="relative inline-block after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-yellow-600 hover:after:w-full  hover:mr-3 transition-all duration-700"
+                >
+                  LIÊN HỆ
+                </Link>
+              </motion.div>
+            </li>
+          </ul>
+        </div>
+
+        <div className="w-[15%]">
+          <button
+            onClick={toggleOverlay}
+            className="hidden justify-center items-center gap-3 hover:opacity-70 rounded-full py-5 mx-auto xl:flex 2xl:w-[100%] 2xl:py-5 xl:w-[100%] xl:py-3 bg-red-800 text-white active:opacity-90 transition-all animate-shake duration-500 delay-200"
+          >
+            <p className="text-2xl font-semibold text-black">ĐẶT NGAY</p>
+          </button>
+        </div>
+      </div>
+
+      {/* Hiển thị Subscribe_Responsive khi nút ĐẶT NGAY được nhấn */}
+      {isOverlayVisible && (
+        <div
+          onClick={toggleOverlay}
+          className="fixed w-full bg-black inset-0 bg-bgr-download bg-opacity-50 flex items-center justify-center z-50 transition-example delay-1000"
+        >
+          <Subscribe_Responsive />
+        </div>
+      )}
     </div>
   );
 };
+
 export default Header;

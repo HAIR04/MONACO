@@ -1,59 +1,80 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import Slider from "react-slick";
+import {Member_Ship} from "../../components/data/Member"
+import { Link } from 'react-router-dom';
 const Worlds = () => {
-  const Images = [
-    {
-      id: 1,
-      url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/icon-3@2x.svg",
-      title: "Setup Your Wallet",
-      text: "Set up your wallet of choice. Connect it to the Animarket by clicking the wallet icon in the top right corner.",
-    },
-    {
-      id: 2,
-      url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/icon-4@2x.svg",
-      title: "Create Collection",
-      text: "Upload your work and setup your collection. Add a description, social links and floor price.",
-    },
-    {
-      id: 3,
-      url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/icon-5@2x.svg",
-      title: "Start Earning",
-      text: "Choose between auctions and fixed-price listings. Start earning by selling your NFTs or trading others.",
-    },
-  ];
+
+
+  const getVisibleImagesCount = () => {
+    if (window.innerWidth >= 1280) return 4;
+    if (window.innerWidth >= 768) return 2;
+    return 1;
+  };
+
+  const visibleImagesCount = getVisibleImagesCount();
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: visibleImagesCount,
+    slidesToScroll: 1,
+    autoplay: true,   // Bật chế độ tự động
+    autoplaySpeed: 2000,  // Thời gian chuyển slide (2s)
+    arrows: false,    // Tắt mũi tên
+  };
+
   return (
-    <div className="w-full">
-      <div
-        className="w-[75%] md:w-[80%] lg:w-[70%] mx-auto
-                            "
-      >
-        <span className="text-3xl md:text-4xl text-white font-semibold ">How It Works</span>
-        <p className="text-base md:text-2xl text-white font-normal leading-loose capitalize ">
-          Find Out How To Get Started
-        </p>
+    <div className="w-[90%] mx-auto pt-10">
+      <div className="w-[75%] sm:w-[80%] lg:w-[70%] text-center mx-auto py-5 mb-10">
+        <span className="text-3xl animate-blink sm:text-4xl text-red-600 font-semibold leading-loose">
+          TOP KỸ THUẬT VIÊN
+        </span>
       </div>
-      <div
-        className=" w-[75%] lg:w-[70%] mx-auto flex gap-5 flex-col  md:flex-row justify-between py-10
-                    md:w-[80%]"
-      >
-        {Images.map((item) => (
-          <React.Fragment>
-            <div
-              className="w-full md:w-[31.5%] flex flex-col bg-footer rounded-3xl text-white  p-5
-              hover:scale-95 transition-all duration-500"
-              key={item.id}
+      <Slider {...settings}>
+        {Member_Ship.slice(0, visibleImagesCount).map((item, index) => (
+          <React.Fragment key={index}>
+            <Link to={`/girl/${item.id}`}
+              className="w-[95%] mx-auto flex flex-col  border-2 border-red-500
+              hover:scale-[0.95] transition-all duration-500 group"
             >
-              <div className="flex md:flex-col md:items-center">
-              <img className="w-[40%] md:w-full " src={item.url} alt={item.title}></img>
-             <div className="flex flex-col md:items-center ">
-             <span className="text-base xl:text-2xl font-medium">{item.title}</span>
-             <p className="md:text-center text-xs xl:text-lg md:w-[85%] py-2">{item.text}</p>
-             </div>
+              <img src={item.url} alt={item.name} />
+
+              <div className="relative overflow-hidden">
+                <p className="text-2xl pt-4 text-yellow-600 text-center font-bold">
+                  {item.name}
+                </p>
+                <p className="text-base text-white text-center font-bold py-2">
+                  {item.desc}
+                </p>
+                <p className="text-xs text-white text-center flex items-center justify-between w-[95%] mx-auto pb-4">
+                  <p className="text-base italic font-semibold">ĐÁNH GIÁ : </p>
+                  {/* Hiển thị 5 sao mặc định */}
+                  {[...Array(5)].map((_, index) => (
+                    <FontAwesomeIcon
+                      key={index}
+                      icon={faStar}
+                      className="text-yellow-400 ml-1 text-xl"
+                    />
+                  ))}
+                 ( {item.vote} VOTE {""})
+                </p>
+
+                <div
+                  className="absolute left-0 bottom-0 w-full bg-red-900 text-white text-lg font-semibold flex items-center justify-center py-3
+                         translate-y-full group-hover:translate-y-0 transition-all duration-500"
+                >
+                  Xem chi tiết
+                </div>
               </div>
-            </div>
+            </Link>
           </React.Fragment>
         ))}
-      </div>
+      </Slider>
     </div>
   );
 };
+
 export default Worlds;

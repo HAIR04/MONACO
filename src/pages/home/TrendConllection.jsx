@@ -1,125 +1,71 @@
-import React from "react";
+import { Products_Service } from "../../components/data/Service";
+import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 const TrendingCollection = () => {
-  const Images = [
-    {
-      url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/primary-photo-placeholder-1@2x.png",
-      sub_images: [
-        {
-          url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/secondary-photo-placeholder@2x.png",
-        },
-        {
-          url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/secondary-photo-placeholder-1@2x.png",
-        },
-      ],
-      name: "Dsgn Animals",
-      sub_avatar: [
-        {
-          url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder@2x.png",
-          name_avatar: "MrFox",
-        },
-      ],
-    },
-    {
-      url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/primary-photo-placeholder@2x.png",
-      sub_images: [
-        {
-          url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/secondary-photo-placeholder-2@2x.png",
-        },
-        {
-          url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/secondary-photo-placeholder-3@2x.png",
-        },
-      ],
-      name: "Magic Mushrooms",
-      sub_avatar: [
-        {
-          url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-2@2x.png",
-          name_avatar: "Shroomie",
-        },
-      ],
-    },
-    {
-      url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/primary-photo-placeholder-5@2x.png",
-      sub_images: [
-        {
-          url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/secondary-photo-placeholder-10@2x.png",
-        },
-        {
-          url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/secondary-photo-placeholder-11@2x.png",
-        },
-      ],
-      name: "Disco Machines",
-      sub_avatar: [
-        {
-          url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-54@2x.png",
-          name_avatar: "BeKind2Robots",
-        },
-      ],
-    },
-  ];
+  const [visibleImagesCount, setVisibleImagesCount] = useState(getVisibleImagesCount());
 
+  // Hàm xác định số lượng ảnh hiển thị dựa trên kích thước màn hình
+  function getVisibleImagesCount() {
+    if (window.innerWidth >= 1280) return 3;
+    if (window.innerWidth >= 768) return 2;
+    return 1;
+  }
 
-  const getVisibleImagesCount = () => {
-    if (window.innerWidth >= 1280) return 3; 
-    if (window.innerWidth >= 768) return 2
-    ; 
-    return 1; 
-  };
+  // Lắng nghe sự thay đổi kích thước màn hình
+  useEffect(() => {
+    const handleResize = () => setVisibleImagesCount(getVisibleImagesCount());
+    window.addEventListener("resize", handleResize);
 
-  const visibleImagesCount = getVisibleImagesCount();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
-    <div className="w-full bg-header py-10">
-      <div className="w-[75%] sm:w-[80%] lg:w-[70%] mx-auto py-5 mb-10 ">
-        <span className="text-3xl sm:text-4xl text-white font-semibold leading-loose ">
-          Trending Collection
+    <div className="w-full bg-header">
+      {/* Tiêu đề */}
+      <div className="w-[75%] sm:w-[80%] lg:w-[70%] text-center mx-auto py-5 mb-10">
+        <span className="text-3xl sm:text-4xl font-semibold leading-loose animate-blink">
+          ƯU ĐÃI ĐỘC QUYỀN
         </span>
-        <p className="text-base lg:text-2xl text-white font-normal ">
-          Checkout our weekly updated trending collection.
-        </p>
       </div>
-      <div className="w-[75%] md:w-[80%] sm:w-[70%] mx-auto flex gap-7 xl:gap-0 justify-between ">
-        {Images.slice(0, visibleImagesCount).map((item, index) => (
-          <React.Fragment key={index}>
-            <div className="w-full xl:w-[31.5%] flex flex-col gap-5">
+
+      {/* Danh sách sản phẩm */}
+      <div className="w-[90%] mx-auto flex flex-wrap gap-7 xl:gap-0 justify-between">
+        {Products_Service.slice(0, visibleImagesCount).map((item, index) => (
+          <div
+            key={index}
+            className="w-full xl:w-[31.5%] flex flex-col gap-5 border-2 border-yellow-500 hover:scale-[0.95] transition-all duration-500 relative group"
+          >
+            <Link to={`/service/${item.id}`} className="w-full">
+              {/* Hình ảnh sản phẩm */}
               <img
-                className="hover:scale-[0.95] transition-all duration-500"
                 src={item.url}
                 alt={item.name}
+                className="w-full h-[300px] object-cover"
               />
 
-              <div className="flex justify-between w-[100%]">
-                {item.sub_images.map((sub_item, sub_index) => (
-                  <div
-                    className="w-[31%] hover:scale-[0.9] transition-all duration-500"
-                    key={sub_index}
-                  >
-                    <img src={sub_item.url} alt={sub_item.name} />
-                  </div>
-                ))}
-                <div
-                  className="bg-popular w-[31%] flex justify-center items-center rounded-3xl
-                hover:scale-[0.9] transition-all duration-500"
-                >
-                  <h1 className="text-xl sm:text-2xl text-white font-semibold ">1025+</h1>
-                </div>
+              {/* Tên và mô tả sản phẩm */}
+              <p className="text-2xl text-yellow-600 pt-5 text-center font-semibold">{item.name}</p>
+              <p className="text-lg text-white py-2 text-center font-semibold">
+                ({item.desc})
+              </p>
+
+              {/* Giá sản phẩm */}
+              <div className="flex justify-center gap-5 items-center pb-5">
+                <p className="text-2xl text-red-700 font-semibold">{item.price} VNĐ</p>
+                {item.price_sale && (
+                  <p className="text-xl text-white line-through">{item.price_sale} VNĐ</p>
+                )}
               </div>
-              <p className="text-2xl text-white font-semibold">{item.name}</p>
-              <div className="w-full">
-                {item.sub_avatar.map((sub_item, sub_index) => (
-                  <div
-                    className="w-[9%] flex items-center gap-2"
-                    key={sub_index}
-                  >
-                    <img src={sub_item.url} alt={sub_item.name_avatar} />
-                    <p className="text-base text-white">
-                      {sub_item.name_avatar}
-                    </p>
-                  </div>
-                ))}
+
+              {/* Hiệu ứng chữ "Xem chi tiết" */}
+              <div className="absolute bottom-0 left-0 right-0 text-center py-3 bg-opacity-40 bg-red-600 text-white text-xl font-semibold transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                Xem chi tiết
               </div>
-            </div>
-          </React.Fragment>
+            </Link>
+          </div>
         ))}
       </div>
     </div>

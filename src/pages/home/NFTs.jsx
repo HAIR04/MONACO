@@ -1,131 +1,70 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
-import * as Images from "../../assets/images";
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Products_Service } from "../../components/data/Service";
+
 const NFTs = () => {
-  const Images = [
-    {
-      url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-62@2x.png",
+  const [visibleImagesCount, setVisibleImagesCount] = useState(3); // Hiển thị 3 ảnh ban đầu
+  const [isExpanded, setIsExpanded] = useState(false); // Trạng thái mở rộng hoặc thu gọn
 
-      name: "Distant Galaxy",
-      sub_avatar: [
-        {
-          url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-59@2x.png",
-          name_avatar: "MoonDanger",
-        },
-      ],
-      price: "1.63",
-      highest : "0.33"
-    },
-    {
-      url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-63@2x.png",
-
-      name: "Life On Edena",
-      sub_avatar: [
-        {
-          url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-20@2x.png",
-          name_avatar: "NebulaKid",
-        },
-      ],
-      price: "1.63",
-      highest : "0.33"
-    },
-    {
-      url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/image-placeholder-64@2x.png",
-
-      name: "Astrofiction",
-      sub_avatar: [
-        {
-          url: "https://cdn.animaapp.com/projects/63aaf7e2426e9824f0350c11/releases/63aaf8f2426e9824f0350c13/img/avatar-placeholder-57@2x.png",
-          name_avatar: "Spaceone",
-        },
-      ],
-      price: "1.63",
-      highest : "0.33"
-    },
-  ];
-  const getVisibleImagesCount = () => {
-    if (window.innerWidth >= 1280) return 3; 
-    if (window.innerWidth >= 768) return 2; 
-    return 3; 
+  const handleToggle = () => {
+    if (isExpanded) {
+      setVisibleImagesCount(3); // Thu gọn còn 3 ảnh
+    } else {
+      setVisibleImagesCount(6); // Mở rộng tối đa 6 ảnh
+    }
+    setIsExpanded(!isExpanded); // Chuyển đổi trạng thái
   };
 
-  const visibleImagesCount = getVisibleImagesCount();
   return (
-    <div className="w-full bg-header py-5 lg:py-20">
-      <div
-        className="w-[76%] md:w-[80%]  mx-auto py-10 text-white
-                    lg:w-[70%]"
-      >
-        <span className="text-3xl lg:text-4xl font-semibold leading-loose md:leading-none">Discover More Nfts</span>
-        <div className="flex justify-between items-end">
-          <p className=" text-base lg:text-2xl text-white font-normal  capitalize ">
-            Explore New Trending Nfts
-          </p>
-          <button
-            className="w-[18%] md:w-[30%] xl:w-[18%] md:flex justify-center items-center gap-5 border-2 border-popular p-4 rounded-2xl
-               hover:scale-[0.95] transition-transform duration-500 
-               hidden"
-          >
-            <FontAwesomeIcon icon={faEye} className="text-xl text-popular" />
-            <p className="text-base font-semibold">See All</p>
-          </button>
-        </div>
+    <div className="w-full pt-10">
+      <div className="w-[75%] sm:w-[80%] lg:w-[70%] text-center mx-auto py-5 mb-10">
+        <span className="text-3xl sm:text-4xl text-red-600 font-semibold leading-loose">
+          CHỌN GÓI ĐẶC BIỆT
+        </span>
       </div>
-
-      <div
-        className="w-[75%] md:w-[80%] lg:w-[70%] mx-auto flex flex-col gap-5  md:flex-row md:justify-between 
-                       md:pb-24 lg:pb-0"
-      >
-        {Images.slice(0, visibleImagesCount).map((item, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-7 xl:gap-10 w-[90%] mx-auto">
+        {Products_Service.slice(0, visibleImagesCount).map((item, index) => (
           <React.Fragment key={index}>
-            <div className="w-full xl:w-[31.5%] bg-footer rounded-3xl
-            hover:scale-[0.95] transition-transform duration-500 ">
-              <img
-                className=" transition-all duration-500"
-                src={item.url}
-                alt={item.name}
-              />
-            <div className="p-5 flex flex-col">
-            <p className="text-2xl text-white font-semibold">{item.name}</p>
-              <div className="w-full py-3">
-                {item.sub_avatar.map((sub_item, sub_index) => (
-                  <div
-                    className="w-[9%] flex items-center gap-2"
-                    key={sub_index}
-                  >
-                    <img src={sub_item.url} alt={sub_item.name_avatar} />
-                    <p className="text-base text-white">
-                      {sub_item.name_avatar}
-                    </p>
-                  </div>
-                ))}
-            </div>
-
-            <div className="flex justify-between py-2">
-                <div className="flex flex-col gap-2 items-start">
-                <p className="text-white opacity-50 text-sm">Price</p>
-                <h1 className="text-base text-white font-base">{item.price} ETH</h1>
-                </div>
-                <div className="flex flex-col gap-2 items-end">
-                <p className="text-white opacity-50 text-sm">Highest Bid</p>
-                <h1 className="text-base text-white font-base">{item.highest} wETH</h1>
-                </div>
-            </div>
+            <Link
+              to={`/service/${item.id}`}
+              className="flex flex-col gap-5 border-2 border-yellow-500 hover:scale-[0.95] transition-all duration-500 relative group"
+            >
+              <div className="relative overflow-hidden">
+                <img src={item.url} alt={item.name} className="w-full h-[300px] object-cover" />
               </div>
-            </div>
+              <p className="text-2xl text-yellow-600 text-center font-semibold">
+                {item.name}
+              </p>
+              <p className="text-lg text-white text-center font-semibold">
+                {item.desc}
+              </p>
+              <div className="flex justify-center gap-3 items-center pb-5 relative overflow-hidden">
+                <p className="text-3xl text-red-700 font-semibold">
+                  {item.price} VNĐ
+                </p>
+                <p className="text-xl italic text-white line-through">
+                  {item.price_sale} VNĐ
+                </p>
+                <div className="absolute bottom-[-100%] left-0 w-full bg-red-600 bg-opacity-40 text-white text-lg font-semibold flex items-center justify-center py-2 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-500">
+                  Xem chi tiết
+                </div>
+              </div>
+            </Link>
           </React.Fragment>
         ))}
       </div>
-      <button
-            className="w-[75%] mx-auto md:w-[18%] md:hidden justify-center items-center gap-5 border-2 border-popular p-4 rounded-2xl
-               hover:scale-[0.95] transition-transform duration-500  my-10 md:my-0
-               flex"
+      {Products_Service.length > 3 && ( // Chỉ hiển thị nút nếu có hơn 3 ảnh
+        <div className="text-center mt-10">
+          <button
+            onClick={handleToggle}
+            className=" text-white px-6 rounded-full text-lg font-semibold italic transition-all duration-300"
           >
-            <FontAwesomeIcon icon={faEye} className="text-xl text-popular" />
-            <p className="text-base font-semibold text-white">See All</p>
+            {isExpanded ? "Thu gọn" : "Xem thêm"}
           </button>
+        </div>
+      )}
     </div>
   );
 };
+
 export default NFTs;
