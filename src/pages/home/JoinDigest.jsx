@@ -1,4 +1,4 @@
-import * as Images from "../../assets/images";
+
 import Subscribe from "../../components/subscribe/Subscribe";
 import Subscribe_Responsive from "../../components/subscribe/Subscribe_Responsive";
 
@@ -13,15 +13,15 @@ const JoinDigest = () => {
     
   <div className="flex gap-5 pt-5">
   <div className="w-[50%]">
-     <img className="h-[700px] object-cover" src="https://scontent.fhan14-5.fna.fbcdn.net/v/t39.30808-6/454716872_475953968482957_8043794544769333139_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFvL4J-Wpcg_p8cavL2sYne-etZqQ_Vtn_561mpD9W2fxwLrZzstI4Eg-li4ga4c9WpYbVrN1D0hzXR9Nxagoqp&_nc_ohc=BiClDUgwqsIQ7kNvgEOAB_-&_nc_zt=23&_nc_ht=scontent.fhan14-5.fna&_nc_gid=AznzYSDprs14tpkApUz3i1V&oh=00_AYBxerxy7D0UdegZvrR06RHJ8ieXsEyarCztJAFLdfHDhQ&oe=675F2DD7"/>
+     <img className="h-[700px] object-cover" src="/assets/GioiThieu/Dai.jpg"/>
     </div>
     <div className="w-[50%]">
       <div className="pb-5">
-        <img className="w-full h-[350px] object-cover" src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/465278934_533564216055265_8378617988214659260_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeG58biep-OXGxeS-gqQ_ZsUZnK4ihb6DOBmcriKFvoM4CU5s970D5cKB9c82r0vll5oU_RT1-rKyqVa6Gl-Woub&_nc_ohc=6RItyocLdywQ7kNvgE3Tt5H&_nc_zt=23&_nc_ht=scontent.fhan14-3.fna&_nc_gid=AyvPxudDPOZUYUpBoCPv9HP&oh=00_AYACk6B0rOkKpX25mXZ5R_eSMfXz8JY0mYWRUNzZRvIygA&oe=675F11C1"/>
+        <img className="w-full h-[350px] object-cover" src="/assets/GioiThieu/Ngan.jpg"/>
       </div>
       <div className="flex gap-5 w-[50%]">
-        <img className="w-full h-[350px] object-cover" src="https://scontent.fhan14-5.fna.fbcdn.net/v/t39.30808-6/454594944_475953975149623_8819634696722812969_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFBe6UWvKm30UsBFifzmqDNCr674DpnTiMKvrvgOmdOIz1Hxk19I77p-daFRLvWkCgfdE0vDPYPn7sHxEChFvaA&_nc_ohc=oaTfxcGLHv4Q7kNvgEgQxTW&_nc_zt=23&_nc_ht=scontent.fhan14-5.fna&_nc_gid=ALBofxyd-1c1s5hF7GYmQ3H&oh=00_AYC7XfJOSoGqkhBheHJS7-JU-SfqZN3ZpLqu5jVXZGPCoA&oe=675F3AE1"/>
-        <img className="w-full h-[350px] object-cover" src="https://scontent.fhan14-5.fna.fbcdn.net/v/t39.30808-6/454594944_475953975149623_8819634696722812969_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFBe6UWvKm30UsBFifzmqDNCr674DpnTiMKvrvgOmdOIz1Hxk19I77p-daFRLvWkCgfdE0vDPYPn7sHxEChFvaA&_nc_ohc=oaTfxcGLHv4Q7kNvgEgQxTW&_nc_zt=23&_nc_ht=scontent.fhan14-5.fna&_nc_gid=ALBofxyd-1c1s5hF7GYmQ3H&oh=00_AYC7XfJOSoGqkhBheHJS7-JU-SfqZN3ZpLqu5jVXZGPCoA&oe=675F3AE1"/>
+        <img className="w-full h-[350px] object-cover" src="/assets/GioiThieu/Be1.jpg"/>
+        <img className="w-full h-[350px] object-cover" src="/assets/GioiThieu/Be2.jpg"/>
       </div>
     </div>
   </div>

@@ -1,10 +1,10 @@
 export const Member_Ship = [
     {
         id: 1,
-      url: "https://hanoivip4.vncns.com/attachments/bae9870a-282f-401c-9f45-96d160340c44-jpeg.27466/",
+      url: "/assets/NhanVien/nv1.jpeg",
       img_data: [
-        { url: "https://s.net.vn/K4JU" },
-        { url: "https://s.net.vn/0iz1" },
+        { url: "/assets/NhanVien/nv1.jpeg" },
+        { url: "/assets/NhanVien/nv1.jpeg" },
      
       ],
       name: "KHÁNH LINH",
@@ -20,10 +20,10 @@ export const Member_Ship = [
     },
     {
         id: 2,
-      url: "https://hanoivip4.vncns.com/attachments/01bb1d86-dc69-46cb-ae14-c778eb55e347-jpeg.33050/",
+      url: "/assets/NhanVien/nv2.jpeg",
       img_data: [
-        { url: "https://s.net.vn/K4JU" },
-        { url: "https://s.net.vn/0iz1" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
      
       ],
       name: "BẢO NGỌC",
@@ -37,10 +37,10 @@ export const Member_Ship = [
     },
     {
         id: 3,
-      url: "https://hanoivip4.vncns.com/attachments/z5899238630347_f2e06a8d41fd4f9a6f98bfc56a1a47ab-jpg.32093/",
+      url: "/assets/NhanVien/nv3.jpeg",
       img_data: [
-        { url: "https://s.net.vn/K4JU" },
-        { url: "https://s.net.vn/0iz1" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
      
       ],
       name: "KHẢ HÂN",
@@ -54,10 +54,10 @@ export const Member_Ship = [
     },
     {
         id: 4,
-      url: "https://hanoivip4.vncns.com/attachments/img_20241205_124543_712-jpg.38448/",
+      url: "/assets/NhanVien/nv4.jpg",
       img_data: [
-        { url: "https://s.net.vn/K4JU" },
-        { url: "https://s.net.vn/0iz1" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
      
       ],
       name: "MỸ LINH",
@@ -71,10 +71,10 @@ export const Member_Ship = [
     },
     {
         id: 5,
-      url: "https://hanoivip4.vncns.com/attachments/z5989329196079_188b5cb078b7216ac2e10931cf7d2c3f-jpg.33676/",
+      url: "/assets/NhanVien/nv5.jpg",
       img_data: [
-        { url: "https://s.net.vn/K4JU" },
-        { url: "https://s.net.vn/0iz1" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
      
       ],
       name: "HẢI YẾN",
@@ -88,10 +88,10 @@ export const Member_Ship = [
     },
     {
         id: 6,
-      url: "https://hanoivip4.vncns.com/attachments/bae9870a-282f-401c-9f45-96d160340c44-jpeg.27466/",
+      url: "/assets/NhanVien/nv6.jpg",
       img_data: [
-        { url: "https://s.net.vn/K4JU" },
-        { url: "https://s.net.vn/0iz1" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
      
       ],
       name: "HẢI YẾN",
@@ -105,10 +105,10 @@ export const Member_Ship = [
     },
     {
         id: 7,
-      url: "https://hanoivip4.vncns.com/attachments/01bb1d86-dc69-46cb-ae14-c778eb55e347-jpeg.33050/",
+      url: "/assets/NhanVien/nv7.jpg",
       img_data: [
-        { url: "https://s.net.vn/K4JU" },
-        { url: "https://s.net.vn/0iz1" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
      
       ],
       name: "HẢI YẾN",
@@ -122,10 +122,10 @@ export const Member_Ship = [
     },
     {
         id: 8,
-      url: "https://hanoivip4.vncns.com/attachments/z5899238630347_f2e06a8d41fd4f9a6f98bfc56a1a47ab-jpg.32093/",
+      url: "/assets/NhanVien/nv1.jpeg",
       img_data: [
-        { url: "https://s.net.vn/K4JU" },
-        { url: "https://s.net.vn/0iz1" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
      
       ],
       name: "HẢI YẾN",
@@ -139,10 +139,10 @@ export const Member_Ship = [
     },
     {
         id: 9,
-      url: "https://hanoivip4.vncns.com/attachments/img_20241205_124543_712-jpg.38448/",
+      url: "/assets/NhanVien/nv2.jpeg",
       img_data: [
-        { url: "https://s.net.vn/K4JU" },
-        { url: "https://s.net.vn/0iz1" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
      
       ],
       name: "HẢI YẾN",
@@ -156,10 +156,10 @@ export const Member_Ship = [
     },
     {
         id: 10,
-      url: "https://hanoivip4.vncns.com/attachments/z5989329196079_188b5cb078b7216ac2e10931cf7d2c3f-jpg.33676/",
+      url: "/assets/NhanVien/nv3.jpeg",
       img_data: [
-        { url: "https://s.net.vn/K4JU" },
-        { url: "https://s.net.vn/0iz1" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
      
       ],
       name: "HẢI YẾN",
@@ -173,10 +173,10 @@ export const Member_Ship = [
     },
     {
         id: 11,
-      url: "https://hanoivip4.vncns.com/attachments/z5899238630347_f2e06a8d41fd4f9a6f98bfc56a1a47ab-jpg.32093/",
+      url: "/assets/NhanVien/nv4.jpg",
       img_data: [
-        { url: "https://s.net.vn/K4JU" },
-        { url: "https://s.net.vn/0iz1" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
      
       ],
       name: "HẢI YẾN",
@@ -190,10 +190,10 @@ export const Member_Ship = [
     },
     {
         id: 12,
-      url: "https://hanoivip4.vncns.com/attachments/img_20241205_124543_712-jpg.38448/",
+      url: "/assets/NhanVien/nv5.jpg",
       img_data: [
-        { url: "https://s.net.vn/K4JU" },
-        { url: "https://s.net.vn/0iz1" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
+        { url: "/assets/NhanVien/nv2.jpeg" },
      
       ],
       name: "HẢI YẾN",

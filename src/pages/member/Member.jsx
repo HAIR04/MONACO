@@ -112,7 +112,7 @@ const Girl_Detail = () => {
                 className={`snap-item w-[500px] ${
                   subIndex === selectedImageIndex
                     ? "border-2 border-red-700"
-                    : ""
+                    : "border-2 border-red-700"
                 }`}
                 onClick={() => handleImageClick(subIndex)}
               >
@@ -124,7 +124,7 @@ const Girl_Detail = () => {
               </div>
             ))}
           </div>
-          <div className="w-[85%] mx-auto text-lg">
+          <div className="w-[85%] py-5 mx-auto text-lg">
             <p>
               Em ấy là một chuyên viên massage với hơn 5 năm kinh nghiệm trong
               việc thực hiện các liệu trình massage thư giãn...

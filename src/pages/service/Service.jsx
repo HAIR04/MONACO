@@ -14,7 +14,7 @@ const ServicePR = () => {
       <div className="py-5 relative">
         <img
           className="h-[200px] w-full opacity-15 object-cover "
-          src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/453899223_472868748791479_2923702485545177927_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF0t9NQWXrrzrnO89_sOtKpdOjRhdgZZt906NGF2Blm30Vg6zjrhSeIId9k8Em-l2Nrzg90dO_laYBwYIoGnTcR&_nc_ohc=stCRmu14FxkQ7kNvgHFQ4Jc&_nc_zt=23&_nc_ht=scontent.fhan14-3.fna&_nc_gid=AtjjjWbUbnBAMOTHvEqG0no&oh=00_AYD6MJRfdR4SsD3WK4a-D8sEL5VDPm0pzGuwHXY1WA6YpQ&oe=675F988C"
+          src="/assets/GioiThieu/Be2.jpg"
         />
         <p className="text-2xl text-yellow-600 font-semibold absolute inset-0 flex items-center justify-center">
           DỊCH VỤ / SERVICE

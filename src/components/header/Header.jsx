@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { logo } from "../../assets/images";
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';

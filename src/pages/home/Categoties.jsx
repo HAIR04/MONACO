@@ -8,19 +8,19 @@ const Category = () => {
 
   const Images = [
     {
-      url: "https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/453899223_472868748791479_2923702485545177927_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF0t9NQWXrrzrnO89_sOtKpdOjRhdgZZt906NGF2Blm30Vg6zjrhSeIId9k8Em-l2Nrzg90dO_laYBwYIoGnTcR&_nc_ohc=stCRmu14FxkQ7kNvgHFQ4Jc&_nc_zt=23&_nc_ht=scontent.fhan14-3.fna&_nc_gid=AnpuhzVuaIIMa_o0yp7jGYx&oh=00_AYCt0RBkLtaWhbjseNFuOLpBGvu4o1WxIR1LuOWRHchtgA&oe=675F280C",
+      url: "/assets/KhongGian/KhongGian11.jpg",
       name: "BỒN TẮM ĐỨNG QUÝ TỘC",
     },
     {
-      url: "https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/453996957_472868752124812_5090541935325247991_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGiqUl9E7bfdqFev_-sdukm0eUs_MPzvY_R5Sz8w_O9j8v2aCrB8uURJ-HmGmrP4gnEYghX2PYkuj-6ptI8VQf8&_nc_ohc=7JC8Zpsr4rYQ7kNvgEx1iiG&_nc_zt=23&_nc_ht=scontent.fhan14-2.fna&_nc_gid=Ai1CQmDcZut3v4jDlqSk7HQ&oh=00_AYC2GTMiGHdyur86f4TK2G_HURbEBCcm68cLHYwD0jOq7Q&oe=675F291B",
+      url: "/assets/KhongGian/KhongGian22.jpg",
       name: "POOL LỚN CỰC CHẤT",
     },
     {
-      url: "https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/466419488_541174615294225_2132206919666216590_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHpkRsQ_2lCNZrcKgw6nnVpqYzp7ey6G2ipjOnt7LobaBa5e2d9JQsGNkUX-z_0pPKUSLYU0GyiSzQWzMVD6IYT&_nc_ohc=cW8fQBF7Pe8Q7kNvgHPQbe9&_nc_zt=23&_nc_ht=scontent.fhan14-3.fna&_nc_gid=AyvPxudDPOZUYUpBoCPv9HP&oh=00_AYBchEo2o7_Fxll9KfyeHXQInB-PvkTSCuUJEMfHlNm6WA&oe=675F2709",
+      url: "/assets/KhongGian/KhongGian33.jpg",
       name: "POOL BAR SIÊU VIP",
     },
     {
-      url: "https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/466419488_541174615294225_2132206919666216590_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHpkRsQ_2lCNZrcKgw6nnVpqYzp7ey6G2ipjOnt7LobaBa5e2d9JQsGNkUX-z_0pPKUSLYU0GyiSzQWzMVD6IYT&_nc_ohc=cW8fQBF7Pe8Q7kNvgHPQbe9&_nc_zt=23&_nc_ht=scontent.fhan14-3.fna&_nc_gid=AyvPxudDPOZUYUpBoCPv9HP&oh=00_AYBchEo2o7_Fxll9KfyeHXQInB-PvkTSCuUJEMfHlNm6WA&oe=675F2709",
+      url: "/assets/KhongGian/KhongGian44.jpg",
       name: "SWINGPOLL",
     },
   ];

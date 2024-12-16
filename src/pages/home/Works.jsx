@@ -40,7 +40,7 @@ const Worlds = () => {
               className="w-[95%] mx-auto flex flex-col  border-2 border-red-500
               hover:scale-[0.95] transition-all duration-500 group"
             >
-              <img src={item.url} alt={item.name} />
+              <img src={item.url} alt={item.name} className="w-full h-[500px] object-cover" />
 
               <div className="relative overflow-hidden">
                 <p className="text-2xl pt-4 text-yellow-600 text-center font-bold">

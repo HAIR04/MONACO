@@ -17,7 +17,7 @@ const Wallet = () => {
       <div className="py-5 relative">
         <img
           className="h-[200px] w-full opacity-15 object-cover"
-          src="https://s.pro.vn/Z0ec"
+          src="/assets/GioiThieu/Be1.jpg"
         />
         <p className="text-2xl text-yellow-600 font-semibold absolute inset-0 flex items-center justify-center">
           LIÊN HỆ / CONTACT
