@@ -80,7 +80,7 @@ const Wallet = () => {
           </div>
         </div>
 
-        {/* Kênh liên hệ */}
+        {/* Kênh Liên hệ */}
         
         
       </div>
