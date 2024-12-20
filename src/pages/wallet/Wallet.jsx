@@ -64,18 +64,19 @@ const Wallet = () => {
           <div className="transform transition-all duration-300 hover:scale-105">
             <Za_lo />
           </div>
+          <div className="transform transition-all duration-300 hover:scale-105 ">
+            <Telegram />
+          </div>
           <div className="transform transition-all duration-300 hover:scale-105">
             <PhoneNumber />
           </div>
         
-          <div className="transform transition-all duration-300 hover:scale-105 ">
-            <Telegram />
-          </div>
+         
         </div>
           </div>
 
           {/* Form đặt lịch */}
-          <div className="w-full md:w-1/2 flex items-center justify-center">
+          <div className="w-full md:w-1/2 border-2 border-yellow-600 rounded-xl px-5 flex items-center justify-center">
             <ContactForm />
           </div>
         </div>

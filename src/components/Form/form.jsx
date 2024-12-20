@@ -34,7 +34,7 @@ const ContactForm = () => {
       Swal.fire({
         icon: "error",
         title: "Lỗi!",
-        text: "Số điện thoại không hợp lệ. Vui lòng nhập số điện thoại hợp lệ!.",
+        text: "Số điện thoại không hợp lệ. Vui lòng nhập số điện thoại hợp lệ!",
         confirmButtonText: "Đóng",
         confirmButtonColor: "#e11d48",
       });
@@ -91,14 +91,25 @@ const ContactForm = () => {
       );
   };
 
-  const timeOptions = Array.from({ length: 48 }, (_, i) => {
-    const hour = Math.floor(i / 2);
-    const minute = i % 2 === 0 ? "00" : "30";
-    return `${hour.toString().padStart(2, "0")}:${minute}`;
-  });
+  // Tạo danh sách thời gian từ 10h sáng hôm trước đến 3h sáng hôm sau
+  const timeOptions = [];
+
+  // Thêm thời gian từ 10h sáng hôm trước đến 12h đêm
+  for (let hour = 10; hour < 24; hour++) {
+    timeOptions.push(`${hour.toString().padStart(2, "0")}:00`);
+    timeOptions.push(`${hour.toString().padStart(2, "0")}:30`);
+  }
+  
+  // Thêm thời gian từ 00:00 đến 03:00 sáng hôm sau (không có 03:30)
+  for (let hour = 0; hour <= 3; hour++) {
+    timeOptions.push(`${hour.toString().padStart(2, "0")}:00`);
+    if (hour !== 3) {
+      timeOptions.push(`${hour.toString().padStart(2, "0")}:30`);
+    }
+  }
 
   return (
-    <div className="max-w-3xl mx-auto border-2 border-yellow-500 p-8 rounded-lg shadow-lg">
+    <div className="w-[100%] mx-auto py-5 px-3 rounded-lg shadow-lg">
       <h2 className="text-2xl font-semibold text-center text-white mb-6">
         GỬI YÊU CẦU ĐẶT LỊCH
       </h2>

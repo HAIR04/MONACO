@@ -11,7 +11,7 @@ const Girl_Detail = () => {
   const { id } = useParams(); // Lấy id từ URL
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const handleImageClick = (index) => {
     setSelectedImageIndex(index);
   };
@@ -90,7 +90,7 @@ const Girl_Detail = () => {
                     onClick={toggleOverlay}
                     className="  fixed w-full bg-black inset-0 bg-bgr-download bg-opacity-50 flex items-center justify-center z-50 transition-example delay-1000"
                   >
-                    <Subscribe_Responsive />
+                    <Subscribe_Responsive setOpen={setIsModalOpen}/>
                   </div>
                 )}
               </div>

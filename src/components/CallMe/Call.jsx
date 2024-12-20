@@ -3,7 +3,9 @@ import Subscribe_Responsive from '../subscribe/Subscribe_Responsive';
 
 const CallNowButton = () => {
   // State để điều khiển hiển thị Subscribe_Responsive
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+  
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   const handleImageClick = (index) => {
@@ -28,7 +30,7 @@ const CallNowButton = () => {
       {/* Hiển thị Subscribe_Responsive nếu isSubscribeVisible là true */}
       {isOverlayVisible && (
         <div>
-          <Subscribe_Responsive />
+          <Subscribe_Responsive setOpen={setIsModalOpen}/>
         </div>
       )}
     </div>

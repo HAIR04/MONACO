@@ -1,9 +1,12 @@
 import { Products_Service } from "../../components/data/Service";
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import ReactPlayer from "react-player";
 
 const TrendingCollection = () => {
-  const [visibleImagesCount, setVisibleImagesCount] = useState(getVisibleImagesCount());
+  const [visibleImagesCount, setVisibleImagesCount] = useState(
+    getVisibleImagesCount()
+  );
 
   // Hàm xác định số lượng ảnh hiển thị dựa trên kích thước màn hình
   function getVisibleImagesCount() {
@@ -25,48 +28,51 @@ const TrendingCollection = () => {
   return (
     <div className="w-full bg-header">
       {/* Tiêu đề */}
-      <div className="w-[75%] sm:w-[80%] lg:w-[70%] text-center mx-auto py-5 mb-10">
-        <span className="text-3xl sm:text-4xl font-semibold leading-loose animate-blink">
-          ƯU ĐÃI ĐỘC QUYỀN
+      <div className="w-[85%] mx-auto py-5 mb-10 flex items-center justify-between relative">
+        <span className="text-3xl uppercase sm:text-4xl font-semibold leading-loose animate-blink absolute left-1/2 transform -translate-x-1/2">
+          Monaco - Massage Quý Ông
         </span>
+        <Link
+          to="/rankings"
+          className="text-2xl  uppercase sm:text-2xl font-semibold leading-loose text-right animate-blink ml-auto transition-all duration-700 hover:text-xl"
+        >
+          Kỹ Thuật Viên
+        </Link>
       </div>
 
-      {/* Danh sách sản phẩm */}
-      <div className="w-[90%] mx-auto flex flex-wrap gap-7 xl:gap-0 justify-between">
-        {Products_Service.slice(0, visibleImagesCount).map((item, index) => (
-          <div
-            key={index}
-            className="w-full xl:w-[31.5%] flex flex-col gap-5 border-2 border-yellow-500 hover:scale-[0.95] transition-all duration-500 relative group"
-          >
-            <Link to={`/service/${item.id}`} className="w-full">
-              {/* Hình ảnh sản phẩm */}
-              <img
-                src={item.url}
-                alt={item.name}
-                className="w-full h-[300px] object-cover"
-              />
-
-              {/* Tên và mô tả sản phẩm */}
-              <p className="text-2xl text-yellow-600 pt-5 text-center font-semibold">{item.name}</p>
-              <p className="text-lg text-white py-2 text-center font-semibold">
-                ({item.desc})
-              </p>
-
-              {/* Giá sản phẩm */}
-              <div className="flex justify-center gap-5 items-center pb-5">
-                <p className="text-2xl text-red-700 font-semibold">{item.price} VNĐ</p>
-                {item.price_sale && (
-                  <p className="text-xl text-white line-through">{item.price_sale} VNĐ</p>
-                )}
-              </div>
-
-              {/* Hiệu ứng chữ "Xem chi tiết" */}
-              <div className="absolute bottom-0 left-0 right-0 text-center py-3 bg-opacity-40 bg-red-600 text-white text-xl font-semibold transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                Xem chi tiết
-              </div>
-            </Link>
-          </div>
-        ))}
+      {/* Ảnh cố định */}
+      <div className="w-[90%] mx-auto flex justify-center">
+        <div className="w-full flex flex-col gap-5 relative group">
+          {/* Hình ảnh sản phẩm */}
+          <img
+            src="/assets/GioiThieu/Banner1.jpg"
+            alt="Giới thiệu"
+            className="w-full hover:scale-[0.95] transition-all duration-500 h-auto object-cover"
+          />
+          <p className="text-white text-xl">
+            Hệ thống khách sạn EMERALD đạt tiêu chuẩn quốc tế trực thuộc sự quản
+            lý của Công ty TNHH Du Lịch Âu Việt. Khách sạn đầu tiên được xây
+            dựng vào năm 2016, có tên khách sạn Âu Việt Hà Nội chuẩn 3 sao, bao
+            gồm 9 tầng với 50 phòng nghỉ. Nằm tại khu vực Mỹ Đình, một vị trí
+            đắc địa thuộc trung tâm thủ đô Hà Nội. Khách sạn được thiết kế theo
+            phong cách Á- u sang trọng kết hợp cùng trang thiết bị nội thất đồ
+            gỗ cao cấp. Với gam màu nâu là điểm thu hút ấn tượng cho quý khách
+            ngay lần đầu bước chân đến khách sạn. Bên cạnh đó, sự kết hợp những
+            tông màu trắng tươi sáng góp phần làm cho nghỉ của khách sạn trở nên
+            thật hiện đại và sang trọng, trẻ trung và thu hút. Những điều đó đã
+            tạo nên một không gian nghỉ dưỡng gần gũi, ấm áp và thoải mái cho
+            quý khách.
+          </p>
+          {/* Video thay thế hình ảnh cuối */}
+          <ReactPlayer
+            url="/https://www.youtube.com/watch?v=eF7eRpLivSg&t=4s" // Đường dẫn đến video
+            playing={false}
+            controls={true}
+            width="100%"
+            height="500px"
+            className="hover:scale-[0.95] transition-all duration-500"
+          />
+        </div>
       </div>
     </div>
   );

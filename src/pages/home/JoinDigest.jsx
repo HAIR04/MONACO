@@ -30,9 +30,9 @@ const JoinDigest = () => {
               alt="Ngan"
             />
           </div>
-          <div className="flex gap-5">
+          <div className="w-[48.5%] flex gap-5">
             <img
-              className="w-full h-[350px] object-cover transform hover:scale-105 transition-all duration-300 ease-in-out"
+              className="w-full h-auto object-cover transform hover:scale-105 transition-all duration-300 ease-in-out"
               src="/assets/GioiThieu/Be1.jpg"
               alt="Be1"
             />
@@ -45,7 +45,7 @@ const JoinDigest = () => {
         </div>
       </div>
 
-      <p className="text-2xl font-semibold">Vì sao chọn Monaco?</p>
+      {/* <p className="text-2xl font-semibold">Vì sao chọn Monaco?</p>
       <p className="text-left pt-3 text-xl font-medium">
         - Chất lượng dịch vụ vượt trội: Đội ngũ kỹ thuật viên được đào tạo bài bản và luôn tận tâm với công việc.
       </p>
@@ -60,23 +60,19 @@ const JoinDigest = () => {
       </p>
       <p className="text-xl text-left py-5">
         Hãy đến Quán Massage Monaco để tận hưởng sự thư giãn tuyệt vời và trải nghiệm dịch vụ chăm sóc sức khỏe đẳng cấp. Chúng tôi luôn sẵn sàng phục vụ bạn với sự chuyên nghiệp và tận tâm nhất!
-      </p>
+      </p> */}
 
-      <div className="flex w-[100%] justify-between">
+      
+        
         <img
-          className="w-[49%] h-[400px] object-cover transform hover:scale-105 transition-all duration-300 ease-in-out"
-          src="/assets/GioiThieu/Banner3.jpg"
-          alt="Banner3"
-        />
-        <img
-          className="w-[49%] h-[400px] object-cover transform hover:scale-105 transition-all duration-300 ease-in-out"
+          className="w-[100%] h-[400px] object-cover transform hover:scale-105 transition-all duration-300 ease-in-out"
           src="/assets/GioiThieu/Banner2.jpg"
           alt="Banner2"
         />
-      </div>
-      <p className="text-left pt-3 text-xl font-medium">
+     
+      {/* <p className="text-left pt-3 text-xl font-medium">
         Massage Monaco không chỉ là một liệu pháp chăm sóc cơ thể mà còn là hành trình tái tạo năng lượng, nơi các quý ông có thể thả lỏng tâm trí, lấy lại sự tự tin và phong thái đĩnh đạc. Đến với Monaco, bạn sẽ được tận hưởng sự hoàn hảo, vượt qua mọi giới hạn của sự thư giãn.
-      </p>
+      </p> */}
     </div>
   );
 };

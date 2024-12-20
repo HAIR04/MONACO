@@ -13,12 +13,11 @@ const Home = () => {
     <div>
       <Banner />
       <TrendingCollection />
-      <Worlds />
-      <TopCreators />
-      <Category />
-      <NFTs />
-     
-     
+      {/* <Worlds /> */}
+      {/* <TopCreators /> */}
+      {/* <Category /> */}
+      {/* <NFTs /> */}
+
       <JoinDigest />
     </div>
   );

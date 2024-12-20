@@ -189,18 +189,7 @@ const TreatM = () => {
             </div>
           </div>
 
-          {/* LIỆU TRÌNH 5 */}
-        
-           
-              <p className="text-lg text-center text-white font-semibold pb-5">{item.num5}</p>
-              {item.img_data[4] && (
-                <img
-                  src={item.img_data[4].url}
-                  alt="Ảnh chi tiết"
-                  className="w-full h-[250px] object-cover rounded-lg mb-5"
-                />
-              )}
-              <p className="text-base text-white order-3 w-[90%] mx-auto text-center py-5">{item.desc5}</p>
+         
             
      
         </div>
