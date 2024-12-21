@@ -30,15 +30,15 @@ const Header = () => {
       <ContactInfo />
 
       <div className="w-[100%] mx-auto flex justify-between items-center">
-        <div className="w-[15%]">
+        <div className="w-[25%]">
           <Link
             to="/"
-            className="flex items-center gap-2 2xl:w-[63%] 2xl:gap-3 xl:w-[100%] xl:gap-3"
+            className="flex items-start justify-center xl:ml-10 2xl:ml-16 2xl:w-[70%] 2xl:gap-3 xl:w-[100%] xl:gap-3"
           >
             <img
               src="/assets/Logo/logo.png"
               alt="Logo"
-              className="w-full rounded-full"
+              className="w-full"
             />
           </Link>
         </div>
