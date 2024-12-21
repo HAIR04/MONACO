@@ -2,8 +2,8 @@ const Subscribe = () => {
   return (
     <div className="">
       <button
-        className="w-full p-5  rounded-full animate-shake
-     bg-red-800 text-black font-semibold text-2xl
+        className="lg:w-full lg:p-5 text-lg p-2   rounded-full animate-shake
+     bg-red-800 text-black font-semibold lg:text-2xl
     
     hover:scale-[0.95] transition-all duration-500"
       >
