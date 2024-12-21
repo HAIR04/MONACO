@@ -29,8 +29,8 @@ const TrendingCollection = () => {
     <div className="w-full bg-header">
       {/* Tiêu đề */}
       <div className="w-[85%] mx-auto py-5 mb-10 flex items-center justify-between relative">
-        <span className="text-3xl uppercase sm:text-4xl font-semibold leading-loose animate-blink absolute left-1/2 transform -translate-x-1/2">
-          Monaco - Massage Quý Ông
+        <span className="text-7xl uppercase sm:text-4xl font-semibold leading-loose animate-blink absolute left-1/2 transform -translate-x-1/2">
+        Welcome to Massage Quý Ông
         </span>
         <Link
           to="/rankings"

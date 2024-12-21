@@ -33,7 +33,7 @@ const Header = () => {
         <div className="w-[15%]">
           <Link
             to="/"
-            className="flex items-center gap-2 2xl:w-[63%] 2xl:gap-3 xl:w-[63%] xl:gap-3"
+            className="flex items-center gap-2 2xl:w-[63%] 2xl:gap-3 xl:w-[100%] xl:gap-3"
           >
             <img
               src="/assets/Logo/logo.png"
@@ -44,7 +44,7 @@ const Header = () => {
         </div>
 
         <div className="w-[70%] animate-goldShine">
-          <ul className="2xl:w-[100%] hidden justify-around items-center xl:flex text-white text-2xl font-semibold xl:w-[100%]">
+          <ul className="2xl:w-[100%] hidden justify-around items-center xl:flex text-white text-xl 2xl:text-3xl font-semibold xl:w-[100%]">
             <li>
               <Link
                 to="/"
@@ -100,45 +100,46 @@ const Header = () => {
         >
           <FontAwesomeIcon icon={faBarsStaggered} className="text-yellow-700" />
           {open && (
-  <div className="fixed w-[60%] top-0 right-0 bottom-0 bg-black z-50 flex flex-col">
-    <div className="bg-body py-3 text-right flex items-center justify-between px-4">
-      
-      <FontAwesomeIcon
-        icon={faTimes}
-        className="text-gray-300 text-xl cursor-pointer"
-        onClick={() => setOpen(false)} // Đóng menu khi nhấn
-      />
-      <span className="text-gray-300 font-semibold text-lg">MENU</span>
-    </div>
-    <Link
-      to="/"
-      className="text-lg border-b text-red-600 border-white border-opacity-30 p-3 w-full text-right font-semibold"
-    >
-      TRANG CHỦ
-    </Link>
-    <Link
-      to="/service"
-      className="text-lg border-b border-white animate-goldShine transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-right font-medium"
-    >
-      DỊCH VỤ
-    </Link>
-    <Link
-      to="/rankings"
-      className="text-lg border-b border-white animate-goldShine transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-right font-medium"
-    >
-      KỸ THUẬT VIÊN
-    </Link>
-    <Link
-      to="/wallet"
-      className="text-lg border-b border-white animate-goldShine transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-right font-medium"
-    >
-      LIÊN HỆ
-    </Link>
-    <div className="py-5 block lg:hidden" onClick={toggleOverlay}>
-      <Booking />
-    </div>
-  </div>
-)}
+            <div className="fixed w-[60%] top-0 right-0 bottom-0 bg-black z-50 flex flex-col">
+              <div className="bg-body py-3 text-right flex items-center justify-between px-4">
+                <FontAwesomeIcon
+                  icon={faTimes}
+                  className="text-gray-300 text-xl cursor-pointer"
+                  onClick={() => setOpen(false)} // Đóng menu khi nhấn
+                />
+                <span className="text-gray-300 font-semibold text-lg">
+                  MENU
+                </span>
+              </div>
+              <Link
+                to="/"
+                className="text-lg border-b text-red-600 border-white border-opacity-30 p-3 w-full text-right font-semibold"
+              >
+                TRANG CHỦ
+              </Link>
+              <Link
+                to="/service"
+                className="text-lg border-b border-white animate-goldShine transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-right font-medium"
+              >
+                DỊCH VỤ
+              </Link>
+              <Link
+                to="/rankings"
+                className="text-lg border-b border-white animate-goldShine transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-right font-medium"
+              >
+                KỸ THUẬT VIÊN
+              </Link>
+              <Link
+                to="/wallet"
+                className="text-lg border-b border-white animate-goldShine transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-right font-medium"
+              >
+                LIÊN HỆ
+              </Link>
+              <div className="py-5 block lg:hidden" onClick={toggleOverlay}>
+                <Booking />
+              </div>
+            </div>
+          )}
         </button>
       </div>
     </div>

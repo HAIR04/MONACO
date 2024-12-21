@@ -20,7 +20,7 @@ const Footer = () => {
                 src="https://s.pro.vn/mSxg"
                 className="2xl:w-[20%] md:w-[7%] xl:w-[15%] rounded-full w-[20%]"
               />
-              <h1 className="text-white text-xl font-semibold xl:font-semibold tracking-wider">
+              <h1 className="text-white text-2xl font-semibold xl:font-semibold tracking-wider">
                 MONACO - MASSAGE QUÝ ÔNG
               </h1>
             </a>
