@@ -52,13 +52,13 @@ const Review_PR = () => {
 
   return (
     <>
-      <span className="text-2xl text-white font-semibold flex justify-center py-10">
-        _________ĐÁNH GIÁ CỦA CÁC QUÝ ÔNG_________
+      <span className="md:text-2xl text-sm text-white font-semibold flex justify-center py-10">
+        ______ĐÁNH GIÁ CỦA CÁC QUÝ ÔNG______
       </span>
       {reviews.map((item, index) => (
         <div
           key={item.id}
-          className={`border-b border-gray-500 p-5 transition-colors duration-300 ease-in-out ${
+          className={`border-b text-sm md:text-lg border-gray-500 p-5 transition-colors duration-300 ease-in-out ${
             index % 2 === 0 ? "bg-zinc-800" : "bg-zinc-900"
           } hover:bg-opacity-70`}
         >
@@ -68,7 +68,7 @@ const Review_PR = () => {
               <FontAwesomeIcon
                 key={starIndex}
                 icon={faStar}
-                className={`text-white ml-1 text-xl ${
+                className={`text-white ml-1 md:text-xl text-sm  ${
                   starIndex < item.vote ? "text-yellow-500" : "text-gray-300 opacity-50"
                 }`}
               />

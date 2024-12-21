@@ -16,20 +16,20 @@ const Wallet = () => {
       {/* Banner */}
       <div className="py-5 relative">
         <img
-          className="h-[200px] w-full opacity-15 object-cover"
+          className="md:h-[200px] h-[100px] w-full opacity-15 object-cover"
           src="/assets/GioiThieu/Be1.jpg"
         />
-        <p className="text-2xl text-yellow-600 font-semibold absolute inset-0 flex items-center justify-center">
+        <p className="md:text-2xl text-lg text-yellow-600 font-semibold absolute inset-0 flex items-center justify-center">
           LIÊN HỆ / CONTACT
         </p>
       </div>
 
       {/* Nội dung chính */}
-      <div className="w-[90%] mx-auto">
+      <div className="w-[95%] md:w-[90%] mx-auto">
         {/* Bản đồ */}
         <iframe
           src="https://s.net.vn/XRVt"
-          className="w-full h-[400px]"
+          className="w-full md:h-[400px] h-[150px]"
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
@@ -38,52 +38,65 @@ const Wallet = () => {
         {/* Thông tin MONACO */}
         <div className="flex flex-wrap py-10">
           <div className="w-full md:w-1/2">
-            <p className="text-white text-3xl font-semibold text-left pb-5">
+            <p className="text-white md:text-3xl text-xl text-center font-semibold md:text-left pb-5">
               MONACO - MASSAGE QUÝ ÔNG
             </p>
-            <hr className="w-[55%]" />
-            <p className="text-white w-[70%] text-xl  flex py-5 italic font-medium">
+            <hr className="md:w-[55%] w-full" />
+            <p className="text-white md:w-[70%] w-full md:text-xl text-sm  flex py-5 italic font-medium">
               <FontAwesomeIcon
                 icon={faMapMarkerAlt}
                 className="mr-2 text-white"
               />
               Địa chỉ: Số 28 – 30 Lê Đức Thọ, Mỹ Đình, Nam Từ Liêm, Hà Nội
             </p>
-            <p className="text-white text-xl  flex items-center italic pb-5 font-medium">
+            <p className="text-white md:text-xl text-sm  flex items-center italic pb-5 font-medium">
               <FontAwesomeIcon icon={faPhone} className="mr-2 text-white" />
               Liên hệ: 098.656.2839
             </p>
-            <hr className="w-[40%]" />
-            <p className="text-white py-10 text-3xl font-semibold text-left">
-          KÊNH LIÊN HỆ
-        </p>
-        <div className="grid grid-cols-2 gap-6 w-[80%]  ">
-          <div className="transform transition-all  duration-300 hover:scale-105">
-            <FB />
-          </div>
-          <div className="transform transition-all duration-300 hover:scale-105">
-            <Za_lo />
-          </div>
-          <div className="transform transition-all duration-300 hover:scale-105 ">
-            <Telegram />
-          </div>
-          <div className="transform transition-all duration-300 hover:scale-105">
-            <PhoneNumber />
-          </div>
-        
-         
-        </div>
+            <hr className="md:w-[40%] w-full" />
+            <p className="text-white hidden md:block py-10 text-3xl font-semibold text-left">
+              KÊNH LIÊN HỆ
+            </p>
+            <div className="md:grid grid-cols-2 hidden gap-6 w-[80%]">
+              <div className="transform transition-all duration-300 hover:scale-105">
+                <FB />
+              </div>
+              <div className="transform transition-all duration-300 hover:scale-105">
+                <Za_lo />
+              </div>
+              <div className="transform transition-all duration-300 hover:scale-105">
+                <Telegram />
+              </div>
+              <div className="transform transition-all duration-300 hover:scale-105">
+                <PhoneNumber />
+              </div>
+            </div>
           </div>
 
-          {/* Form đặt lịch */}
-          <div className="w-full md:w-1/2 border-2 border-yellow-600 rounded-xl px-5 flex items-center justify-center">
+          {/* Form đặt lịch sẽ hiển thị trước ở màn hình nhỏ, và sau kênh liên hệ trên màn hình lớn */}
+          <div className="w-full md:w-1/2 md:border-2 md:border-yellow-600 rounded-xl md:px-5 flex items-center justify-center">
             <ContactForm />
           </div>
+          <p className="text-white w-full md:hidden py-5 text-xl text-center font-semibold ">
+              KÊNH LIÊN HỆ
+            </p>
+            <div className="grid grid-cols md:hidden items-center gap-5 w-[90%] mx-auto">
+              <div className="transform transition-all duration-300 hover:scale-105">
+                <FB />
+              </div>
+              <div className="transform transition-all duration-300 hover:scale-105">
+                <Za_lo />
+              </div>
+              <div className="transform transition-all duration-300 hover:scale-105">
+                <Telegram />
+              </div>
+              <div className="transform transition-all duration-300 hover:scale-105">
+                <PhoneNumber />
+              </div>
+            </div>
         </div>
 
         {/* Kênh Liên hệ */}
-        
-        
       </div>
     </div>
   );

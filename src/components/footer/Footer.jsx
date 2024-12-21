@@ -17,8 +17,8 @@ const Footer = () => {
           <div className="flex flex-col gap-5 2xl:w-[30%] xl:w-[35%]">
             <a href="#" className="flex items-center gap-3 2xl:w-full xl:w-full">
               <img
-                src="https://s.pro.vn/mSxg"
-                className="2xl:w-[20%] md:w-[7%] xl:w-[15%] rounded-full w-[20%]"
+                src="/assets/Logo/logo.png"
+                className="2xl:w-[25%] md:w-[25%] xl:w-[25%] rounded-full w-[25%]"
               />
               <h1 className="text-white text-2xl font-semibold xl:font-semibold tracking-wider">
                 MONACO - MASSAGE QUÝ ÔNG
@@ -31,10 +31,10 @@ const Footer = () => {
               Địa chỉ : Số 28 – 30 Lê Đức Thọ, Mỹ Đình, Nam Từ Liêm, Hà Nội
             </p>
             <div>
-              <p className="text-white opacity-80 mb-5 font-normal text-sm md:text-base tracking-wide">
+              <p className="text-white   mb-5 font-normal text-left text-sm md:text-base tracking-wide">
                 Các phương tiện truyền thông
               </p>
-              <ul className="flex text-white gap-5 opacity-30 text-2xl xl:text-3xl leading-loose">
+              <ul className="flex text-white  gap-5 justify-start  opacity-30 text-3xl xl:text-3xl leading-loose">
                 <li>
                   <a href="https://s.net.vn/5eJU">
                     <FontAwesomeIcon icon={faFacebook} />
@@ -59,7 +59,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="w-full xl:w-[30%] flex flex-col gap-3 ml-10 xl:gap-5 tracking-wide">
+          <div className="w-full xl:w-[30%] flex flex-col gap-3 md:ml-10 xl:gap-5 tracking-wide">
             <h1 className="text-white text-xl font-extrabold tracking-wider">LIÊN HỆ</h1>
             <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide">
               Hotline : +84964445201
@@ -89,8 +89,8 @@ const Footer = () => {
       </div>
       <div className="w-[80%] 2xl:w-[80%] xl:w-[80%] mx-auto pb-5">
         <hr className="opacity-70" />
-        <p className="text-white opacity-70 text-xs font-light tracking-wider mt-5">
-          © Bản quyền thuộc về MONACO - Massage Quý Ông
+        <p className="text-white text-center md:text-left opacity-70 text-xs font-light tracking-wider mt-5">
+          © Bản quyền thuộc về Massage Quý Ông
         </p>
       </div>
     </div>

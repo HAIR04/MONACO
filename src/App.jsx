@@ -7,7 +7,7 @@ import CallNowButton from "./components/CallMe/Call";
 
 const App = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-black overflow-hidden">
       <ScrollToTop />  {/* Đặt ScrollToTop ở đây */}
       <Header />
       <CallNowButton/>

@@ -29,16 +29,16 @@ const Header = () => {
     <div className="mx-auto justify-between flex items-center overflow-hidden lg:flex-col bg-black border-opacity-15 w-[95%] md:w-[90%] 2xl:w-[100%] xl:w-[100%] px-3">
       <ContactInfo />
 
-      <div className="w-[100%] mx-auto flex justify-between items-center">
+      <div className="md:w-[100%] mx-auto flex justify-between items-center">
         <div className="w-[25%]">
           <Link
             to="/"
-            className="flex items-start justify-center xl:ml-10 2xl:ml-16 2xl:w-[70%] 2xl:gap-3 xl:w-[100%] xl:gap-3"
+            className="flex items-start justify-center mmd:ml-10 2xl:ml-16 2xl:w-[70%] 2xl:gap-3 xl:w-[100%] xl:gap-3"
           >
             <img
               src="/assets/Logo/logo.png"
               alt="Logo"
-              className="w-full"
+              className="w-full hidden md:block"
             />
           </Link>
         </div>
@@ -93,7 +93,12 @@ const Header = () => {
         )}
       </div>
 
-      <div>
+      <div className="flex justify-between ">
+      <img
+              src="/assets/Logo/logo.png"
+              alt="Logo"
+              className="w-[30%]  block md:hidden"
+            />
         <button
           onClick={() => setOpen(!open)}
           className="xl:hidden text-2xl text-white  "

@@ -6,7 +6,7 @@ const Telegram = () => {
   return (
     <a
     href="https://t.me/+84912302830"
-    className="flex items-center justify-center gap-2 bg-white text-blue-400 py-2 lg:py-4 rounded-2xl transition-all duration-400 transform hover:scale-105 hover:text-white"
+    className="flex items-center justify-center gap-2 bg-white text-blue-400 py-2 lg:py-4 rounded-2xl transition-all duration-400 transform hover:scale-105 "
   >
     <FontAwesomeIcon  icon={faTelegramPlane} className="text-3xl text-blue-400" />
     <span className="font-semibold">MASSAGE QUÝ ÔNG</span>
