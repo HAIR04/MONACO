@@ -16,7 +16,7 @@ const Wallet = () => {
       {/* Banner */}
       <div className="py-5 relative">
         <img
-          className="md:h-[200px] h-[100px] w-full opacity-15 object-cover"
+          className="md:h-[200px] h-[150px] w-full opacity-15 object-cover"
           src="/assets/GioiThieu/Be1.jpg"
         />
         <p className="md:text-2xl text-lg text-yellow-600 font-semibold absolute inset-0 flex items-center justify-center">

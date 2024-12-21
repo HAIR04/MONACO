@@ -18,7 +18,7 @@ const Rankings = () => {
       <div className="py-5">
         <div className="py-5 relative">
           <img
-            className="md:h-[200px] h-[100px] w-full opacity-15 object-cover"
+            className="md:h-[200px] h-[150px] w-full opacity-15 object-cover"
             src="/assets/GioiThieu/Be2.jpg"
             alt="Background"
           />
@@ -37,7 +37,7 @@ const Rankings = () => {
                 <img
                   src={item.url}
                   alt={item.name}
-                  className="md:w-full object-cover md:h-[500px] w-full h-[200px]"
+                  className="md:w-full object-cover md:h-[500px] w-full h-[250px]"
                 />
                 <div className="relative overflow-hidden">
                   <p className="md:text-2xl text-md pt-4 animate-goldShine text-center font-bold">
