@@ -26,10 +26,10 @@ const Header = () => {
   };
 
   return (
-    <div className="mx-auto justify-between flex items-center overflow-hidden lg:flex-col bg-black border-opacity-15 w-[95%] md:w-[90%] 2xl:w-[100%] xl:w-[93%]">
+    <div className="mx-auto justify-between flex items-center overflow-hidden lg:flex-col bg-black border-opacity-15 w-[95%] md:w-[90%] 2xl:w-[100%] xl:w-[100%] px-3">
       <ContactInfo />
 
-      <div className="w-[90%] mx-auto flex justify-between items-center">
+      <div className="w-[100%] mx-auto flex justify-between items-center">
         <div className="w-[15%]">
           <Link
             to="/"
@@ -44,7 +44,7 @@ const Header = () => {
         </div>
 
         <div className="w-[70%] animate-goldShine">
-          <ul className="2xl:w-[100%] hidden justify-around items-center xl:flex text-white text-xl 2xl:text-3xl font-semibold xl:w-[100%]">
+          <ul className="2xl:w-[100%] hidden justify-around items-center xl:flex text-white text-xl xl:text-3xl font-semibold xl:w-[100%]">
             <li>
               <Link
                 to="/"
