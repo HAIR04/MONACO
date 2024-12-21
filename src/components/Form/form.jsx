@@ -173,14 +173,17 @@ const ContactForm = () => {
             <option value="" disabled>
               Chọn gói dịch vụ
             </option>
-            <option value="Massage 60 phút + Hồ bơi">
-              Massage 60 phút + Hồ bơi
+            <option value="QUÝ ÔNG ĐẲNG CẤP - 2.000.000vnđ">
+              QUÝ ÔNG ĐẲNG CẤP - 2.000.000vnđ
             </option>
-            <option value="Massage 90 phút + Hồ bơi">
-              Massage 90 phút + Hồ bơi
+            <option value="QUÝ ÔNG HOÀN HẢO - 1.500.000vnđ">
+              QUÝ ÔNG HOÀN HẢO - 1.500.000vnđ
             </option>
-            <option value="Massage 120 phút + Hồ bơi">
-              Massage 120 phút + Hồ bơi
+            <option value="QUÝ ÔNG HỘI TỤ - 2.300.000vnđ">
+              QUÝ ÔNG HỘI TỤ - 2.300.000vnđ
+            </option>
+            <option value="QUÝ ÔNG QUYỀN LỰC - 3.000.000vnđ">
+              QUÝ ÔNG QUYỀN LỰC - 3.000.000vnđ
             </option>
           </select>
           <input

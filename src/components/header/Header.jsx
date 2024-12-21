@@ -93,15 +93,17 @@ const Header = () => {
         )}
       </div>
 
-      <div className="flex justify-between ">
+      <div className="flex ">
+      <div className="flex w-full justify-center">
       <img
               src="/assets/Logo/logo.png"
               alt="Logo"
-              className="w-[30%]  block md:hidden"
+              className="w-[40%]  ml-10 md:hidden"
             />
+      </div>
         <button
           onClick={() => setOpen(!open)}
-          className="xl:hidden text-2xl text-white  "
+          className="xl:hidden text-2xl w-[10%] text-right  text-white  "
         >
           <FontAwesomeIcon icon={faBarsStaggered} className="text-yellow-700" />
           {open && (

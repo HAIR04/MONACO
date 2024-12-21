@@ -102,11 +102,11 @@ const Girl_Detail = () => {
                
                 <div className="flex flex-col gap-5">
                   <p className="text-sm text-left">
-                    <span className="text-sm font-semibold">Mô tả ngắn</span>:{" "}
+                    <span className="text-sm font-semibold">MÔ TẢ NGẮN</span>:{" "}
                     {member.desc}
                   </p>
                   <p className="text-sm text-left">
-                    <span className="text-sm font-semibold">Kinh nghiệm</span>:{" "}
+                    <span className="text-sm font-semibold">KINH NGHIỆM</span>:{" "}
                     {member.ex}
                   </p>
                   <p>
@@ -155,7 +155,7 @@ const Girl_Detail = () => {
           </div>
         </div>
 
-        <div className="w-[100%] text-white py-10">
+        <div className="w-[100%] text-white ">
           <span className="md:text-2xl text-base font-semibold py-5 flex justify-center">
             _________MÔ TẢ CHI TIẾT_________
           </span>

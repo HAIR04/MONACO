@@ -34,8 +34,8 @@ const TrendingCollection = () => {
         <div className="md:text-4xl text-xl w-full uppercase font-semibold leading-loose text-center animate-blink absolute md:left-1/2 transform md:-translate-x-1/2">
           {/* Hiển thị cho màn hình nhỏ (dưới md) */}
           <span className="block md:hidden w-[100%] text-center">
-            Welcome <br />
-            <div className="w-[100%]"> Massage Quý Ông</div>
+            Welcome 
+            Massage Quý Ông
           </span>
 
           {/* Hiển thị cho màn hình từ md trở lên */}
