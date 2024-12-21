@@ -56,7 +56,7 @@ const ContactForm = () => {
 
     emailjs
       .sendForm(
-        "service_uu24hel",
+        "service_pambzho",
         "template_t8vll2k",
         e.target,
         "6nooVVJZEQE93be_W"
@@ -99,7 +99,7 @@ const ContactForm = () => {
     timeOptions.push(`${hour.toString().padStart(2, "0")}:00`);
     timeOptions.push(`${hour.toString().padStart(2, "0")}:30`);
   }
-  
+
   // Thêm thời gian từ 00:00 đến 03:00 sáng hôm sau (không có 03:30)
   for (let hour = 0; hour <= 3; hour++) {
     timeOptions.push(`${hour.toString().padStart(2, "0")}:00`);
@@ -110,112 +110,111 @@ const ContactForm = () => {
 
   return (
     <div className="w-[100%] mx-auto py-5 px-3 rounded-lg shadow-lg">
-  <h2 className="md:text-2xl text-xl font-semibold text-center text-white mb-6">
-    GỬI YÊU CẦU ĐẶT LỊCH
-  </h2>
-  <form onSubmit={handleSubmit}>
-    <div className="grid grid-cols-2 gap-4 mb-4">
-      <input
-        type="text"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        required
-        placeholder="Tên / Bí danh"
-        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      />
-      <input
-        type="number"
-        name="phone"
-        value={formData.phone}
-        onChange={handleChange}
-        required
-        placeholder="Số Điện Thoại"
-        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      />
+      <h2 className="md:text-2xl text-xl font-semibold text-center text-white mb-6">
+        GỬI YÊU CẦU ĐẶT LỊCH
+      </h2>
+      <form onSubmit={handleSubmit}>
+        <div className="grid grid-cols-2 gap-4 mb-4">
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            placeholder="Tên / Bí danh"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+          <input
+            type="number"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+            placeholder="Số Điện Thoại"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+        </div>
+
+        <div className="grid grid-cols-2 gap-4 mb-4">
+          <input
+            type="date"
+            name="date"
+            value={formData.date}
+            onChange={handleChange}
+            required
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+          <select
+            name="time"
+            value={formData.time}
+            onChange={handleChange}
+            required
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          >
+            <option value="" disabled>
+              Chọn khung giờ
+            </option>
+            {timeOptions.map((time) => (
+              <option key={time} value={time}>
+                {time}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="grid grid-cols-2 gap-4 mb-4">
+          <select
+            name="package"
+            value={formData.package}
+            onChange={handleChange}
+            required
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          >
+            <option value="" disabled>
+              Chọn gói dịch vụ
+            </option>
+            <option value="Massage 60 phút + Hồ bơi">
+              Massage 60 phút + Hồ bơi
+            </option>
+            <option value="Massage 90 phút + Hồ bơi">
+              Massage 90 phút + Hồ bơi
+            </option>
+            <option value="Massage 120 phút + Hồ bơi">
+              Massage 120 phút + Hồ bơi
+            </option>
+          </select>
+          <input
+            type="number"
+            name="numberOfPeople"
+            value={formData.numberOfPeople}
+            onChange={handleChange}
+            required
+            placeholder="Số người"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+        </div>
+
+        <textarea
+          name="additionalRequest"
+          value={formData.additionalRequest}
+          onChange={handleChange}
+          placeholder="Yêu Cầu Khác (chọn kỹ thuật viên, dịch vụ phụ...)"
+          className="w-full italic p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        />
+
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className={`w-full py-3 text-white font-semibold rounded-xl focus:outline-none focus:ring-2 transition-all duration-500 transform ${
+            isSubmitting
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-red-600 hover:bg-opacity-90 hover:scale-105"
+          }`}
+        >
+          {isSubmitting ? "Đặt Lịch Ngay" : "Đặt Lịch Ngay"}
+        </button>
+      </form>
     </div>
-
-    <div className="grid grid-cols-2 gap-4 mb-4">
-      <input
-        type="date"
-        name="date"
-        value={formData.date}
-        onChange={handleChange}
-        required
-        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      />
-      <select
-        name="time"
-        value={formData.time}
-        onChange={handleChange}
-        required
-        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      >
-        <option value="" disabled>
-          Chọn khung giờ
-        </option>
-        {timeOptions.map((time) => (
-          <option key={time} value={time}>
-            {time}
-          </option>
-        ))}
-      </select>
-    </div>
-
-    <div className="grid grid-cols-2 gap-4 mb-4">
-      <select
-        name="package"
-        value={formData.package}
-        onChange={handleChange}
-        required
-        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      >
-        <option value="" disabled>
-          Chọn gói dịch vụ
-        </option>
-        <option value="Massage 60 phút + Hồ bơi">
-          Massage 60 phút + Hồ bơi
-        </option>
-        <option value="Massage 90 phút + Hồ bơi">
-          Massage 90 phút + Hồ bơi
-        </option>
-        <option value="Massage 120 phút + Hồ bơi">
-          Massage 120 phút + Hồ bơi
-        </option>
-      </select>
-      <input
-        type="number"
-        name="numberOfPeople"
-        value={formData.numberOfPeople}
-        onChange={handleChange}
-        required
-        placeholder="Số người"
-        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-      />
-    </div>
-
-    <textarea
-      name="additionalRequest"
-      value={formData.additionalRequest}
-      onChange={handleChange}
-      placeholder="Yêu Cầu Khác (chọn kỹ thuật viên, dịch vụ phụ...)"
-      className="w-full italic p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-    />
-
-    <button
-      type="submit"
-      disabled={isSubmitting}
-      className={`w-full py-3 text-white font-semibold rounded-xl focus:outline-none focus:ring-2 transition-all duration-500 transform ${
-        isSubmitting
-          ? "bg-gray-400 cursor-not-allowed"
-          : "bg-red-600 hover:bg-opacity-90 hover:scale-105"
-      }`}
-    >
-      {isSubmitting ? "Đặt Lịch Ngay" : "Đặt Lịch Ngay"}
-    </button>
-  </form>
-</div>
-
   );
 };
 
