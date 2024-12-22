@@ -4,7 +4,7 @@ const JoinDigest = () => {
   const [showFullText, setShowFullText] = useState(false);
 
   return (
-    <div className="w-[80%] mx-auto text-center text-white py-10 md:py-20">
+    <div className="md:w-[80%] w-[90%] mx-auto text-center text-white py-10 md:py-20">
       <span className="text-xl md:text-4xl font-semibold leading-loose">
         THÔNG TIN VỀ CHÚNG TÔI
       </span>

@@ -18,9 +18,9 @@ const Footer = () => {
             <a href="#" className="flex items-center gap-3 2xl:w-full xl:w-full">
               <img
                 src="/assets/Logo/logo.png"
-                className="2xl:w-[25%] md:w-[25%] xl:w-[25%] rounded-full w-[25%]"
+                className="2xl:w-[25%] md:w-[25%] xl:w-[25%] rounded-full w-[30%]"
               />
-              <h1 className="text-white text-2xl font-semibold xl:font-semibold tracking-wider">
+              <h1 className="text-white text-xl text-center md:text-left md:text-2xl font-semibold xl:font-semibold tracking-wider">
                 MONACO - MASSAGE QUÝ ÔNG
               </h1>
             </a>

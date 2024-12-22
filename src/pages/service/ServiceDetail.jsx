@@ -97,7 +97,7 @@ const DetailSercive = () => {
               />
             </div>
             <div className="flex items-center gap-3">
-              <div className="flex gap-5 w-full">
+              <div className="flex gap-2 w-full">
                 {product.sub_images
                   .slice(
                     visibleStartIndex,
@@ -147,8 +147,8 @@ const DetailSercive = () => {
                 {product.price_sale} VNĐ
               </p>
             </div>
-            <p className="text-xs text-white text-center justify-center flex items-en md:justify-between gap-1 md:gap-0 w-[95%] mx-auto pb-4">
-              <span className="md:text-lg text-xs italic font-semibold text-white">
+            <p className="text-xs text-white text-center justify-center flex  md:justify-between gap-1 md:gap-0 w-[95%] mx-auto pb-4">
+              <span className="md:text-lg text-xs flex  italic font-semibold text-white">
                 ĐÁNH GIÁ :{" "}
               </span>
               {[...Array(5)].map((_, index) => (
@@ -209,7 +209,7 @@ const DetailSercive = () => {
           onClick={() => setSelectedImageIndex(null)}
           className="fixed w-full h-full top-0 left-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
         >
-          <div className="w-[80%] sm:w-[60%] h-[80%]  p-5 flex justify-center items-center relative">
+          <div className="md:w-[80%] w-[95%]  sm:w-[60%] h-[80%]  p-5 flex justify-center items-center relative">
             <img
               src={product.sub_images[selectedImageIndex].url}
               alt={`Phóng to ${product.name} - Ảnh phụ ${
@@ -222,7 +222,7 @@ const DetailSercive = () => {
                 e.stopPropagation();
                 goToPreviousImage();
               }}
-              className="absolute bg-gray-500 hover:opacity-70 text-white px-5 py-3 font-semibold rounded-full shadow-md top-1/2 left-5 transform -translate-y-1/2 transition-all duration-300 ease-in-out"
+              className="absolute bg-gray-500 hover:opacity-70 text-white px-5 py-3 font-semibold rounded-full shadow-md top-1/2 md:left-72 left-0 transform -translate-y-1/2 transition-all duration-300 ease-in-out"
             >
               &lt;
             </button>
@@ -231,7 +231,7 @@ const DetailSercive = () => {
                 e.stopPropagation();
                 goToNextImage();
               }}
-              className="absolute bg-gray-500 hover:opacity-70 text-white px-5 py-3 font-semibold rounded-full shadow-md top-1/2 right-5 transform -translate-y-1/2 transition-all duration-300 ease-in-out"
+              className="absolute bg-gray-500 hover:opacity-70 text-white px-5 py-3 font-semibold rounded-full shadow-md top-1/2 md:right-72 right-0 transform -translate-y-1/2 transition-all duration-300 ease-in-out"
             >
               &gt;
             </button>

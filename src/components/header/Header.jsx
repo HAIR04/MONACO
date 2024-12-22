@@ -94,60 +94,62 @@ const Header = () => {
       </div>
 
       <div className="flex ">
-      <div className="flex w-full justify-center">
-      <img
-              src="/assets/Logo/logo.png"
-              alt="Logo"
-              className="w-[40%]  ml-10 md:hidden"
-            />
-      </div>
-        <button
+      <button
           onClick={() => setOpen(!open)}
-          className="xl:hidden text-2xl w-[10%] text-right  text-white  "
+          className="xl:hidden text-2xl w-[4%] text-left  text-white  "
         >
-          <FontAwesomeIcon icon={faBarsStaggered} className="text-yellow-700" />
+          <FontAwesomeIcon icon={faBarsStaggered} className="animate-goldShine" />
           {open && (
-            <div className="fixed w-[60%] top-0 right-0 bottom-0 bg-black z-50 flex flex-col">
+            <div className="fixed w-[60%] top-0 left-0 bottom-0 bg-black z-50 flex flex-col">
               <div className="bg-body py-3 text-right flex items-center justify-between px-4">
+                
+                <span className="text-gray-300 font-semibold text-lg">
+                  MENU
+                </span>
                 <FontAwesomeIcon
                   icon={faTimes}
                   className="text-gray-300 text-xl cursor-pointer"
                   onClick={() => setOpen(false)} // Đóng menu khi nhấn
                 />
-                <span className="text-gray-300 font-semibold text-lg">
-                  MENU
-                </span>
               </div>
               <Link
                 to="/"
-                className="text-lg border-b text-red-600 border-white border-opacity-30 p-3 w-full text-right font-semibold"
+                className="text-lg border-b text-red-600 border-white border-opacity-30 p-3 w-full text-left font-semibold"
               >
                 TRANG CHỦ
               </Link>
               <Link
                 to="/service"
-                className="text-lg border-b border-white animate-goldShine transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-right font-medium"
+                className="text-lg border-b border-white animate-goldShine transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-left font-medium"
               >
                 DỊCH VỤ
               </Link>
               <Link
                 to="/rankings"
-                className="text-lg border-b border-white animate-goldShine transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-right font-medium"
+                className="text-lg border-b border-white animate-goldShine transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-left font-medium"
               >
                 KỸ THUẬT VIÊN
               </Link>
               <Link
                 to="/wallet"
-                className="text-lg border-b border-white animate-goldShine transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-right font-medium"
+                className="text-lg border-b border-white animate-goldShine transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-left font-medium"
               >
                 LIÊN HỆ
               </Link>
-              <div className="py-5 block lg:hidden" onClick={toggleOverlay}>
+              <div className="py-5 items-center justify-center flex  lg:hidden" onClick={toggleOverlay}>
                 <Booking />
               </div>
             </div>
           )}
         </button>
+        <div className="flex w-full justify-center">
+          <img
+            src="/assets/Logo/logo.png"
+            alt="Logo"
+            className="w-[40%] mr-5 md:hidden"
+          />
+        </div>
+       
       </div>
     </div>
   );

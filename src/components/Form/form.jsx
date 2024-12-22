@@ -149,7 +149,7 @@ const ContactForm = () => {
             value={formData.time}
             onChange={handleChange}
             required
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 border text-gray-700 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
             <option value="" disabled>
               Chọn khung giờ
