@@ -27,7 +27,7 @@ const Rankings = () => {
           </p>
         </div>
 
-        <div className="md:w-[80%] w-[95%] mx-auto grid grid-cols-2 sm:grid-cols-2 gap-2 md:grid-cols-4 md:gap-7">
+        <div className="lg:w-[80%] w-[95%] mx-auto grid grid-cols-2 sm:grid-cols-2 gap-2 lg:grid-cols-4 md:grid-cols-3 md:gap-7">
           {Member_Ship.slice(0, visibleImagesCount).map((item, index) => (
             <React.Fragment key={index}>
               <Link
@@ -37,7 +37,7 @@ const Rankings = () => {
                 <img
                   src={item.url}
                   alt={item.name}
-                  className="md:w-full object-cover md:h-[500px] w-full h-[250px]"
+                  className="md:w-full object-cover lg:h-[500px] md:h-[400px] w-full h-[250px]"
                 />
                 <div className="relative overflow-hidden">
                   <p className="md:text-2xl text-md pt-4 animate-goldShine text-center font-bold">

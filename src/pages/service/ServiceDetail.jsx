@@ -16,28 +16,37 @@ const DetailSercive = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 4, // Mặc định hiển thị 4 ảnh
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
     responsive: [
+   
       {
-        breakpoint: 768,
+        breakpoint: 1024, // Màn hình tablet nằm ngang
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 2, // Hiển thị 3 ảnh
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 768, // Màn hình tablet dọc
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2, // Hiển thị 2 ảnh
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480, // Màn hình điện thoại
+        settings: {
+          slidesToShow: 1, // Hiển thị 1 ảnh
           slidesToScroll: 1,
         },
       },
     ],
   };
+  
 
   const { id } = useParams();
   const product = Products_Service.find((item) => item.id === parseInt(id));
@@ -86,14 +95,14 @@ const DetailSercive = () => {
 
   return (
     <div className="py-5">
-      <div className="md:w-[80%] w-[95%] mx-auto sm:grid-cols-2 gap-7">
+      <div className="lg:w-[80%] w-[95%] mx-auto sm:grid-cols-2 gap-7">
         <div className="flex flex-col md:flex-row w-full items-start gap-5 group">
           <div className="w-full md:w-[65%] flex flex-col gap-5">
             <div className="overflow-hidden flex border-2 border-yellow-600">
               <img
                 src={product.url}
                 alt={product.name}
-                className="w-full object-cover md:h-[350px] h-[250px]"
+                className="w-full object-cover lg:h-[350px] h-[250px]"
               />
             </div>
             <div className="flex items-center gap-3">
@@ -118,7 +127,7 @@ const DetailSercive = () => {
                         <img
                           src={subImage.url}
                           alt={`${product.name} - Ảnh phụ ${actualIndex + 1}`}
-                          className="w-full border border-yellow-600 hover:cursor-pointer object-cover md:h-[150px] h-auto transition-transform transform hover:scale-110 duration-300 ease-in-out"
+                          className="w-full border border-yellow-600 hover:cursor-pointer object-cover lg:h-[150px] h-auto transition-transform transform hover:scale-110 duration-300 ease-in-out"
                         />
                       </div>
                     );
@@ -127,40 +136,43 @@ const DetailSercive = () => {
             </div>
           </div>
           <div className="w-full md:w-[40%] flex flex-col justify-center gap-3 items-center pb-5">
-            <p className="text-3xl text-yellow-600 text-center font-semibold">
+            <p className=" text-3xl md:text-xl lg:text-3xl text-yellow-600 text-center font-semibold">
               {product.name}
             </p>
-            <p className="md:text-lg text-sm text-white text-center font-semibold">
+            <p className="lg:text-lg text-sm text-white text-center font-semibold">
               Dịch vụ đi kèm : {product.service}
             </p>
-            <p className="md:text-lg text-sm text-white text-center font-semibold">
+            <p className="lg:text-lg text-sm text-white text-center font-semibold">
               Thời gian phục vụ : {product.time} ( phút )
             </p>
-            <p className="md:text-lg text-sm text-white text-center font-semibold">
+            <p className="lg:text-lg text-sm text-white text-center font-semibold">
               Không gian : {product.space}
             </p>
             <div className="flex gap-3 items-end">
-              <p className="md:text-3xl text-xl text-red-700 font-bold md:font-semibold">
+              <p className="lg:text-3xl text-xl text-red-700 font-bold lg:font-semibold">
                 {product.price} VNĐ
               </p>
-              <p className="md:text-lg text-md text-white line-through">
+              <p className="lg:text-lg text-lg md:text-sm text-white line-through">
                 {product.price_sale} VNĐ
               </p>
             </div>
-            <p className="text-xs text-white text-center justify-center flex  md:justify-between gap-1 md:gap-0 w-[95%] mx-auto pb-4">
-              <span className="md:text-lg text-xs flex  italic font-semibold text-white">
+            <p className="text-xs text-white text-center justify-center flex  lg:justify-between gap-1 lg:gap-0 w-[95%] mx-auto pb-4">
+              <span className="lg:text-lg text-xs flex  italic font-semibold text-white">
                 ĐÁNH GIÁ :{" "}
               </span>
               {[...Array(5)].map((_, index) => (
                 <FontAwesomeIcon
                   key={index}
                   icon={faStar}
-                  className="text-yellow-500 ml-1 md:text-2xl text-lg"
+                  className="text-yellow-500 ml-1 lg:text-2xl md:text-sm text-lg"
                 />
               ))}
               <p className="flex items-end">( {product.vote} VOTE )</p>
             </p>
-            <div className="w-[100%] flex md:block justify-center" onClick={toggleOverlay}>
+            <div
+              className="w-[100%] flex md:block justify-center"
+              onClick={toggleOverlay}
+            >
               <Booking />
             </div>
             {isOverlayVisible && (
@@ -174,7 +186,7 @@ const DetailSercive = () => {
           </div>
         </div>
 
-        <span className="md:text-2xl text-sm font-bold text-white flex justify-center pt-10">
+        <span className="lg:text-2xl md:text-lg text-sm font-bold text-white flex justify-center pt-10">
           _______THÔNG TIN CHI TIẾT_______
         </span>
 
@@ -215,14 +227,14 @@ const DetailSercive = () => {
               alt={`Phóng to ${product.name} - Ảnh phụ ${
                 selectedImageIndex + 1
               }`}
-              className="w-full  md:h-full h-[300px] object-contain"
+              className="w-full  lg:h-full h-[300px] md:h-[500px] object-contain"
             />
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 goToPreviousImage();
               }}
-              className="absolute bg-gray-500 hover:opacity-70 text-white px-5 py-3 font-semibold rounded-full shadow-md top-1/2 md:left-72 left-0 transform -translate-y-1/2 transition-all duration-300 ease-in-out"
+              className="absolute bg-gray-500 hover:opacity-70 text-white px-5 py-3 font-semibold rounded-full shadow-md top-1/2 lg:left-72 left-0 transform -translate-y-1/2 transition-all duration-300 ease-in-out"
             >
               &lt;
             </button>
@@ -231,7 +243,7 @@ const DetailSercive = () => {
                 e.stopPropagation();
                 goToNextImage();
               }}
-              className="absolute bg-gray-500 hover:opacity-70 text-white px-5 py-3 font-semibold rounded-full shadow-md top-1/2 md:right-72 right-0 transform -translate-y-1/2 transition-all duration-300 ease-in-out"
+              className="absolute bg-gray-500 hover:opacity-70 text-white px-5 py-3 font-semibold rounded-full shadow-md top-1/2 lg:right-72 right-0 transform -translate-y-1/2 transition-all duration-300 ease-in-out"
             >
               &gt;
             </button>

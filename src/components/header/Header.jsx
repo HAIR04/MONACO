@@ -26,14 +26,14 @@ const Header = () => {
   };
 
   return (
-    <div className="mx-auto justify-between flex items-center overflow-hidden lg:flex-col bg-black border-opacity-15 w-[95%] md:w-[90%] 2xl:w-[100%] xl:w-[100%] px-3">
+    <div className="mx-auto justify-between flex items-center overflow-hidden md:flex-col bg-black border-opacity-15 w-[95%] md:w-[100%] 2xl:w-[100%] xl:w-[100%] px-3">
       <ContactInfo />
 
-      <div className="md:w-[100%] mx-auto flex justify-between items-center">
-        <div className="w-[25%]">
+      <div className="md:w-[100%] xl:w-[90%] mx-auto flex justify-between items-center md:pr-12 lg:pr-0  xl:ml-10">
+        <div className="md:w-[20%] xl:w-[25%] w-[25%]">
           <Link
             to="/"
-            className="flex items-start justify-center mmd:ml-10 2xl:ml-16 2xl:w-[70%] 2xl:gap-3 xl:w-[100%] xl:gap-3"
+            className="flex items-start justify-center md:ml-10 2xl:ml-16 2xl:w-[70%] 2xl:gap-3 xl:w-[100%] xl:gap-3"
           >
             <img
               src="/assets/Logo/logo.png"
@@ -44,7 +44,7 @@ const Header = () => {
         </div>
 
         <div className="w-[70%] animate-goldShine">
-          <ul className="2xl:w-[100%] hidden justify-around items-center xl:flex text-white text-xl xl:text-3xl font-semibold xl:w-[100%]">
+          <ul className="2xl:w-[100%] hidden justify-around items-center md:flex text-white text-lg xl:text-3xl font-semibold xl:w-[100%]">
             <li>
               <Link
                 to="/"
@@ -80,7 +80,7 @@ const Header = () => {
           </ul>
         </div>
 
-        <div className=" w-[15%] hidden lg:block" onClick={toggleOverlay}>
+        <div className=" w-[15%] hidden md:block" onClick={toggleOverlay}>
           <Booking />
         </div>
         {isOverlayVisible && (
@@ -96,7 +96,7 @@ const Header = () => {
       <div className="flex ">
       <button
           onClick={() => setOpen(!open)}
-          className="xl:hidden text-2xl w-[4%] text-left  text-white  "
+          className="md:hidden text-2xl w-[4%] text-left  text-white  "
         >
           <FontAwesomeIcon icon={faBarsStaggered} className="animate-goldShine" />
           {open && (

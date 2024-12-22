@@ -18,28 +18,28 @@ const Banner = () => {
   };
 
   return (
-    <div className="w-[100%] md:w-[80%] mx-auto flex flex-col pb-6  xl:py-10 text-white gap-5 lg:w-[100%] overflow-hidden">
+    <div className="w-[100%] md:w-[100%] mx-auto flex flex-col pb-6  xl:py-10 text-white gap-5 lg:w-[100%] overflow-hidden">
       <div className="slider-container">
         <Slider {...settings}>
           <div>
             <img
               src="/assets/GioiThieu/Banner1.jpg"
               alt="Slide 1"
-              className="w-full h-[200px] lg:h-[600px] object-cover "
+              className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover "
             />
           </div>
           <div>
           <img
               src="/assets/GioiThieu/Banner2.jpg"
               alt="Slide 1"
-              className="w-full h-[200px] lg:h-[600px] object-cover"
+              className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover"
             />
           </div>
           <div>
           <img
               src="/assets/GioiThieu/Banner3.jpg"
               alt="Slide 1"
-              className="w-full h-[200px] lg:h-[600px] object-cover"
+              className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover"
             />
           </div>
         </Slider>

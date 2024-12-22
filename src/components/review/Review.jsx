@@ -52,7 +52,7 @@ const Review_PR = () => {
 
   return (
     <>
-      <span className="md:text-2xl text-sm text-white font-semibold flex justify-center py-10">
+      <span className="lg:text-2xl md:text-lg text-sm text-white font-semibold flex justify-center py-10">
         ______ĐÁNH GIÁ CỦA CÁC QUÝ ÔNG______
       </span>
       {reviews.map((item, index) => (

@@ -4,14 +4,14 @@ const JoinDigest = () => {
   const [showFullText, setShowFullText] = useState(false);
 
   return (
-    <div className="md:w-[80%] w-[90%] mx-auto text-center text-white py-10 md:py-20">
-      <span className="text-xl md:text-4xl font-semibold leading-loose">
+    <div className="lg:w-[80%] w-[90%] mx-auto text-center text-white py-10 md:py-20">
+      <span className="text-xl md:text-2xl lg::text-4xl font-semibold leading-loose">
         THÔNG TIN VỀ CHÚNG TÔI
       </span>
 
       {/* Đoạn mô tả */}
       <div>
-        <p className="text-left pt-5 text-sm md:text-xl">
+        <p className="text-left pt-5 text-base lg:text-xl">
           Quán Massage Monaco tự hào là một trong những điểm đến hàng đầu cho
           những ai tìm kiếm sự thư giãn và chăm sóc sức khỏe tại Hà Nội. Chúng tôi
           cam kết mang đến cho khách hàng những trải nghiệm tuyệt vời với dịch vụ
@@ -19,7 +19,7 @@ const JoinDigest = () => {
         </p>
 
         {/* Nội dung bổ sung - chỉ hiển thị khi `showFullText` hoặc `md` trở lên */}
-        {(showFullText || window.innerWidth >= 768) && (
+        {(showFullText || window.innerWidth >= 1024) && (
           <p className="text-left text-sm md:text-xl">
             Tại Monaco, đội ngũ kỹ thuật viên của chúng tôi được tuyển chọn kỹ càng,
             đều là những chuyên gia với tay nghề cao và kinh nghiệm lâu năm trong
@@ -31,7 +31,7 @@ const JoinDigest = () => {
         )}
 
         {/* Nút Xem thêm hoặc Thu gọn */}
-        {window.innerWidth < 768 && (
+        {window.innerWidth < 1024 && (
           <>
             {!showFullText ? (
               <button
@@ -80,7 +80,7 @@ const JoinDigest = () => {
 
       <div className="pt-5">
         <img
-          className="w-full mx-auto h-[200px] sm:h-[300px] md:h-[400px] object-cover transform hover:scale-105 transition-all duration-300 ease-in-out"
+          className="w-full mx-auto h-[200px] sm:h-[300px] lg::h-[400px] object-cover transform hover:scale-105 transition-all duration-300 ease-in-out"
           src="/assets/GioiThieu/Banner2.jpg"
           alt="Banner2"
         />

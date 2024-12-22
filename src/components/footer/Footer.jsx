@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div className="w-full bg-footer">
       <div className="mx-auto py-10 w-[90%] 2xl:w-[90%] xl:w-[90%]">
-        <div className="flex flex-col 2xl:flex-row xl:flex-row justify-between gap-8">
+        <div className="flex flex-col lg:flex-row justify-between gap-8">
           <div className="flex flex-col gap-5 2xl:w-[30%] xl:w-[35%]">
             <a href="#" className="flex items-center gap-3 2xl:w-full xl:w-full">
               <img

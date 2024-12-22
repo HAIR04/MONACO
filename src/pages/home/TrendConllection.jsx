@@ -28,10 +28,10 @@ const TrendingCollection = () => {
   }, []);
 
   return (
-    <div className="md:w-[90%] w-[100%] mx-auto bg-header">
+    <div className="lg:w-[90%] w-[100%] mx-auto bg-header">
       {/* Tiêu đề */}
       <div className="w-full mx-auto py-5 mb-10 flex items-center justify-between relative">
-        <div className="md:text-4xl text-xl w-full uppercase font-semibold leading-loose text-center animate-blink absolute md:left-1/2 transform md:-translate-x-1/2">
+        <div className="lg:text-4xl md:text-2xl text-xl w-full uppercase font-semibold leading-loose text-center animate-blink absolute md:left-1/2 transform md:-translate-x-1/2">
           {/* Hiển thị cho màn hình nhỏ (dưới md) */}
           <span className="block md:hidden w-[100%] text-center">
             Welcome 
@@ -46,14 +46,14 @@ const TrendingCollection = () => {
 
         <Link
           to="/rankings"
-          className="hidden md:block text-2xl p-5 rounded-full bg-red-600 uppercase font-semibold leading-loose text-right animate-shake ml-auto transition-all duration-700 hover:scale-110"
+          className="hidden md:block md:mr-14 lg:mr-0 text-sm p-3 lg:text-2xl lg:p-5 rounded-full bg-red-600 uppercase font-semibold leading-loose text-right animate-shake ml-auto transition-all duration-700 hover:scale-110"
         >
           Kỹ Thuật Viên
         </Link>
       </div>
 
       {/* Ảnh cố định */}
-      <div className="md:w-[90%] w-full mx-auto flex justify-center">
+      <div className="lg:w-[90%] w-full mx-auto flex justify-center">
         <div className="w-full flex flex-col gap-5 relative group">
           {/* Hình ảnh sản phẩm */}
           <img
@@ -63,8 +63,8 @@ const TrendingCollection = () => {
           />
 
           {/* Hiển thị đoạn text */}
-          <div className="text-white md:text-xl text-sm px-4 md:px-0">
-            {window.innerWidth >= 768 || isExpanded ? (
+          <div className="text-white md:text-base lg:text-xl text-sm px-4 lg:px-0">
+            {window.innerWidth >= 1024 || isExpanded ? (
               <p>
                 Hệ thống khách sạn EMERALD đạt tiêu chuẩn quốc tế trực thuộc sự
                 quản lý của Công ty TNHH Du Lịch Âu Việt. Khách sạn đầu tiên
@@ -89,7 +89,7 @@ const TrendingCollection = () => {
             )}
 
             {/* Nút Xem thêm / Thu gọn */}
-            {window.innerWidth < 768 && (
+            {window.innerWidth < 1024 && (
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
                 className="text-white italic text-center w-full underline mt-2"

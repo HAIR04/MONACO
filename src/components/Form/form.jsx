@@ -109,8 +109,8 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="w-[100%] mx-auto py-5 px-3 rounded-lg shadow-lg">
-      <h2 className="md:text-2xl text-xl font-semibold text-center text-white mb-6">
+    <div className="w-[100%] md:w-[80%] lg:w-[100%] mx-auto py-5 px-3 rounded-lg shadow-lg">
+      <h2 className="lg:text-2xl text-xl font-semibold text-center text-white mb-6">
         GỬI YÊU CẦU ĐẶT LỊCH
       </h2>
       <form onSubmit={handleSubmit}>
