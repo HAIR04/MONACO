@@ -13,7 +13,7 @@ const DefaultImage = () => {
         <img
           src="/assets/GioiThieu/ThongBao.jpg" // Thay bằng đường dẫn ảnh của bạn
           alt="Default"
-          className="w-[35%] h-auto object-cover cursor-pointer" // Thêm cursor pointer để người dùng biết có thể nhấn vào
+          className="md:w-[35%] w-[70%] h-auto object-cover cursor-pointer" // Thêm cursor pointer để người dùng biết có thể nhấn vào
           // Gọi hàm khi nhấn vào ảnh
         />
       </div>
