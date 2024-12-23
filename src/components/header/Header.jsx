@@ -43,8 +43,8 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="w-[70%] animate-goldShine">
-          <ul className="2xl:w-[100%] hidden justify-around items-center md:flex text-white text-lg xl:text-3xl font-semibold xl:w-[100%]">
+        <div className="w-[70%] ">
+          <ul className="2xl:w-[100%]  hidden justify-around items-center md:flex text-white text-lg xl:text-2xl 2xl:text-3xl font-semibold xl:w-[100%]">
             <li>
               <Link
                 to="/"
@@ -56,7 +56,7 @@ const Header = () => {
             <li>
               <Link
                 to="/service"
-                className="relative inline-block  animate-goldShine  transition-all duration-300 after:content-[''] after:block after:w-0 after:h-1 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full"
+                className="relative inline-block  bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text  transition-all duration-300 after:content-[''] after:block after:w-0 after:h-1 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full"
               >
                 DỊCH VỤ
               </Link>
@@ -64,7 +64,7 @@ const Header = () => {
             <li>
               <Link
                 to="/rankings"
-                className="relative inline-block  animate-goldShine  transition-all duration-300 after:content-[''] after:block after:w-0 after:h-1 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full"
+                className="relative inline-block  bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text  transition-all duration-300 after:content-[''] after:block after:w-0 after:h-1 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full"
               >
                 KỸ THUẬT VIÊN
               </Link>
@@ -72,7 +72,7 @@ const Header = () => {
             <li>
               <Link
                 to="/wallet"
-                className="relative inline-block  animate-goldShine  transition-all duration-300 after:content-[''] after:block after:w-0 after:h-1 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full"
+                className="relative inline-block  bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text  transition-all duration-300 after:content-[''] after:block after:w-0 after:h-1 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full"
               >
                 LIÊN HỆ
               </Link>
@@ -96,9 +96,9 @@ const Header = () => {
       <div className="flex ">
       <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-2xl w-[4%] text-left  text-white  "
+          className="md:hidden text-2xl w-[10%] text-left  text-white  "
         >
-          <FontAwesomeIcon icon={faBarsStaggered} className="animate-goldShine" />
+          <FontAwesomeIcon icon={faBarsStaggered} className="text-white " />
           {open && (
             <div className="fixed w-[60%] top-0 left-0 bottom-0 bg-black z-50 flex flex-col">
               <div className="bg-body py-3 text-right flex items-center justify-between px-4">
@@ -114,28 +114,29 @@ const Header = () => {
               </div>
               <Link
                 to="/"
-                className="text-lg border-b text-red-600 border-white border-opacity-30 p-3 w-full text-left font-semibold"
+                className="text-lg border-b  text-red-600 border-white border-opacity-30 p-3 w-full text-left font-semibold"
               >
                 TRANG CHỦ
               </Link>
               <Link
                 to="/service"
-                className="text-lg border-b border-white animate-goldShine transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-left font-medium"
+                className="text-lg border-b border-white bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text font-semibold transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-left "
               >
                 DỊCH VỤ
               </Link>
               <Link
                 to="/rankings"
-                className="text-lg border-b border-white animate-goldShine transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-left font-medium"
+                className="text-lg border-b border-white bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text font-semibold transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-left "
               >
                 KỸ THUẬT VIÊN
               </Link>
               <Link
                 to="/wallet"
-                className="text-lg border-b border-white animate-goldShine transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-left font-medium"
+                className="text-lg border-b border-white bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text font-semibold transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-left "
               >
                 LIÊN HỆ
               </Link>
+              
               <div className="py-5 items-center justify-center flex  lg:hidden" onClick={toggleOverlay}>
                 <Booking />
               </div>

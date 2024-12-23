@@ -22,12 +22,12 @@ const Rankings = () => {
             src="/assets/GioiThieu/Be2.jpg"
             alt="Background"
           />
-          <p className="md:text-2xl text-lg text-yellow-600 font-semibold text-center absolute inset-0 flex items-center justify-center">
+          <p className="md:text-2xl text-base tracking-widest text-white font-bold italic text-center absolute inset-0 flex items-center justify-center">
             KỸ THUẬT VIÊN / TECHNICIAN
           </p>
         </div>
 
-        <div className="lg:w-[80%] w-[95%] mx-auto grid grid-cols-2 sm:grid-cols-2 gap-2 lg:grid-cols-4 md:grid-cols-3 md:gap-7">
+        <div className="xl:w-[80%] w-[95%] mx-auto grid grid-cols-2 sm:grid-cols-2 gap-2 xl:grid-cols-4 md:grid-cols-3 md:gap-7">
           {Member_Ship.slice(0, visibleImagesCount).map((item, index) => (
             <React.Fragment key={index}>
               <Link

@@ -8,6 +8,7 @@ module.exports = {
         popular: "#A259FF",
         goldDark: "#A37D2B", // Vàng đậm
         goldLight: "#FFD700", // Vàng sáng
+         customRed: '#92171a',
       },
       borderRadius: {
         "2.5xl": "20px",

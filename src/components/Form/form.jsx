@@ -122,7 +122,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             placeholder="Tên / Bí danh"
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 text-gray-400 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
           <input
             type="number"
@@ -142,14 +142,14 @@ const ContactForm = () => {
             value={formData.date}
             onChange={handleChange}
             required
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 border text-gray-400 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
           <select
             name="time"
             value={formData.time}
             onChange={handleChange}
             required
-            className="w-full p-3 border text-gray-700 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 border text-gray-400 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
             <option value="" disabled>
               Chọn khung giờ
@@ -168,7 +168,7 @@ const ContactForm = () => {
             value={formData.package}
             onChange={handleChange}
             required
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full text-gray-400 p-3 border  border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
             <option value="" disabled>
               Chọn gói dịch vụ
@@ -193,7 +193,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             placeholder="Số người"
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 border text-gray-400 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
         </div>
 
@@ -202,7 +202,7 @@ const ContactForm = () => {
           value={formData.additionalRequest}
           onChange={handleChange}
           placeholder="Yêu Cầu Khác (chọn kỹ thuật viên, dịch vụ phụ...)"
-          className="w-full italic p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full italic text-gray-400 p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
         />
 
         <button

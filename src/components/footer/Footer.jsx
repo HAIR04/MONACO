@@ -1,9 +1,7 @@
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faYoutube,
-  
   faInstagram,
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
@@ -15,7 +13,10 @@ const Footer = () => {
       <div className="mx-auto py-10 w-[90%] 2xl:w-[90%] xl:w-[90%]">
         <div className="flex flex-col lg:flex-row justify-between gap-8">
           <div className="flex flex-col gap-5 2xl:w-[30%] xl:w-[35%]">
-            <a href="#" className="flex items-center gap-3 2xl:w-full xl:w-full">
+            <a
+              href="#"
+              className="flex items-center gap-3 2xl:w-full xl:w-full"
+            >
               <img
                 src="/assets/Logo/logo.png"
                 className="2xl:w-[25%] md:w-[25%] xl:w-[25%] rounded-full w-[30%]"
@@ -60,9 +61,11 @@ const Footer = () => {
           </div>
 
           <div className="w-full xl:w-[30%] flex flex-col gap-3 md:ml-10 xl:gap-5 tracking-wide">
-            <h1 className="text-white text-xl font-extrabold tracking-wider">LIÊN HỆ</h1>
+            <h1 className="text-white text-xl font-extrabold tracking-wider">
+              LIÊN HỆ
+            </h1>
             <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide">
-              Hotline : +84964445201
+              Hotline : +84912302830
             </p>
             <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide">
               Facebook : Massa Quý Ông
@@ -76,7 +79,9 @@ const Footer = () => {
           </div>
 
           <div className="w-full xl:w-[40%] mt-5 xl:mt-0 flex flex-col gap-5">
-            <h1 className="text-white text-xl font-extrabold tracking-wider">Vị trí trên Google Map</h1>
+            <h1 className="text-white text-xl font-extrabold tracking-wider">
+              Vị trí trên Google Map
+            </h1>
             <iframe
               src="https://s.net.vn/XRVt"
               className="h-[220px]"

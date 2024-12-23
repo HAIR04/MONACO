@@ -31,29 +31,28 @@ const TrendingCollection = () => {
     <div className="lg:w-[90%] w-[100%] mx-auto bg-header">
       {/* Tiêu đề */}
       <div className="w-full mx-auto py-5 mb-10 flex items-center justify-between relative">
-        <div className="lg:text-4xl md:text-2xl text-xl w-full uppercase font-semibold leading-loose text-center animate-blink absolute md:left-1/2 transform md:-translate-x-1/2">
+        <div className="xl:text-4xl md:text-2xl text-xl w-full uppercase font-semibold leading-loose text-center text-white absolute md:left-1/2 transform md:-translate-x-1/2">
           {/* Hiển thị cho màn hình nhỏ (dưới md) */}
-          <span className="block md:hidden w-[100%] text-center">
-            Welcome 
-            Massage Quý Ông
-          </span>
+          <h1 className="block md:hidden bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text italic w-[100%] text-center">
+            Welcome Massage Quý Ông
+          </h1>
 
           {/* Hiển thị cho màn hình từ md trở lên */}
-          <span className="hidden md:inline-block w-full">
+          <h1 className="hidden md:inline-block w-full bg-gradient-to-t from-yellow-800 font-bold to-yellow-300 text-transparent bg-clip-text italic tracking-widest">
             Welcome Massage Quý Ông
-          </span>
+          </h1>
         </div>
 
         <Link
           to="/rankings"
-          className="hidden md:block md:mr-14 lg:mr-0 text-sm p-3 lg:text-2xl lg:p-5 rounded-full bg-red-600 uppercase font-semibold leading-loose text-right animate-shake ml-auto transition-all duration-700 hover:scale-110"
+          className="hidden text-white md:block md:mr-14 lg:mr-0 text-sm p-3 xl:text-xl lg:p-5 rounded-full bg-customRed uppercase font-semibold leading-loose text-right animate-shake ml-auto transition-all duration-700 hover:scale-110"
         >
           Kỹ Thuật Viên
         </Link>
       </div>
 
       {/* Ảnh cố định */}
-      <div className="lg:w-[90%] w-full mx-auto flex justify-center">
+      <div className="lg:w-[100%] w-full mx-auto flex justify-center">
         <div className="w-full flex flex-col gap-5 relative group">
           {/* Hình ảnh sản phẩm */}
           <img

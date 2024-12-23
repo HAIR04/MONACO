@@ -29,9 +29,9 @@ const Girl_Detail = () => {
 
   return (
     <div className="py-5">
-      <div className="lg:w-[80%] md:w-[100%] w-[90%] mx-auto sm:grid-cols-2 gap-7">
+      <div className=" md:w-[100%] w-[90%] mx-auto sm:grid-cols-2 gap-7">
         <div className="flex w-full justify-center group flex-col md:flex-row">
-          <div className="md:w-[65%] w-full items-center flex-col gap-5">
+          <div className="md:w-[65%] lg:w-[75%] xl:w-[65%] w-full items-center flex-col gap-5">
           <p className="text-2xl md:hidden pb-5 animate-goldShine text-center font-semibold">
                   {member.name}
                 </p>
@@ -41,32 +41,26 @@ const Girl_Detail = () => {
                 alt={member.name}
                 className="md:w-[50%] w-full object-cover h-auto"
               />
-              <div className="md:flex hidden  flex-col justify-between w-[90%] p-5">
+              <div className="md:flex hidden   flex-col justify-between  w-[90%] p-5">
                 <p className="text-3xl animate-goldShine text-center py-5 font-semibold">
                   {member.name}
                 </p>
                 <div className="flex flex-col gap-5">
-                  <p className="text-lg text-white text-left">
+                  <p className="text-xl text-white text-left">
                     <span className="lg:text-xl md:text-lg font-semibold">Mô tả ngắn</span>:{" "}
                     {member.desc}
                   </p>
-                  <p className="text-lg text-white text-left">
-                    <span className="lg:text-xl md:text-lg font-semibold">Kinh nghiệm</span>:{" "}
-                    {member.ex}
-                  </p>
-                  <p>
+                 
+                  <p className="text-xl text-white text-left">
                     <span className="lg:text-xl md:text-lg font-semibold">NĂM SINH</span>:{" "}
                     {member.age}
                   </p>
-                  <p>
+                  <p className="text-xl text-white text-left">
                     <span className="lg:text-xl md:text-lg font-semibold">QUÊ QUÁN</span>:{" "}
                     {member.country}
                   </p>
-                  <p>
-                    <span className="lg:text-xl md:text-lg font-semibold">CÂN NẶNG</span>:{" "}
-                    {member.kg} (kg)
-                  </p>
-                  <p>
+                
+                  <p className="text-xl text-white text-left">
                     <span className="lg:text-xl md:text-lg font-semibold">SỐ ĐO BA VÒNG</span>
                     : {member.roud}
                   </p>
@@ -80,7 +74,7 @@ const Girl_Detail = () => {
                     <FontAwesomeIcon
                       key={index}
                       icon={faStar}
-                      className="text-red-700 ml-1 lg:text-3xl "
+                      className="text-red-700 ml-1 lg:text-2xl xl:text-3xl "
                     />
                   ))}
                   ( {member.vote} VOTE {""})
@@ -105,10 +99,7 @@ const Girl_Detail = () => {
                     <span className="text-sm font-semibold">MÔ TẢ NGẮN</span>:{" "}
                     {member.desc}
                   </p>
-                  <p className="text-sm text-left">
-                    <span className="text-sm font-semibold">KINH NGHIỆM</span>:{" "}
-                    {member.ex}
-                  </p>
+                
                   <p>
                     <span className="text-sm font-semibold">NĂM SINH</span>:{" "}
                     {member.age}
@@ -117,10 +108,7 @@ const Girl_Detail = () => {
                     <span className="text-sm font-semibold">QUÊ QUÁN</span>:{" "}
                     {member.country}
                   </p>
-                  <p>
-                    <span className="text-sm font-semibold">CÂN NẶNG</span>:{" "}
-                    {member.kg} (kg)
-                  </p>
+                
                   <p>
                     <span className="text-sm font-semibold">SỐ ĐO BA VÒNG</span>
                     : {member.roud}
@@ -160,7 +148,7 @@ const Girl_Detail = () => {
             _________MÔ TẢ CHI TIẾT_________
           </span>
           <div className="text-2xl text-center py-3"></div>
-          <div className="flex overflow-x-auto justify-center w-[100%] md:w-[80%] mx-auto scroll-smooth snap-x snap-mandatory gap-5 lg:w-full">
+          <div className="flex overflow-x-auto justify-center w-[100%] md:w-[80%] mx-auto scroll-smooth snap-x snap-mandatory gap-5 xl:w-full">
             {member.img_data.map((subImage, subIndex) => (
               <div
                 key={subIndex}
@@ -179,7 +167,7 @@ const Girl_Detail = () => {
               </div>
             ))}
           </div>
-          <div className="md:w-[80%] lg:w-[70%] w-full py-5 mx-auto md:text-lg text-sm">
+          <div className="md:w-[80%] xl:w-[70%] w-full py-5 mx-auto md:text-lg text-sm">
             <p>
               Em ấy là một chuyên viên massage với hơn 5 năm kinh nghiệm trong
               việc thực hiện các liệu trình massage thư giãn...
@@ -192,7 +180,9 @@ const Girl_Detail = () => {
             </p>
             
           </div>
-          <Review_PR />
+          <div className="md:w-[90%] mx-auto">
+          <Review_PR/>
+          </div>
         </div>
       </div>
     </div>

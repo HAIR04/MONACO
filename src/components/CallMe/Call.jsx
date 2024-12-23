@@ -18,14 +18,14 @@ const CallNowButton = () => {
 
   return (
     <div  onClick={toggleOverlay}>
-      <div
+      <h2
         className="fixed bottom-5 z-10 italic text-center right-5 flex items-center justify-center 
-                 bg-red-600 rounded-full text-black text-xl font-bold h-20 w-20 cursor-pointer 
+                 bg-red-600 rounded-full text-white text-xl font-bold h-20 w-20 cursor-pointer 
                  shadow-lg  animate-shake  hover:animate-shake"
                  onClick={toggleOverlay}
       >
         Đặt ngay !
-      </div>
+      </h2>
 
       {/* Hiển thị Subscribe_Responsive nếu isSubscribeVisible là true */}
       {isOverlayVisible && (

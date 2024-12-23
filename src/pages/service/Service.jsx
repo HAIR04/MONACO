@@ -17,7 +17,7 @@ const ServicePR = () => {
           className="md:h-[200px] h-[150px] w-full opacity-15 object-cover"
           src="/assets/GioiThieu/Be2.jpg"
         />
-        <p className="md:text-2xl text-lg text-yellow-600 font-semibold absolute inset-0 flex items-center justify-center">
+        <p className="md:text-2xl text-base tracking-widest text-white font-bold italic absolute inset-0 flex items-center justify-center">
           DỊCH VỤ / SERVICE
         </p>
       </div>
@@ -33,7 +33,7 @@ const ServicePR = () => {
                 borderStyle: "solid",
               }}
             >
-              <div className="overflow-hidden w-[100%] flex relative">
+              <div className="overflow-hidden w-[100%] flex ">
                 <img
                   src={item.url}
                   alt={item.name}
@@ -47,7 +47,7 @@ const ServicePR = () => {
                     className="absolute  top-0 right-0 lg:w-40 lg:h-40 w-20 h-20 opacity-90"
                   />
                 )}
-                <div className="absolute inset-0 bg-black bg-opacity-60 text-white text-lg font-semibold flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                <div className="absolute italic inset-0 bg-black bg-opacity-60 text-white text-lg font-semibold flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
                   Xem chi tiết
                 </div>
               </div>

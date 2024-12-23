@@ -19,7 +19,7 @@ const Wallet = () => {
           className="lg:h-[200px] h-[150px] w-full opacity-15 object-cover"
           src="/assets/GioiThieu/Be1.jpg"
         />
-        <p className="lg:text-2xl text-lg text-yellow-600 font-semibold absolute inset-0 flex items-center justify-center">
+        <p className="lg:text-2xl text-base tracking-widest text-white italic font-semibold absolute inset-0 flex items-center justify-center">
           LIÊN HỆ / CONTACT
         </p>
       </div>
@@ -51,7 +51,7 @@ const Wallet = () => {
             </p>
             <p className="text-white lg:text-xl text-sm  flex items-center italic pb-5 font-medium">
               <FontAwesomeIcon icon={faPhone} className="mr-2 text-white" />
-              Liên hệ: 098.656.2839
+              Liên hệ: 0912.30.28.30
             </p>
             <hr className="lg:w-[40%] w-full" />
             <p className="text-white hidden lg:block py-10 text-3xl font-semibold text-left">
@@ -78,22 +78,22 @@ const Wallet = () => {
             <ContactForm />
           </div>
           <p className="text-white w-full lg:hidden py-5 text-xl text-center font-semibold ">
-              KÊNH LIÊN HỆ
-            </p>
-            <div className="grid grid-cols md:grid-cols-2 lg:hidden items-center gap-5 w-[90%] mx-auto">
-              <div className="transform transition-all duration-300 hover:scale-105">
-                <FB />
-              </div>
-              <div className="transform transition-all duration-300 hover:scale-105">
-                <Za_lo />
-              </div>
-              <div className="transform transition-all duration-300 hover:scale-105">
-                <Telegram />
-              </div>
-              <div className="transform transition-all duration-300 hover:scale-105">
-                <PhoneNumber />
-              </div>
+            KÊNH LIÊN HỆ
+          </p>
+          <div className="grid grid-cols md:grid-cols-2 lg:hidden items-center gap-5 w-[90%] mx-auto">
+            <div className="transform transition-all duration-300 hover:scale-105">
+              <FB />
             </div>
+            <div className="transform transition-all duration-300 hover:scale-105">
+              <Za_lo />
+            </div>
+            <div className="transform transition-all duration-300 hover:scale-105">
+              <Telegram />
+            </div>
+            <div className="transform transition-all duration-300 hover:scale-105">
+              <PhoneNumber />
+            </div>
+          </div>
         </div>
 
         {/* Kênh Liên hệ */}
