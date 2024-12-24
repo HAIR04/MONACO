@@ -11,7 +11,7 @@ const ServicePR = () => {
   const visibleImagesCount = getVisibleImagesCount();
 
   return (
-    <div className="py-5">
+    <div className="py-5 mt-24 lg:mt-0">
       <div className="py-5 relative">
         <img
           className="md:h-[200px] h-[150px] w-full opacity-15 object-cover"
@@ -51,7 +51,7 @@ const ServicePR = () => {
                   Xem chi tiết
                 </div>
               </div>
-              <p className="lg:text-2xl text-xl text-center pt-5 font-bold bg-clip-text text-transparent bg-gold-gradient animation-goldShine">
+              <p className="lg:text-2xl text-xl text-center pt-5 font-bold bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text">
                 {item.name}
               </p>
               <p className="lg:text-lg text-sm text-white text-center py-2 font-semibold">

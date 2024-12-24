@@ -19,6 +19,9 @@ module.exports = {
       clipPath: {
         diagonal: "polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%)", // Vát chéo từ dưới lên
       },
+      screens: {
+        '3xl': '1800px', // Thêm breakpoint mới cho màn lớn hơn
+      },
       keyframes: {
         blink: {
           '0%': { color: '#EF4444' },  // Đỏ (red-600)

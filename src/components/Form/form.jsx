@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 
@@ -13,6 +13,23 @@ const ContactForm = () => {
     additionalRequest: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Lấy ngày hiện tại theo định dạng yyyy-mm-dd
+  const getCurrentDate = () => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  };
+
+  // Thiết lập ngày mặc định khi component được render
+  useEffect(() => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      date: getCurrentDate(),
+    }));
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -93,14 +110,10 @@ const ContactForm = () => {
 
   // Tạo danh sách thời gian từ 10h sáng hôm trước đến 3h sáng hôm sau
   const timeOptions = [];
-
-  // Thêm thời gian từ 10h sáng hôm trước đến 12h đêm
   for (let hour = 10; hour < 24; hour++) {
     timeOptions.push(`${hour.toString().padStart(2, "0")}:00`);
     timeOptions.push(`${hour.toString().padStart(2, "0")}:30`);
   }
-
-  // Thêm thời gian từ 00:00 đến 03:00 sáng hôm sau (không có 03:30)
   for (let hour = 0; hour <= 3; hour++) {
     timeOptions.push(`${hour.toString().padStart(2, "0")}:00`);
     if (hour !== 3) {
@@ -152,7 +165,7 @@ const ContactForm = () => {
             className="w-full p-3 border text-gray-400 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
             <option value="" disabled>
-              Chọn khung giờ
+              Chọn giờ
             </option>
             {timeOptions.map((time) => (
               <option key={time} value={time}>
@@ -171,7 +184,7 @@ const ContactForm = () => {
             className="w-full text-gray-400 p-3 border  border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
             <option value="" disabled>
-              Chọn gói dịch vụ
+              Chọn dịch vụ
             </option>
             <option value="QUÝ ÔNG ĐẲNG CẤP - 2.000.000vnđ">
               QUÝ ÔNG ĐẲNG CẤP - 2.000.000vnđ
@@ -214,7 +227,7 @@ const ContactForm = () => {
               : "bg-red-600 hover:bg-opacity-90 hover:scale-105"
           }`}
         >
-          {isSubmitting ? "Đặt Lịch Ngay" : "Đặt Lịch Ngay"}
+          {isSubmitting ? "Đang Gửi..." : "Đặt Lịch Ngay"}
         </button>
       </form>
     </div>

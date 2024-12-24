@@ -12,7 +12,7 @@ import Telegram from "../../components/subscribe/Tele";
 
 const Wallet = () => {
   return (
-    <div className="py-5">
+    <div className="py-5 mt-24 lg:mt-0">
       {/* Banner */}
       <div className="py-5 relative">
         <img

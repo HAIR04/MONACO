@@ -15,7 +15,8 @@ const App = () => {
       {/* Hiển thị ảnh mặc định khi không có route con */}
       <DefaultImage />  {/* Ảnh này sẽ đè lên toàn bộ nội dung */}
 
-      <Outlet /> {/* Render các route con */}
+      <div >
+      <Outlet /></div> {/* Render các route con */}
       
       <Footer />
     </div>

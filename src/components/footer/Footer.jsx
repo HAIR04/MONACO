@@ -25,7 +25,7 @@ const Footer = () => {
                 MONACO - MASSAGE QUÝ ÔNG
               </h1>
             </a>
-            <p className="text-white font-semibold text-sm md:text-base tracking-wide w-full 2xl:w-[90%] xl:w-[90%]">
+            <p className="text-white font-semibold text-sm md:text-base tracking-wide w-full 2xl:w-[95%] xl:w-[95%]">
               NÂNG TẦM QUÝ ÔNG - KHẲNG ĐỊNH PHONG ĐỘ.
             </p>
             <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide w-full 2xl:w-[90%] xl:w-[90%]">
@@ -60,15 +60,15 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="w-full xl:w-[30%] flex flex-col gap-3 md:ml-10 xl:gap-5 tracking-wide">
-            <h1 className="text-white text-xl font-extrabold tracking-wider">
+          <div className="w-full xl:w-[30%] xl:mt-5  flex flex-col gap-3 md:ml-10 xl:gap-5 tracking-wide">
+            <p className="text-white text-xl font-extrabold tracking-wider">
               LIÊN HỆ
-            </h1>
+            </p>
             <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide">
               Hotline : +84912302830
             </p>
             <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide">
-              Facebook : Massa Quý Ông
+              Facebook : Massage Quý Ông
             </p>
             <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide">
               Zalo : +84912302830
@@ -78,10 +78,10 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="w-full xl:w-[40%] mt-5 xl:mt-0 flex flex-col gap-5">
-            <h1 className="text-white text-xl font-extrabold tracking-wider">
-              Vị trí trên Google Map
-            </h1>
+          <div className="w-full xl:w-[40%] mt-5 xl:mt-5  flex flex-col gap-5">
+            <p className="text-white text-xl font-extrabold tracking-wider">
+              VỊ TRÍ TRÊN GOOLGE MAP
+            </p>
             <iframe
               src="https://s.net.vn/XRVt"
               className="h-[220px]"

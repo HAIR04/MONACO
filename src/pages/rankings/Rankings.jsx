@@ -15,7 +15,7 @@ const Rankings = () => {
 
   return (
     <>
-      <div className="py-5">
+      <div className="py-5 mt-24 lg:mt-0">
         <div className="py-5 relative">
           <img
             className="md:h-[200px] h-[150px] w-full opacity-15 object-cover"
@@ -40,22 +40,24 @@ const Rankings = () => {
                   className="md:w-full object-cover lg:h-[500px] md:h-[400px] w-full h-[250px]"
                 />
                 <div className="relative overflow-hidden">
-                  <p className="md:text-2xl text-md pt-4 animate-goldShine text-center font-bold">
+                  <p className="md:text-2xl text-md pt-4 bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text text-center font-bold">
                     {item.name}
                   </p>
                   <p className="md:text-base  text-xs text-white text-center font-bold py-2">
                     {item.desc}
                   </p>
-                  <p className="text-xs text-white text-center flex items-center md:items-end justify-between w-[95%] mx-auto pb-4">
-                    <p className="text-xs font-semibold italic text-yellow-600">ĐÁNH GIÁ : </p>
+                  <p className="text-xs text-white text-center flex items-center lg:items-end justify-between w-[95%] mx-auto pb-4">
+                    <p className="text-xs font-semibold italic text-yellow-600">
+                      ĐÁNH GIÁ :{" "}
+                    </p>
                     {[...Array(5)].map((_, index) => (
                       <FontAwesomeIcon
                         key={index}
                         icon={faStar}
-                        className="text-red-700  md:text-xl text-xs"
+                        className="text-red-700  lg:text-xl text-xs"
                       />
                     ))}
-                   <div className="hidden md:block"> ( {item.vote} VOTE )</div>
+                    <div className="hidden md:block"> ( {item.vote} VOTE )</div>
                   </p>
 
                   <div

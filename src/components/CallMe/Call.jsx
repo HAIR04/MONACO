@@ -20,7 +20,7 @@ const CallNowButton = () => {
     <div  onClick={toggleOverlay}>
       <h2
         className="fixed bottom-5 z-10 italic text-center right-5 flex items-center justify-center 
-                 bg-red-600 rounded-full text-white text-xl font-bold h-20 w-20 cursor-pointer 
+                 bg-customRed rounded-full text-white text-xl font-bold h-20 w-20 cursor-pointer 
                  shadow-lg  animate-shake  hover:animate-shake"
                  onClick={toggleOverlay}
       >

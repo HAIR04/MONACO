@@ -6,7 +6,7 @@ const Review_PR = () => {
     {
       id: 1,
       name: "Nguyễn Minh Tú",
-      time: 2,
+      date: "2024-08-11", // Định dạng ISO
       comment:
         "Dịch vụ massage rất tuyệt vời! Cảm giác thư giãn hoàn toàn sau khi kết thúc liệu trình, kỹ thuật massage rất chuyên nghiệp và nhẹ nhàng.",
       vote: 4,
@@ -14,7 +14,7 @@ const Review_PR = () => {
     {
       id: 2,
       name: "Vua Checker",
-      time: 4,
+      date: "2024-02-07",
       comment:
         "Mình rất hài lòng với dịch vụ ở đây, massage cổ vai gáy giúp mình giảm đau nhức rất hiệu quả. Tuy nhiên, thời gian hơi ngắn.",
       vote: 3,
@@ -22,7 +22,7 @@ const Review_PR = () => {
     {
       id: 3,
       name: "Lê Quang Huy",
-      time: 5,
+      date: "2024-07-29",
       comment:
         "Massage rất tuyệt vời! Chuyên viên rất tận tâm và kỹ thuật rất tốt. Đặc biệt là dịch vụ massage chân giúp thư giãn và giảm mệt mỏi cực kỳ hiệu quả.",
       vote: 5,
@@ -30,7 +30,7 @@ const Review_PR = () => {
     {
       id: 4,
       name: "Mr. Tuấn",
-      time: 4,
+      date: "2024-03-11",
       comment:
         "Cảm giác thật sự thư giãn, đặc biệt là liệu trình massage toàn thân. Mình sẽ quay lại nhiều lần nữa.",
       vote: 4,
@@ -38,12 +38,18 @@ const Review_PR = () => {
     {
       id: 5,
       name: "Caubeloichoi",
-      time: 4,
+      date: "2024-06-23",
       comment:
         "Chuyên viên massage rất chuyên nghiệp và tận tâm. Sau khi massage, tôi cảm thấy cơ thể nhẹ nhõm và thoải mái hơn rất nhiều. Dịch vụ tuyệt vời!",
       vote: 4,
     },
   ];
+
+  // Format ngày tháng
+  const formatDate = (dateString) => {
+    const options = { day: "2-digit", month: "2-digit", year: "numeric" };
+    return new Intl.DateTimeFormat("vi-VN", options).format(new Date(dateString));
+  };
 
   // Kiểm tra xem reviews có tồn tại và là một mảng hợp lệ không
   if (!reviews || !Array.isArray(reviews) || reviews.length === 0) {
@@ -68,8 +74,10 @@ const Review_PR = () => {
               <FontAwesomeIcon
                 key={starIndex}
                 icon={faStar}
-                className={`text-white ml-1 md:text-xl text-sm  ${
-                  starIndex < item.vote ? "text-yellow-500" : "text-gray-300 opacity-50"
+                className={`text-white ml-1 md:text-xl text-sm ${
+                  starIndex < item.vote
+                    ? "text-yellow-500"
+                    : "text-gray-300 opacity-50"
                 }`}
               />
             ))}
@@ -77,7 +85,7 @@ const Review_PR = () => {
           <p className="text-md py-3 text-white">{item.comment}</p>
 
           <p className="text-sm italic text-right text-gray-200">
-            {item.time} giờ trước
+            {formatDate(item.date)}
           </p>
         </div>
       ))}

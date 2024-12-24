@@ -28,13 +28,10 @@ const Girl_Detail = () => {
   }
 
   return (
-    <div className="py-5">
+    <div className="py-5 mt-28 lg:mt-0">
       <div className=" md:w-[100%] w-[90%] mx-auto sm:grid-cols-2 gap-7">
         <div className="flex w-full justify-center group flex-col md:flex-row">
           <div className="md:w-[65%] lg:w-[75%] xl:w-[65%] w-full items-center flex-col gap-5">
-          <p className="text-2xl md:hidden pb-5 animate-goldShine text-center font-semibold">
-                  {member.name}
-                </p>
             <div className="overflow-hidden flex border-2 border-yellow-600 text-white">
               <img
                 src={member.url}
@@ -47,21 +44,29 @@ const Girl_Detail = () => {
                 </p>
                 <div className="flex flex-col gap-5">
                   <p className="text-xl text-white text-left">
-                    <span className="lg:text-xl md:text-lg font-semibold">Mô tả ngắn</span>:{" "}
-                    {member.desc}
+                    <span className="lg:text-xl md:text-lg font-semibold">
+                      Mô tả ngắn
+                    </span>
+                    : {member.desc}
                   </p>
-                 
+
                   <p className="text-xl text-white text-left">
-                    <span className="lg:text-xl md:text-lg font-semibold">NĂM SINH</span>:{" "}
-                    {member.age}
+                    <span className="lg:text-xl md:text-lg font-semibold">
+                      NĂM SINH
+                    </span>
+                    : {member.age}
                   </p>
                   <p className="text-xl text-white text-left">
-                    <span className="lg:text-xl md:text-lg font-semibold">QUÊ QUÁN</span>:{" "}
-                    {member.country}
+                    <span className="lg:text-xl md:text-lg font-semibold">
+                      QUÊ QUÁN
+                    </span>
+                    : {member.country}
                   </p>
-                
+
                   <p className="text-xl text-white text-left">
-                    <span className="lg:text-xl md:text-lg font-semibold">SỐ ĐO BA VÒNG</span>
+                    <span className="lg:text-xl md:text-lg font-semibold">
+                      SỐ ĐO BA VÒNG
+                    </span>
                     : {member.roud}
                   </p>
                 </div>
@@ -93,53 +98,58 @@ const Girl_Detail = () => {
               </div>
             </div>
             <div className="flex md:hidden flex-col text-white mx-auto justify-between w-full p-5">
-               
-                <div className="flex flex-col gap-5">
-                  <p className="text-sm text-left">
-                    <span className="text-sm font-semibold">MÔ TẢ NGẮN</span>:{" "}
-                    {member.desc}
-                  </p>
-                
-                  <p>
-                    <span className="text-sm font-semibold">NĂM SINH</span>:{" "}
-                    {member.age}
-                  </p>
-                  <p>
-                    <span className="text-sm font-semibold">QUÊ QUÁN</span>:{" "}
-                    {member.country}
-                  </p>
-                
-                  <p>
-                    <span className="text-sm font-semibold">SỐ ĐO BA VÒNG</span>
-                    : {member.roud}
-                  </p>
-                </div>
-
-                <p className="text-xs text-white text-center py-5 md:py-0 flex items-center justify-between w-[95%] mx-auto pb-4">
-                  <p className="text-sm font-bold italic text-yellow-600">
-                    ĐÁNH GIÁ :{" "}
-                  </p>
-                  {[...Array(5)].map((_, index) => (
-                    <FontAwesomeIcon
-                      key={index}
-                      icon={faStar}
-                      className="text-red-700 ml-1 md:text-xl text-sm"
-                    />
-                  ))}
-                  ( {member.vote} VOTE {""})
+              <div className="flex flex-col gap-5">
+                <p className="text-2xl md:hidden  bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text text-center font-semibold">
+                  {member.name}
                 </p>
-                <div className=" w-full flex justify-center" onClick={toggleOverlay}>
-                  <Booking />
-                </div>
-                {isOverlayVisible && (
-                  <div
-                    onClick={toggleOverlay}
-                    className="  fixed w-full bg-black inset-0 bg-bgr-download bg-opacity-50 flex items-center justify-center z-50 transition-example delay-1000"
-                  >
-                    <Subscribe_Responsive setOpen={setIsModalOpen} />
-                  </div>
-                )}
+                <p>
+                  <span className="text-sm font-semibold">MÔ TẢ NGẮN</span>:{" "}
+                  {member.desc}
+                </p>
+
+                <p>
+                  <span className="text-sm font-semibold">NĂM SINH</span>:{" "}
+                  {member.age}
+                </p>
+                <p>
+                  <span className="text-sm font-semibold">QUÊ QUÁN</span>:{" "}
+                  {member.country}
+                </p>
+
+                <p>
+                  <span className="text-sm font-semibold">SỐ ĐO BA VÒNG</span>:{" "}
+                  {member.roud}
+                </p>
               </div>
+
+              <p className="text-xs text-white text-center py-5 md:py-0 flex items-center justify-between w-[95%] mx-auto pb-4">
+                <p className="text-sm font-bold italic text-yellow-600">
+                  ĐÁNH GIÁ :{" "}
+                </p>
+                {[...Array(5)].map((_, index) => (
+                  <FontAwesomeIcon
+                    key={index}
+                    icon={faStar}
+                    className="text-red-700 ml-1 md:text-xl text-sm"
+                  />
+                ))}
+                ( {member.vote} VOTE {""})
+              </p>
+              <div
+                className=" w-full flex justify-center"
+                onClick={toggleOverlay}
+              >
+                <Booking />
+              </div>
+              {isOverlayVisible && (
+                <div
+                  onClick={toggleOverlay}
+                  className="  fixed w-full bg-black inset-0 bg-bgr-download bg-opacity-50 flex items-center justify-center z-50 transition-example delay-1000"
+                >
+                  <Subscribe_Responsive setOpen={setIsModalOpen} />
+                </div>
+              )}
+            </div>
           </div>
         </div>
 
@@ -170,18 +180,17 @@ const Girl_Detail = () => {
           <div className="md:w-[80%] xl:w-[70%] w-full py-5 mx-auto md:text-lg text-sm">
             <p>
               Em ấy là một chuyên viên massage với hơn 5 năm kinh nghiệm trong
-              việc thực hiện các liệu trình massage thư giãn...
-              Em ấy là một chuyên viên massage với hơn 5 năm kinh nghiệm trong
-              việc thực hiện các liệu trình massage thư giãn...
-              Em ấy là một chuyên viên massage với hơn 5 năm kinh nghiệm trong
-              việc thực hiện các liệu trình massage thư giãn...
-              Em ấy là một chuyên viên massage với hơn 5 năm kinh nghiệm trong
-              việc thực hiện các liệu trình massage thư giãn...
+              việc thực hiện các liệu trình massage thư giãn... Em ấy là một
+              chuyên viên massage với hơn 5 năm kinh nghiệm trong việc thực hiện
+              các liệu trình massage thư giãn... Em ấy là một chuyên viên
+              massage với hơn 5 năm kinh nghiệm trong việc thực hiện các liệu
+              trình massage thư giãn... Em ấy là một chuyên viên massage với hơn
+              5 năm kinh nghiệm trong việc thực hiện các liệu trình massage thư
+              giãn...
             </p>
-            
           </div>
           <div className="md:w-[90%] mx-auto">
-          <Review_PR/>
+            <Review_PR />
           </div>
         </div>
       </div>

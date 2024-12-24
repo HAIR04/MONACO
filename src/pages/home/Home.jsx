@@ -10,7 +10,7 @@ import Worlds from "./Works";
 
 const Home = () => {
   return (
-    <div>
+    <div className="mt-36 lg:mt-0">
       <Banner />
       <TrendingCollection />
       {/* <Worlds /> */}

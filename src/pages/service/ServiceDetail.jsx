@@ -12,34 +12,67 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const DetailSercive = () => {
-  const settings = {
+  const settingsAutoPlay = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4, // Mặc định hiển thị 4 ảnh
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: true, // Bật autoplay cho slider này
     autoplaySpeed: 2000,
     arrows: false,
     responsive: [
       {
-        breakpoint: 1024, // Màn hình tablet nằm ngang
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 2, // Hiển thị 3 ảnh
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  const settingsNoAutoPlay = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4, // Mặc định hiển thị 4 ảnh
+    slidesToScroll: 1,
+    autoplay: false, // Tắt autoplay cho slider này
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024, // Màn hình tablet nằm ngang
+        settings: {
+          slidesToShow: 3, // Hiển thị 3 ảnh
+          slidesToScroll: 1,
+        },
+      },
+
+      {
         breakpoint: 768, // Màn hình tablet dọc
         settings: {
-          slidesToShow: 2, // Hiển thị 2 ảnh
+          slidesToShow: 3, // Hiển thị 2 ảnh
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 480, // Màn hình điện thoại
         settings: {
-          slidesToShow: 1, // Hiển thị 1 ảnh
+          slidesToShow: 4, // Hiển thị 1 ảnh
           slidesToScroll: 1,
         },
       },
@@ -75,24 +108,8 @@ const DetailSercive = () => {
     );
   };
 
-  const goToNextGroup = () => {
-    setVisibleStartIndex((prevIndex) =>
-      prevIndex + MAX_VISIBLE_IMAGES >= product.sub_images.length
-        ? 0
-        : prevIndex + MAX_VISIBLE_IMAGES
-    );
-  };
-
-  const goToPreviousGroup = () => {
-    setVisibleStartIndex((prevIndex) =>
-      prevIndex - MAX_VISIBLE_IMAGES < 0
-        ? product.sub_images.length - MAX_VISIBLE_IMAGES
-        : prevIndex - MAX_VISIBLE_IMAGES
-    );
-  };
-
   return (
-    <div className="py-5">
+    <div className="py-5 mt-28 lg:mt-0">
       <div className=" xl:w-[80%] w-[95%] mx-auto sm:grid-cols-2 gap-7">
         <div className="flex flex-col md:flex-row w-full items-start gap-5 group">
           <div className="w-full md:w-[65%] flex flex-col gap-5">
@@ -103,38 +120,28 @@ const DetailSercive = () => {
                 className="w-full object-cover lg:h-[350px] h-[250px]"
               />
             </div>
-            <div className="flex items-center gap-3">
-              <div className="flex gap-2 w-full ">
-                {product.sub_images
-                  .slice(
-                    visibleStartIndex,
-                    visibleStartIndex + MAX_VISIBLE_IMAGES
-                  )
-                  .map((subImage, subIndex) => {
-                    const actualIndex = visibleStartIndex + subIndex;
-                    return (
-                      <div
-                        key={actualIndex}
-                        className={`snap-item w-[300px] ${
-                          actualIndex === selectedImageIndex
-                            ? "border-2 border-red-700"
-                            : ""
-                        }`}
-                        onClick={() => handleImageClick(actualIndex)}
-                      >
-                        <img
-                          src={subImage.url}
-                          alt={`${product.name} - Ảnh phụ ${actualIndex + 1}`}
-                          className="w-full border border-yellow-600 hover:cursor-pointer object-cover lg:h-[150px] h-auto transition-transform transform hover:scale-110 duration-300 ease-in-out"
-                        />
-                      </div>
-                    );
-                  })}
-              </div>
+            <div className="md:py-5 ">
+              <Slider
+                {...settingsNoAutoPlay}
+                className="md:w-[95%] w-full mx-auto"
+              >
+                {product.sub_images.map((subImage, index) => (
+                  <div
+                    key={index}
+                    className=""
+                    onClick={() => handleImageClick(index)} // Thêm sự kiện click vào ảnh
+                  >
+                    <img
+                      src={subImage.url}
+                      className="md:w-[190px] w-full 3xl:w-[220px]  border border-yellow-600  md:h-[200px] hover:scale-110  transition-all duration-500 h-[90px] object-cover cursor-pointer" // Thêm cursor pointer để nhận diện là ảnh có thể click
+                    />
+                  </div>
+                ))}
+              </Slider>
             </div>
           </div>
           <div className="w-full md:w-[40%] flex flex-col justify-center gap-3 items-center pb-5">
-            <p className=" text-2xl md:text-xl lg:text-3xl text-yellow-600 text-center font-semibold">
+            <p className=" text-2xl md:text-xl lg:text-3xl bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text text-center font-semibold">
               {product.name}
             </p>
             <p className="lg:text-base xl:text-lg  text-sm text-white text-center font-semibold">
@@ -147,7 +154,7 @@ const DetailSercive = () => {
               Không gian : {product.space}
             </p>
             <div className="flex gap-3 items-end">
-              <p className="lg:text-3xl text-xl text-red-700 font-bold lg:font-semibold">
+              <p className="lg:text-3xl md:text-lg text-xl text-red-700 font-bold lg:font-semibold">
                 {product.price} VNĐ
               </p>
               <p className="lg:text-sm xl:text-lg text-lg md:text-sm text-white line-through">
@@ -155,7 +162,7 @@ const DetailSercive = () => {
               </p>
             </div>
             <p className="text-xs text-white text-center justify-center flex  lg:justify-between gap-1 lg:gap-0 w-[95%] mx-auto pb-4">
-              <span className="lg:text-base xl:text-lg text-xs flex  italic font-semibold text-white">
+              <span className="lg:text-base  xl:text-lg text-xs flex  italic font-semibold text-white">
                 ĐÁNH GIÁ :{" "}
               </span>
               {[...Array(5)].map((_, index) => (
@@ -165,7 +172,9 @@ const DetailSercive = () => {
                   className="text-yellow-500 ml-1 xl:text-2xl md:text-sm text-lg"
                 />
               ))}
-              <p className="flex items-end">( {product.vote} VOTE )</p>
+              <p className=" items-end flex md:hidden lg:flex">
+                ( {product.vote} VOTE )
+              </p>
             </p>
             <div
               className="w-[100%] flex md:block justify-center"
@@ -189,7 +198,7 @@ const DetailSercive = () => {
         </span>
 
         <div className="py-5">
-          <Slider {...settings} className="flex gap-4">
+          <Slider {...settingsAutoPlay} className="flex gap-4">
             {product.sub_images.map((subImage, index) => (
               <div
                 key={index}
@@ -204,7 +213,7 @@ const DetailSercive = () => {
                 <img
                   src={subImage.url}
                   alt={subImage.title || `Ảnh phụ ${index + 1}`}
-                  className="w-full md:h-[300px] h-[200px] object-cover rounded-md"
+                  className="w-full md:h-[300px] lg:h-[200px] 3xl:h-[250px] h-[200px] object-cover rounded-md"
                 />
               </div>
             ))}

@@ -31,14 +31,14 @@ const TrendingCollection = () => {
     <div className="lg:w-[90%] w-[100%] mx-auto bg-header">
       {/* Tiêu đề */}
       <div className="w-full mx-auto py-5 mb-10 flex items-center justify-between relative">
-        <div className="xl:text-4xl md:text-2xl text-xl w-full uppercase font-semibold leading-loose text-center text-white absolute md:left-1/2 transform md:-translate-x-1/2">
+        <div className="xl:text-5xl md:text-2xl text-xl w-full uppercase font-semibold leading-loose text-center text-white absolute md:left-1/2 transform md:-translate-x-1/2">
           {/* Hiển thị cho màn hình nhỏ (dưới md) */}
-          <h1 className="block md:hidden bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text italic w-[100%] text-center">
+          <h1 className="block md:hidden text-white italic w-[100%] text-center">
             Welcome Massage Quý Ông
           </h1>
 
           {/* Hiển thị cho màn hình từ md trở lên */}
-          <h1 className="hidden md:inline-block w-full bg-gradient-to-t from-yellow-800 font-bold to-yellow-300 text-transparent bg-clip-text italic tracking-widest">
+          <h1 className="hidden md:inline-block w-full text-white italic tracking-widest">
             Welcome Massage Quý Ông
           </h1>
         </div>
