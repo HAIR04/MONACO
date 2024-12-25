@@ -42,29 +42,29 @@ const Girl_Detail = () => {
                 <p className="text-3xl bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text text-center py-5 font-semibold">
                   {member.name}
                 </p>
-                <div className="flex flex-col justify-between gap-16 items-center">
-                  <p className="text-xl text-white text-left">
-                    <span className="lg:text-xl md:text-lg font-semibold">
-                      Mô tả ngắn
+                <div className="flex flex-col justify-between xl:gap-16 md:gap-5 lg:gap-10 items-center">
+                  <p className="xl:text-xl text-base text-white text-center">
+                    <span className="xl:text-xl md:text-base font-semibold">
+                      MÔ TẢ NGẮN
                     </span>
                     : {member.desc}
                   </p>
 
-                  <p className="text-xl text-white text-left">
-                    <span className="lg:text-xl md:text-lg font-semibold">
+                  <p className="xl:text-xl text-base text-white text-center">
+                    <span className="xl:text-xl md:text-base font-semibold">
                       NĂM SINH
                     </span>
                     : {member.age}
                   </p>
-                  <p className="text-xl text-white text-left">
-                    <span className="lg:text-xl md:text-lg font-semibold">
+                  <p className="xl:text-xl text-base text-white text-center">
+                    <span className="xl:text-xl md:text-base font-semibold">
                       QUÊ QUÁN
                     </span>
                     : {member.country}
                   </p>
 
-                  <p className="text-xl text-white text-left">
-                    <span className="lg:text-xl md:text-lg font-semibold">
+                  <p className="xl:text-xl text-base text-white text-center">
+                    <span className="xl:text-xl md:text-base font-semibold">
                       SỐ ĐO BA VÒNG
                     </span>
                     : {member.roud}
@@ -73,7 +73,7 @@ const Girl_Detail = () => {
 
             
                 <div className=" w-full" onClick={toggleOverlay}>
-                <p className="text-xs  text-white text-center flex items-end justify-between w-[95%] mx-auto pb-4">
+                <p className="text-xs  text-white text-center flex items-center pt-3 xl:pt-0 xl:items-end justify-between w-[100%] mx-auto pb-4">
                   <p className="lg:text-base text-xs font-bold italic ">
                     ĐÁNH GIÁ :{" "}
                   </p>

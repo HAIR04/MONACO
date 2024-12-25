@@ -10,11 +10,7 @@ h1 , h2{
 ul>li{
   font-family: "Fraunces", serif;
 }
-a{
-  
-  font-family: "Fraunces", serif;
-  
-}
+
 html {
   scroll-behavior: smooth; /* Kích hoạt cuộn mượt */
 }
