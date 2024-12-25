@@ -45,7 +45,7 @@ const Review_PR = () => {
     },
   ];
 
-  // Format ngày tháng
+  // Format ngày thángđ
   const formatDate = (dateString) => {
     const options = { day: "2-digit", month: "2-digit", year: "numeric" };
     return new Intl.DateTimeFormat("vi-VN", options).format(new Date(dateString));
