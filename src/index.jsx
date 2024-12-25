@@ -10,7 +10,7 @@ import Wallet from "./pages/lien-he/Wallet";
 import ServiceDetail from "./pages/dịch-vu/ServiceDetail";
 import TreatM from "./pages/loi-ich-detail/TreatMent";
 import Girl_Detail from "./pages/ktv-detail/Member";
-import ScrollToTop from "./components/scroll/Scroll";
+import ScrollToTop from "./components/scrolls/Scroll";
 import "./styles/index.css";
 import LoiIch from "./pages/loi-ich/Benefit";
 
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       { path: "/service", element: <ServicePR /> },
       { path: "/rankings", element: <Rankings /> },
       { path: "/wallet", element: <Wallet /> },
-      
+
       { path: "/service/:id", element: <ServiceDetail /> },
 
       { path: "/treat/:id", element: <TreatM /> },
