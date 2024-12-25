@@ -10,8 +10,8 @@ const JoinDigest = () => {
       </span>
 
       {/* Đoạn mô tả */}
-      <div className="lg:w-[100%] w-[95%] mx-auto">
-        <p className="text-left text-base md:text-xl leading-relaxed tracking-wide">
+      <div className="lg:w-[100%] w-[100% pt-5 mx-auto">
+        <p className="text-left text-base md:text-xl leading-relaxed  tracking-tight">
           Quán Massage Monaco tự hào là một trong những điểm đến hàng đầu cho
           những ai tìm kiếm sự thư giãn và chăm sóc sức khỏe tại Hà Nội. Chúng tôi
           cam kết mang đến cho khách hàng những trải nghiệm tuyệt vời với dịch vụ
@@ -20,7 +20,7 @@ const JoinDigest = () => {
 
         {/* Nội dung bổ sung - chỉ hiển thị khi `showFullText` hoặc `md` trở lên */}
         {(showFullText || window.innerWidth >= 1024) && (
-          <p className="text-left text-base md:text-xl leading-relaxed tracking-wide">
+          <p className="text-left text-base md:text-xl leading-relaxed tracking-tight">
             Tại Monaco, đội ngũ kỹ thuật viên của chúng tôi được tuyển chọn kỹ càng,
             đều là những chuyên gia với tay nghề cao và kinh nghiệm lâu năm trong
             ngành massage. Mỗi dịch vụ của chúng tôi được thiết kế để đáp ứng nhu
@@ -54,29 +54,30 @@ const JoinDigest = () => {
 
       {/* Các phần còn lại giữ nguyên */}
       <div className="flex gap-2 md:gap-5 pt-5 w-full mx-auto">
-        {/* Ảnh chính */}
-        <div className=" md:w-[50%]">
-          <img
-            className="h-[350px] sm:h-[400px] md:h-[700px] w-full object-cover transform hover:scale-105 transition-all duration-300 ease-in-out"
-            src="/assets/GioiThieu/Dai.jpg"
-            alt="Dai"
-          />
-        </div>
+  {/* Ảnh chính */}
+  <div className=" md:w-[50%] w-[60%]">
+    <img
+      className="h-[350px] sm:h-[400px] md:h-[700px] w-full object-cover transform hover:scale-105 transition-all duration-300 ease-in-out"
+      src="/assets/GioiThieu/Dai.jpg"
+      alt="Dai"
+    />
+  </div>
 
-        {/* Ảnh phụ */}
-        <div className="flex-col my-auto  w-[50%]">
-          <img
-            className="h-[175px] sm:h-[300px] md:h-[340px] w-[100%] md:w-full  object-cover transform hover:scale-105 transition-all duration-300 ease-in-out"
-            src="/assets/GioiThieu/Be1.jpg"
-            alt="Be1"
-          />
-          <img
-            className="h-[175px] sm:h-[300px] md:h-[340px]  w-[100%] md:w-full object-cover transform hover:scale-105 transition-all duration-300 ease-in-out"
-            src="/assets/GioiThieu/Be2.jpg"
-            alt="Be2"
-          />
-        </div>
-      </div>
+  {/* Ảnh phụ */}
+  <div className="flex flex-col  md:gap-5 h-[350px] justify-between w-[50%]">
+    <img
+      className="h-[170px] sm:h-[300px] md:h-[340px] w-full object-cover transform hover:scale-105 transition-all duration-300 ease-in-out"
+      src="/assets/GioiThieu/Be1.jpg"
+      alt="Be1"
+    />
+    <img
+      className="h-[170px] sm:h-[300px] md:h-[340px] w-full object-cover transform hover:scale-105 transition-all duration-300 ease-in-out"
+      src="/assets/GioiThieu/Be2.jpg"
+      alt="Be2"
+    />
+  </div>
+</div>
+
 
 
       <div className="pt-5">

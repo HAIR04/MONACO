@@ -31,9 +31,9 @@ const LoiIch = () => {
           className="md:h-[200px] h-[150px] w-full opacity-15 object-cover"
           src="/assets/GioiThieu/Be2.jpg"
         />
-        <p className="md:text-2xl text-base tracking-widest text-white font-bold italic absolute inset-0 flex items-center justify-center">
+        <h1 className="md:text-2xl text-base tracking-widest text-white font-bold italic absolute inset-0 flex items-center justify-center">
           LỢI ÍCH / BENEFIT
-        </p>
+        </h1>
       </div>
       <div className="lg:w-[80%] w-[90%] mx-auto grid py-5 grid-cols-1 sm:grid-cols-1 gap-7">
         {massage_data.slice(0, visibleImagesCount).map((item, index) => (

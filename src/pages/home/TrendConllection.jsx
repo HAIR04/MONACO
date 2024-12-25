@@ -7,8 +7,7 @@ const TrendingCollection = () => {
   const [visibleImagesCount, setVisibleImagesCount] = useState(
     getVisibleImagesCount()
   );
-
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(window.innerWidth >= 1024);
 
   // Hàm xác định số lượng ảnh hiển thị dựa trên kích thước màn hình
   function getVisibleImagesCount() {
@@ -19,7 +18,10 @@ const TrendingCollection = () => {
 
   // Lắng nghe sự thay đổi kích thước màn hình
   useEffect(() => {
-    const handleResize = () => setVisibleImagesCount(getVisibleImagesCount());
+    const handleResize = () => {
+      setVisibleImagesCount(getVisibleImagesCount());
+      setIsExpanded(window.innerWidth >= 1024); // Tự động mở rộng trên màn hình lớn
+    };
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -62,30 +64,27 @@ const TrendingCollection = () => {
           />
 
           {/* Hiển thị đoạn text */}
-          <div className="text-white  lg:text-xl text-base px-4 lg:px-0">
-            {window.innerWidth >= 1024 || isExpanded ? (
+          <div className="text-white md:text-xl text-base px-4 lg:px-0 tracking-tight">
+            <p>
+              Hệ thống Massage Quý Ông đạt tiêu chuẩn quốc tế, Trung tâm massage
+              đầu tiên được thành lập vào năm 2016 tại khu vực Mỹ Đình, trung
+              tâm đắc địa của thủ đô Hà Nội.Massage Quý Ông được thiết kế theo
+              phong cách kết hợp Á - Âusang trọng, cùng trang thiết bị hiện đại
+              và nội thất cao cấp. Không gian trung tâm sử dụng gam
+            </p>
+            {isExpanded || window.innerWidth >= 1024 ? (
               <p>
-                Hệ thống khách sạn EMERALD đạt tiêu chuẩn quốc tế trực thuộc sự
-                quản lý của Công ty TNHH Du Lịch Âu Việt. Khách sạn đầu tiên
-                được xây dựng vào năm 2016, có tên khách sạn Âu Việt Hà Nội
-                chuẩn 3 sao, bao gồm 9 tầng với 50 phòng nghỉ. Nằm tại khu vực
-                Mỹ Đình, một vị trí đắc địa thuộc trung tâm thủ đô Hà Nội. Khách
-                sạn được thiết kế theo phong cách Á-Âu sang trọng kết hợp cùng
-                trang thiết bị nội thất đồ gỗ cao cấp. Với gam màu nâu là điểm
-                thu hút ấn tượng cho quý khách ngay lần đầu bước chân đến khách
-                sạn. Bên cạnh đó, sự kết hợp những tông màu trắng tươi sáng góp
-                phần làm cho nghỉ của khách sạn trở nên thật hiện đại và sang
-                trọng, trẻ trung và thu hút. Những điều đó đã tạo nên một không
-                gian nghỉ dưỡng gần gũi, ấm áp và thoải mái cho quý khách.
+                 màu nâu trầm làm điểm nhấn, tạo cảm giác ấm cúng
+                và lịch lãm ngay từ lần đầu bước chân đến. Bên cạnh đó, sự kết
+                hợp giữa tông màu trắng tinh tế và ánh sáng dịu nhẹ giúp không
+                gian trở nên trẻ trung, hiện đại và sang trọng. Với đội ngũ kỹ
+                thuật viên massage chuyên nghiệp, được đào tạo bài bản cùng các
+                liệu pháp chăm sóc sức khỏe đẳng cấp, chúng tôi cam kết mang đến
+                cho quý ông những trải nghiệm thư giãn tuyệt vời nhất. Đây chính
+                là không gian lý tưởng để quý khách tận hưởng sự thoải mái, tái
+                tạo năng lượng và khẳng định phong cách đẳng cấp của mình.
               </p>
-            ) : (
-              <p>
-                Hệ thống khách sạn EMERALD đạt tiêu chuẩn quốc tế trực thuộc sự
-                quản lý của Công ty TNHH Du Lịch Âu Việt. Khách sạn đầu tiên
-                được xây dựng vào năm 2016, có tên khách sạn Âu Việt Hà Nội
-                chuẩn 3 sao...
-              </p>
-            )}
+            ) : null}
 
             {/* Nút Xem thêm / Thu gọn */}
             {window.innerWidth < 1024 && (

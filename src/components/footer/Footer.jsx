@@ -12,28 +12,28 @@ const Footer = () => {
     <div className="w-full bg-footer">
       <div className="mx-auto py-10 w-[90%] 2xl:w-[90%] xl:w-[90%]">
         <div className="flex flex-col lg:flex-row justify-between gap-8">
-          <div className="flex flex-col gap-5 2xl:w-[30%] xl:w-[35%]">
+          <div className="flex flex-col gap-5 2xl:w-[45%] xl:w-[45%]">
             <a
               href="#"
-              className="flex items-center gap-3 2xl:w-full xl:w-full"
+              className="flex  gap-3 2xl:w-full xl:w-full"
             >
               <img
                 src="/assets/Logo/logo.png"
                 className="2xl:w-[25%] md:w-[25%] xl:w-[25%] rounded-full w-[30%]"
               />
-              <h1 className="text-white text-xl text-center md:text-left md:text-2xl font-semibold xl:font-semibold tracking-wider">
+              <h1 className="text-white  xl:mt-8 text-lg text-center md:text-left md:text-2xl font-semibold xl:font-semibold tracking-wider">
                 MONACO - MASSAGE QUÝ ÔNG
               </h1>
             </a>
-            <p className="text-white font-semibold text-sm md:text-base tracking-wide w-full 2xl:w-[100%] xl:w-[100%]">
-              NÂNG TẦM QUÝ ÔNG - KHẲNG ĐỊNH PHONG ĐỘ.
+            <p className="text-white font-semibold text-center md:text-left text-base md:text-xl tracking-wide w-full 2xl:w-[100%] xl:w-[100%]">
+              NÂNG TẦM QUÝ ÔNG - KHẲNG ĐỊNH PHONG ĐỘ
             </p>
             <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide w-full 2xl:w-[90%] xl:w-[90%]">
-              Địa chỉ : Số 28 – 30 Lê Đức Thọ, Mỹ Đình, Nam Từ Liêm, Hà Nội
+              Địa chỉ : Số 28 – 30 Lê Đức Thọ, Mỹ Đình, Nam Từ Liêm, Hà Nội.
             </p>
             <div>
-              <p className="text-white   mb-5 font-normal text-left text-sm md:text-base tracking-wide">
-                Các phương tiện truyền thông
+              <p className="text-white   mb-5 font-medium text-left text-sm md:text-base tracking-wide">
+                CÁC PHƯƠNG TIỆN TRUYỀN THÔNG
               </p>
               <ul className="flex text-white  gap-5 justify-start  opacity-30 text-3xl xl:text-3xl leading-loose">
                 <li>
@@ -60,7 +60,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="w-full xl:w-[30%] xl:mt-5  flex flex-col gap-3 md:ml-10 xl:gap-5 tracking-wide">
+          <div className="w-full xl:w-[25%] xl:mt-8 flex flex-col gap-3  xl:gap-5 tracking-wide">
             <p className="text-white text-xl font-extrabold tracking-wider">
               LIÊN HỆ
             </p>
@@ -78,7 +78,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="w-full xl:w-[40%] mt-5 xl:mt-5  flex flex-col gap-5">
+          <div className="w-full xl:w-[40%] mt-5 xl:mt-8  flex flex-col gap-5">
             <p className="text-white text-xl font-extrabold tracking-wider">
               VỊ TRÍ TRÊN GOOLGE MAP
             </p>

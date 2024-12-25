@@ -7,8 +7,13 @@ body {
 h1 , h2{
   font-family: "Fraunces", serif;
 }
-ul{
+ul>li{
   font-family: "Fraunces", serif;
+}
+a{
+  
+  font-family: "Fraunces", serif;
+  
 }
 html {
   scroll-behavior: smooth; /* Kích hoạt cuộn mượt */

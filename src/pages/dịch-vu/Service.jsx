@@ -17,9 +17,9 @@ const ServicePR = () => {
           className="md:h-[200px] h-[150px] w-full opacity-15 object-cover"
           src="/assets/GioiThieu/Be2.jpg"
         />
-        <p className="md:text-2xl text-base tracking-widest text-white font-bold italic absolute inset-0 flex items-center justify-center">
+        <h1 className="md:text-2xl text-base tracking-widest text-white font-bold italic absolute inset-0 flex items-center justify-center">
           DỊCH VỤ / SERVICE
-        </p>
+        </h1>
       </div>
       <div className="lg:w-[80%] w-[90%] mx-auto grid py-5 grid-cols-1 sm:grid-cols-2 gap-7">
         {Products_Service.slice(0, visibleImagesCount).map((item, index) => (
@@ -51,7 +51,7 @@ const ServicePR = () => {
                   Xem chi tiết
                 </div>
               </div>
-              <p className="lg:text-2xl text-xl text-center pt-5 font-bold bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text">
+              <p className="xl:text-2xl text-xl text-center mt-5 font-bold bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text">
                 {item.name}
               </p>
               <p className="lg:text-lg text-sm text-white text-center py-2 font-semibold">

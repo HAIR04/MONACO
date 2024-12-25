@@ -295,7 +295,7 @@ const DetailSercive = () => {
                 {relatedItem.desc}
               </p>
           <div className="flex justify-center gap-3  items-center pb-5">
-                <p className="xl:text-2xl lg:text-xl text-lg text-red-700 font-bold lg:font-semibold">
+                <p className="xl:text-2xl lg:text-xl text-lg bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text font-bold lg:font-semibold">
                   {relatedItem.price} VNĐ
                 </p>
                 <p className="xl:text-lg text-sm italic text-white line-through">

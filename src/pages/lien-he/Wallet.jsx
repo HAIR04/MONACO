@@ -19,9 +19,9 @@ const Wallet = () => {
           className="lg:h-[200px] h-[150px] w-full opacity-15 object-cover"
           src="/assets/GioiThieu/Be1.jpg"
         />
-        <p className="lg:text-2xl text-base tracking-widest text-white italic font-semibold absolute inset-0 flex items-center justify-center">
+        <h1 className="lg:text-2xl text-base tracking-widest text-white italic font-semibold absolute inset-0 flex items-center justify-center">
           LIÊN HỆ / CONTACT
-        </p>
+        </h1>
       </div>
 
       {/* Nội dung chính */}
