@@ -2,7 +2,7 @@ import Banner from "./Banner.jsx";
 import Category from "./Categoties";
 import JoinDigest from "./JoinDigest";
 import NFTs from "./NFTs";
-import CallNowButton from "../../components/callme/Call.jsx";
+import CallNowButton from "../../components/call/Call.jsx";
 
 import TopCreators from "./TopCreators.jsx";
 import TrendingCollection from "./TrendConllection";
