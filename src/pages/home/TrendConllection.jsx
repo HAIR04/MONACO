@@ -45,7 +45,7 @@ const TrendingCollection = () => {
 
         <Link
           to="/rankings"
-          className="hidden text-white md:block md:mr-14 lg:mr-0 text-sm p-3 xl:text-xl lg:p-5 rounded-full bg-customRed hover:text-customRed hover:bg-white uppercase font-semibold leading-loose text-right  ml-auto transition-all duration-700 hover:scale-110"
+          className="hidden text-white lg:block md:mr-14 lg:mr-0 text-sm p-3 xl:text-xl lg:p-5 rounded-full bg-customRed hover:text-customRed hover:bg-white uppercase font-semibold leading-loose text-right  ml-auto transition-all duration-700 hover:scale-110"
         >
           Kỹ Thuật Viên
         </Link>

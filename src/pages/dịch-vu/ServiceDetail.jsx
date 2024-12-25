@@ -160,22 +160,22 @@ const DetailSercive = () => {
               Không gian : {product.space}
             </p>
             <div className="flex gap-3 items-end">
-              <p className="lg:text-3xl md:text-lg text-xl text-red-700 font-bold lg:font-semibold">
+              <p className="lg:text-3xl md:text-lg text-xl bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text font-bold lg:font-semibold">
                 {product.price} VNĐ
               </p>
               <p className="lg:text-sm xl:text-lg text-lg md:text-sm text-white line-through">
                 {product.price_sale} VNĐ
               </p>
             </div>
-            <p className="text-xs text-white text-center justify-center flex  lg:justify-between gap-1 lg:gap-0 w-[95%] mx-auto pb-4">
-              <span className="lg:text-base  xl:text-lg text-xs flex  italic font-semibold text-white">
+            <p className="text-xs text-white text-center justify-center flex   gap-1 lg:gap-3 w-[95%] mx-auto pb-4">
+              <span className="lg:text-base  xl:text-sm text-xs flex items-end italic font-semibold text-white">
                 ĐÁNH GIÁ :{" "}
               </span>
               {[...Array(5)].map((_, index) => (
                 <FontAwesomeIcon
                   key={index}
                   icon={faStar}
-                  className="text-yellow-500 ml-1 xl:text-2xl md:text-sm text-lg"
+                  className="text-red-800 ml-1 xl:text-2xl md:text-sm text-lg"
                 />
               ))}
               <p className=" items-end flex md:hidden lg:flex">
@@ -199,8 +199,8 @@ const DetailSercive = () => {
           </div>
         </div>
 
-        <span className="lg:text-2xl md:text-lg text-sm font-bold text-white flex justify-center pt-10">
-          _______THÔNG TIN CHI TIẾT_______
+        <span className="lg:text-2xl text-lg  font-bold text-white flex justify-center pt-10">
+          ________THÔNG TIN CHI TIẾT________
         </span>
 
         <div className="py-5">

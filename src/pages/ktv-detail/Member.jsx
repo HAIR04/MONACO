@@ -38,11 +38,11 @@ const Girl_Detail = () => {
                 alt={member.name}
                 className="md:w-[50%] w-full object-cover h-auto"
               />
-              <div className="md:flex hidden   flex-col justify-between  w-[90%] p-5">
-                <p className="text-3xl animate-goldShine text-center py-5 font-semibold">
+              <div className="md:flex hidden   flex-col  justify-between w-[90%] p-5">
+                <p className="text-3xl bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text text-center py-5 font-semibold">
                   {member.name}
                 </p>
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col justify-between gap-16 items-center">
                   <p className="text-xl text-white text-left">
                     <span className="lg:text-xl md:text-lg font-semibold">
                       Mô tả ngắn
@@ -71,20 +71,21 @@ const Girl_Detail = () => {
                   </p>
                 </div>
 
-                <p className="text-xs py-5 text-white text-center flex items-center justify-between w-[95%] mx-auto pb-4">
-                  <p className="lg:text-lg text-xs font-bold italic text-yellow-600">
+            
+                <div className=" w-full" onClick={toggleOverlay}>
+                <p className="text-xs  text-white text-center flex items-end justify-between w-[95%] mx-auto pb-4">
+                  <p className="lg:text-base text-xs font-bold italic ">
                     ĐÁNH GIÁ :{" "}
                   </p>
                   {[...Array(5)].map((_, index) => (
                     <FontAwesomeIcon
                       key={index}
                       icon={faStar}
-                      className="text-red-700 ml-1 lg:text-2xl xl:text-3xl "
+                      className="text-yellow-500 ml-1 lg:text-2xl xl:text-3xl "
                     />
                   ))}
                   ( {member.vote} VOTE {""})
                 </p>
-                <div className=" w-full" onClick={toggleOverlay}>
                   <Booking />
                 </div>
                 {isOverlayVisible && (
@@ -122,21 +123,21 @@ const Girl_Detail = () => {
                 </p>
               </div>
 
-              <p className="text-xs text-white text-center py-5 md:py-0 flex items-center justify-between w-[95%] mx-auto pb-4">
-                <p className="text-sm font-bold italic text-yellow-600">
+              <p className="text-xs text-white text-center py-5 md:py-0 flex items-end justify-between w-[95%] mx-auto pb-4">
+                <p className="text-xs font-bold italic ">
                   ĐÁNH GIÁ :{" "}
                 </p>
                 {[...Array(5)].map((_, index) => (
                   <FontAwesomeIcon
                     key={index}
                     icon={faStar}
-                    className="text-red-700 ml-1 md:text-xl text-sm"
+                    className="text-yellow-400 ml-1 md:text-xl text-xl"
                   />
                 ))}
                 ( {member.vote} VOTE {""})
               </p>
               <div
-                className=" w-full flex justify-center"
+                className=" w-full flex pt-5 justify-center"
                 onClick={toggleOverlay}
               >
                 <Booking />

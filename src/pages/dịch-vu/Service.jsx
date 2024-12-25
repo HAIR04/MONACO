@@ -58,7 +58,7 @@ const ServicePR = () => {
                 {item.desc}
               </p>
               <div className="flex justify-center gap-3  items-center pb-5">
-                <p className="lg:text-3xl text-lg text-red-700 font-bold lg:font-semibold">
+                <p className="lg:text-3xl text-xl bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text font-bold lg:font-semibold">
                   {item.price} VNĐ
                 </p>
                 <p className="lg:text-xl text-sm italic text-white line-through">

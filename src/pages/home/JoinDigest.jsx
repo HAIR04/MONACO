@@ -11,7 +11,7 @@ const JoinDigest = () => {
 
       {/* Đoạn mô tả */}
       <div className="lg:w-[100%] w-[95%] mx-auto">
-        <p className="text-left pt-5 text-base lg:text-xl leading-relaxed tracking-wide">
+        <p className="text-left text-base md:text-xl leading-relaxed tracking-wide">
           Quán Massage Monaco tự hào là một trong những điểm đến hàng đầu cho
           những ai tìm kiếm sự thư giãn và chăm sóc sức khỏe tại Hà Nội. Chúng tôi
           cam kết mang đến cho khách hàng những trải nghiệm tuyệt vời với dịch vụ
