@@ -5,6 +5,7 @@ import ScrollToTop from "./components/scrolls/Scroll";
 import DefaultImage from "./components/deals/deal"; // Import DefaultImage
 import CallNowButton from "./components/callme/Call";
 
+
 const App = () => {
   return (
     <div className="bg-black overflow-hidden">
