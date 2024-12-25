@@ -2,7 +2,7 @@ import React from "react";
 import FB from "./FaceBook";
 import Za_lo from "./Zalo";
 import PhoneNumber from "./Phone";
-import ContactForm from "../Form/form";
+import ContactForm from "../forms/form";
 import Telegram from "./Tele";
 
 const Subscribe_Responsive = ({ setOpen }) => {

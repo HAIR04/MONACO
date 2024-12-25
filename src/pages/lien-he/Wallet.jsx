@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import { Products_Service } from "../../components/data/Service";
+import { Products_Service } from "../../components/data/goi-dich-vu";
 import React from "react";
-import FB from "../../components/subscribe/FaceBook";
-import Za_lo from "../../components/subscribe/Zalo";
-import PhoneNumber from "../../components/subscribe/Phone";
-import EmaiMail from "../../components/subscribe/Mail";
+import FB from "../../components/button/FaceBook";
+import Za_lo from "../../components/button/Zalo";
+import PhoneNumber from "../../components/button/Phone";
+import EmaiMail from "../../components/button/Mail";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faPhone } from "@fortawesome/free-solid-svg-icons";
-import ContactForm from "../../components/Form/form";
-import Telegram from "../../components/subscribe/Tele";
+import ContactForm from "../../components/forms/form";
+import Telegram from "../../components/button/Tele";
 
 const Wallet = () => {
   return (

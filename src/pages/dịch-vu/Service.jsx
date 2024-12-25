@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Products_Service } from "../../components/data/Service";
+import { Products_Service } from "../../components/data/goi-dich-vu";
 import React from "react";
 
 const ServicePR = () => {
@@ -28,7 +28,7 @@ const ServicePR = () => {
               to={`/service/${item.id}`}
               className="flex relative flex-col gap-2 hover:scale-[0.95] transition-all duration-500 group"
               style={{
-                borderWidth: "4px",
+                borderWidth: "3px",
                 borderImage: "linear-gradient(90deg, #FFD700, #A37D2B) 1",
                 borderStyle: "solid",
               }}

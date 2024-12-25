@@ -1,4 +1,4 @@
-import { Products_Service } from "../../components/data/Service";
+import { Products_Service } from "../../components/data/goi-dich-vu";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";
@@ -34,18 +34,18 @@ const TrendingCollection = () => {
         <div className="xl:text-5xl md:text-2xl text-xl w-full uppercase font-semibold leading-loose text-center text-white absolute md:left-1/2 transform md:-translate-x-1/2">
           {/* Hiển thị cho màn hình nhỏ (dưới md) */}
           <h1 className="block md:hidden text-white italic w-[100%] text-center">
-            Welcome Massage Quý Ông
+            Welcome to Massage Quý Ông
           </h1>
 
           {/* Hiển thị cho màn hình từ md trở lên */}
           <h1 className="hidden md:inline-block w-full text-white italic tracking-widest">
-            Welcome Massage Quý Ông
+            Welcome to Massage Quý Ông
           </h1>
         </div>
 
         <Link
           to="/rankings"
-          className="hidden text-white md:block md:mr-14 lg:mr-0 text-sm p-3 xl:text-xl lg:p-5 rounded-full bg-customRed uppercase font-semibold leading-loose text-right animate-shake ml-auto transition-all duration-700 hover:scale-110"
+          className="hidden text-white md:block md:mr-14 lg:mr-0 text-sm p-3 xl:text-xl lg:p-5 rounded-full bg-customRed hover:text-customRed hover:bg-white uppercase font-semibold leading-loose text-right  ml-auto transition-all duration-700 hover:scale-110"
         >
           Kỹ Thuật Viên
         </Link>
@@ -62,7 +62,7 @@ const TrendingCollection = () => {
           />
 
           {/* Hiển thị đoạn text */}
-          <div className="text-white md:text-base lg:text-xl text-sm px-4 lg:px-0">
+          <div className="text-white  lg:text-xl text-base px-4 lg:px-0">
             {window.innerWidth >= 1024 || isExpanded ? (
               <p>
                 Hệ thống khách sạn EMERALD đạt tiêu chuẩn quốc tế trực thuộc sự
@@ -99,7 +99,7 @@ const TrendingCollection = () => {
           </div>
 
           {/* Video thay thế hình ảnh cuối */}
-          <div className="px-5 md:px-0">
+          <div>
             <ReactPlayer
               url="https://www.youtube.com/watch?v=eF7eRpLivSg" // Đường dẫn video đúng định dạng
               playing={false}

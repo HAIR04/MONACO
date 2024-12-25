@@ -2,11 +2,9 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Slider from "react-slick";
-import {Member_Ship} from "../../components/data/Member"
-import { Link } from 'react-router-dom';
+import { Member_Ship } from "../../components/data/KTV";
+import { Link } from "react-router-dom";
 const Worlds = () => {
-
-
   const getVisibleImagesCount = () => {
     if (window.innerWidth >= 1280) return 4;
     if (window.innerWidth >= 768) return 2;
@@ -21,9 +19,9 @@ const Worlds = () => {
     speed: 500,
     slidesToShow: visibleImagesCount,
     slidesToScroll: 1,
-    autoplay: true,   // Bật chế độ tự động
-    autoplaySpeed: 2000,  // Thời gian chuyển slide (2s)
-    arrows: false,    // Tắt mũi tên
+    autoplay: true, // Bật chế độ tự động
+    autoplaySpeed: 2000, // Thời gian chuyển slide (2s)
+    arrows: false, // Tắt mũi tên
   };
 
   return (
@@ -36,11 +34,16 @@ const Worlds = () => {
       <Slider {...settings}>
         {Member_Ship.slice(0, visibleImagesCount).map((item, index) => (
           <React.Fragment key={index}>
-            <Link to={`/girl/${item.id}`}
+            <Link
+              to={`/girl/${item.id}`}
               className="w-[95%] mx-auto flex flex-col  border-2 border-red-500
               hover:scale-[0.95] transition-all duration-500 group"
             >
-              <img src={item.url} alt={item.name} className="w-full h-[500px] object-cover" />
+              <img
+                src={item.url}
+                alt={item.name}
+                className="w-full h-[500px] object-cover"
+              />
 
               <div className="relative overflow-hidden">
                 <p className="text-2xl pt-4 text-yellow-600 text-center font-bold">
@@ -59,7 +62,7 @@ const Worlds = () => {
                       className="text-yellow-400 ml-1 text-xl"
                     />
                   ))}
-                 ( {item.vote} VOTE {""})
+                  ( {item.vote} VOTE {""})
                 </p>
 
                 <div

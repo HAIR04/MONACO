@@ -1,5 +1,5 @@
 import React from "react";
-import { massage_data } from "../../components/data/Massager";
+import { massage_data } from "../../components/data/loi-ich";
 import { Link } from "react-router-dom";
 
 const TopCreators = () => {
@@ -25,8 +25,11 @@ const TopCreators = () => {
               to={`/treat/${item.id}`}
               className="w-full relative xl:w-[31.5%] flex flex-col gap-5 border-2 border-red-500 hover:scale-[0.95] transition-all duration-500 group"
             >
-              <img src={item.url} alt={item.name} 
-              className="w-full h-[300px] object-cover"/>
+              <img
+                src={item.url}
+                alt={item.name}
+                className="w-full h-[300px] object-cover"
+              />
 
               <div className=" overflow-hidden">
                 <p className="text-lg text-yellow-600 text-center font-bold">

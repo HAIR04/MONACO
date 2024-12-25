@@ -1,10 +1,10 @@
-import { Member_Ship } from "../../components/data/Member";
-import Booking from "../../components/subscribe/Subscribe";
+import { Member_Ship } from "../../components/data/KTV";
+import Booking from "../../components/button/Subscribe";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Review_PR from "../../components/review/Review";
-import Subscribe_Responsive from "../../components/subscribe/Subscribe_Responsive";
+import Subscribe_Responsive from "../../components/button/Subscribe_Responsive";
 import { useParams } from "react-router-dom";
 
 const Girl_Detail = () => {
@@ -177,7 +177,7 @@ const Girl_Detail = () => {
               </div>
             ))}
           </div>
-          <div className="md:w-[80%] xl:w-[70%] w-full py-5 mx-auto md:text-lg text-sm">
+          <div className="md:w-[80%] xl:w-[70%] w-full py-5 mx-auto md:text-lg text-base">
             <p>
               Em ấy là một chuyên viên massage với hơn 5 năm kinh nghiệm trong
               việc thực hiện các liệu trình massage thư giãn... Em ấy là một

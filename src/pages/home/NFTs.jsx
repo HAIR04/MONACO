@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Products_Service } from "../../components/data/Service";
+import { Products_Service } from "../../components/data/goi-dich-vu";
 
 const NFTs = () => {
   const [visibleImagesCount, setVisibleImagesCount] = useState(3); // Hiển thị 3 ảnh ban đầu
@@ -30,7 +30,11 @@ const NFTs = () => {
               className="flex flex-col gap-5 border-2 border-yellow-500 hover:scale-[0.95] transition-all duration-500 relative group"
             >
               <div className="relative overflow-hidden">
-                <img src={item.url} alt={item.name} className="w-full h-[300px] object-cover" />
+                <img
+                  src={item.url}
+                  alt={item.name}
+                  className="w-full h-[300px] object-cover"
+                />
               </div>
               <p className="text-2xl text-yellow-600 text-center font-semibold">
                 {item.name}

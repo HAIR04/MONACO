@@ -5,8 +5,8 @@ import {
   faInstagram,
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
-import Subscribe from "../subscribe/Subscribe";
-import Subscribe_Responsive from "../subscribe/Subscribe_Responsive";
+import Subscribe from "../button/Subscribe";
+import Subscribe_Responsive from "../button/Subscribe_Responsive";
 const Footer = () => {
   return (
     <div className="w-full bg-footer">
@@ -25,7 +25,7 @@ const Footer = () => {
                 MONACO - MASSAGE QUÝ ÔNG
               </h1>
             </a>
-            <p className="text-white font-semibold text-sm md:text-base tracking-wide w-full 2xl:w-[95%] xl:w-[95%]">
+            <p className="text-white font-semibold text-sm md:text-base tracking-wide w-full 2xl:w-[100%] xl:w-[100%]">
               NÂNG TẦM QUÝ ÔNG - KHẲNG ĐỊNH PHONG ĐỘ.
             </p>
             <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide w-full 2xl:w-[90%] xl:w-[90%]">

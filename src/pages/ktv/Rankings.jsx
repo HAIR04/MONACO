@@ -1,4 +1,4 @@
-import { Member_Ship } from "../../components/data/Member";
+import { Member_Ship } from "../../components/data/KTV";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";

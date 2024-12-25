@@ -73,7 +73,7 @@ const ContactForm = () => {
 
     emailjs
       .sendForm(
-        "service_pambzho",
+        "service_uu24hel",
         "template_t8vll2k",
         e.target,
         "6nooVVJZEQE93be_W"
@@ -135,7 +135,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             placeholder="Tên / Bí danh"
-            className="w-full p-3 text-gray-400 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
           />
           <input
             type="number"
@@ -144,7 +144,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             placeholder="Số Điện Thoại"
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
           />
         </div>
 
@@ -155,14 +155,14 @@ const ContactForm = () => {
             value={formData.date}
             onChange={handleChange}
             required
-            className="w-full p-3 border text-gray-400 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 border text-black border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
           />
           <select
             name="time"
             value={formData.time}
             onChange={handleChange}
             required
-            className="w-full p-3 border text-gray-400 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 border text-black border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
           >
             <option value="" disabled>
               Chọn giờ
@@ -181,7 +181,7 @@ const ContactForm = () => {
             value={formData.package}
             onChange={handleChange}
             required
-            className="w-full text-gray-400 p-3 border  border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full text-black p-3 border  border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
           >
             <option value="" disabled>
               Chọn dịch vụ
@@ -206,7 +206,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             placeholder="Số người"
-            className="w-full p-3 border text-gray-400 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 border text-black border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
           />
         </div>
 
@@ -215,7 +215,7 @@ const ContactForm = () => {
           value={formData.additionalRequest}
           onChange={handleChange}
           placeholder="Yêu Cầu Khác (chọn kỹ thuật viên, dịch vụ phụ...)"
-          className="w-full italic text-gray-400 p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full italic text-black p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
         />
 
         <button
