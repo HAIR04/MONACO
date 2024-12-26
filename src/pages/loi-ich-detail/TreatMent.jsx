@@ -130,11 +130,11 @@ const TreatM = () => {
                 />
               )}
               <p>
-                Trên đây là những giới thiệu cơ bản của Neko Massage về dịch vụ
-                Super KIng tại cơ sở massage. Neko Massage luôn tự hào mang tới
-                những trải nghiệm dịch vụ thoải mái, sang trọng và chuyên nghiệp
-                nhất, luôn đặt sự thư giãn của khách hàng lên đầu, lấy ấy làm
-                kim chỉ nam để phục vụ các khách hàng của mình.
+                Trên đây là những giới thiệu cơ bản của Masage Quý Ông về dịch
+                vụ Super KIng tại cơ sở massage. Masage Quý Ông luôn tự hào mang
+                tới những trải nghiệm dịch vụ thoải mái, sang trọng và chuyên
+                nghiệp nhất, luôn đặt sự thư giãn của khách hàng lên đầu, lấy ấy
+                làm kim chỉ nam để phục vụ các khách hàng của mình.
               </p>
             </div>
           </div>
@@ -170,17 +170,18 @@ const TreatM = () => {
                     </div>
 
                     <div className="flex flex-col w-[90%] mx-auto md:w-[70%] gap-2">
-                      <p className="text-white px-5 line-clamp-1 md:line-clamp-2 text-center md:text-left md:text-2xl text-base font-bold">
+                      <p className="text-white px-5 md:px-0 lg:pr-5 xl:px-5  line-clamp-1 md:line-clamp-2 text-center md:text-left md:text-2xl text-base font-bold">
                         {relatedItem.name}
                       </p>
-                      <p className="hidden md:block text-white text-base p-5">
-                      
+                      <p className="hidden xl:block text-white text-base p-5">
                         {truncateText(relatedItem.desc, 300)}
                       </p>
                       <p className="block md:hidden text-white text-base ">
-                      
-                      {truncateText(relatedItem.desc, 100)}
-                    </p>
+                        {truncateText(relatedItem.desc, 100)}
+                      </p>
+                      <p className="hidden md:block xl:hidden text-white text-base ">
+                        {truncateText(relatedItem.desc, 200)}
+                      </p>
                       <div className="flex justify-end  pb-4 md:pb-0 md:px-5 items-center gap-2">
                         <FontAwesomeIcon
                           icon={faClock}

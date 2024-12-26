@@ -13,22 +13,19 @@ const Footer = () => {
       <div className="mx-auto py-10 w-[90%] 2xl:w-[90%] xl:w-[90%]">
         <div className="flex flex-col lg:flex-row justify-between gap-8">
           <div className="flex flex-col gap-5 2xl:w-[45%] xl:w-[45%]">
-            <a
-              href="#"
-              className="flex  gap-3 2xl:w-full xl:w-full"
-            >
+            <a href="#" className="flex  gap-3 2xl:w-full xl:w-full">
               <img
                 src="/assets/Logo/logo.png"
                 className="2xl:w-[25%] md:w-[25%] xl:w-[25%] rounded-full w-[30%]"
               />
-              <h1 className="text-white  xl:mt-8 text-lg text-center md:text-left md:text-2xl font-semibold xl:font-semibold tracking-wider">
+              <h1 className="text-white flex items-center lg:items-start  xl:mt-8 text-lg text-center md:text-left md:text-2xl font-semibold xl:font-semibold tracking-wider">
                 MONACO - MASSAGE QUÝ ÔNG
               </h1>
             </a>
-            <p className="text-white font-semibold text-center md:text-left text-base md:text-xl tracking-wide w-full 2xl:w-[100%] xl:w-[100%]">
+            <p className="text-white font-semibold  text-center md:text-left text-sm md:text-xl md:tracking-wide w-full 2xl:w-[100%] xl:w-[100%]">
               NÂNG TẦM QUÝ ÔNG - KHẲNG ĐỊNH PHONG ĐỘ
             </p>
-            <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide w-full 2xl:w-[90%] xl:w-[90%]">
+            <p className="text-white opacity-80 font-normal text-sm md:text-base py-5 md:py-0 tracking-wide w-full 2xl:w-[90%] xl:w-[90%]">
               Địa chỉ : Số 28 – 30 Lê Đức Thọ, Mỹ Đình, Nam Từ Liêm, Hà Nội.
             </p>
             <div>
@@ -78,7 +75,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="w-full xl:w-[40%] mt-5 xl:mt-8  flex flex-col gap-5">
+          <div className="w-full xl:w-[40%] mt-5 lg:mt-0 xl:mt-8  flex flex-col gap-5">
             <p className="text-white text-xl font-extrabold tracking-wider">
               VỊ TRÍ TRÊN GOOLGE MAP
             </p>
