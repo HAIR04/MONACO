@@ -12,7 +12,7 @@ const JoinDigest = () => {
       {/* Đoạn mô tả */}
       <div className="lg:w-[100%] w-[100% pt-5 mx-auto">
         <p className="text-left text-base md:text-xl leading-relaxed  tracking-tight">
-          Quán Massage Monaco tự hào là một trong những điểm đến hàng đầu cho
+          Quán Massage Quý Ông tự hào là một trong những điểm đến hàng đầu cho
           những ai tìm kiếm sự thư giãn và chăm sóc sức khỏe tại Hà Nội. Chúng tôi
           cam kết mang đến cho khách hàng những trải nghiệm tuyệt vời với dịch vụ
           massage chuyên nghiệp, không gian yên tĩnh và thân thiện.
@@ -21,7 +21,7 @@ const JoinDigest = () => {
         {/* Nội dung bổ sung - chỉ hiển thị khi `showFullText` hoặc `md` trở lên */}
         {(showFullText || window.innerWidth >= 1024) && (
           <p className="text-left text-base md:text-xl leading-relaxed tracking-tight">
-            Tại Monaco, đội ngũ kỹ thuật viên của chúng tôi được tuyển chọn kỹ càng,
+            Tại Masage Quý Ông, đội ngũ kỹ thuật viên của chúng tôi được tuyển chọn kỹ càng,
             đều là những chuyên gia với tay nghề cao và kinh nghiệm lâu năm trong
             ngành massage. Mỗi dịch vụ của chúng tôi được thiết kế để đáp ứng nhu
             cầu thư giãn, giải tỏa căng thẳng và phục hồi năng lượng cho cơ thể, từ

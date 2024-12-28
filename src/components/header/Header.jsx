@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBarsStaggered, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import ContactInfo from "./ContactInfo";
 import Subscribe_Responsive from "../button/Subscribe_Responsive";
 import Booking from "../button/Subscribe";
@@ -100,7 +100,7 @@ const Header = () => {
           onClick={() => setOpen(!open)}
           className="text-2xl text-white z-50 px-4"
         >
-          <FontAwesomeIcon icon={faBarsStaggered} />
+          <FontAwesomeIcon icon={faBars} />
         </button>
 
         {/* Menu khi mở */}
@@ -167,11 +167,27 @@ const Header = () => {
             className="h-[150px]" // Chiều cao logo
           />
         </div>
+        
         {open && (
         <div   onClick={() => setOpen(false)} className=" h-[20000px] w-[40%]">
           
         </div>
         )}
+        <Link 
+  to="/rankings" 
+  className="absolute top-1/2 bg-customRed italic rounded-full right-3 border border-white hover:scale-105 transition-all duration-500 transform -translate-y-1/2 w-[65px] h-[65px] flex flex-col items-center justify-center text-center"
+>
+  <h1 className="text-white text-xs">
+    KỸ
+  </h1>
+  <h1 className="text-white text-xs">
+    THUẬT
+  </h1>
+  <h1 className="text-white text-xs">
+    VIÊN
+  </h1>
+</Link>
+
       </div>
       
     </div>

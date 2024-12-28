@@ -39,9 +39,9 @@ const Wallet = () => {
         <div className="flex flex-wrap py-10">
           <div className="w-full lg:w-1/2">
             <p className="text-white lg:text-3xl text-xl text-center font-semibold lg:text-left pb-5">
-              MONACO - MASSAGE QUÝ ÔNG
+             MASSAGE QUÝ ÔNG
             </p>
-            <hr className="lg:w-[55%] w-full" />
+            <hr className="lg:w-[55%] w-[70%] mx-auto md:mx-0" />
             <p className="text-white lg:w-[70%] w-full lg:text-xl text-sm  flex py-5 italic font-medium">
               <FontAwesomeIcon
                 icon={faMapMarkerAlt}
@@ -51,9 +51,9 @@ const Wallet = () => {
             </p>
             <p className="text-white lg:text-xl text-sm  flex items-center italic pb-5 font-medium">
               <FontAwesomeIcon icon={faPhone} className="mr-2 text-white" />
-              Liên hệ: 0912.30.28.30
+              Điện thoại: 0912.30.28.30 - 098.656.2830
             </p>
-            <hr className="lg:w-[40%] w-full" />
+            <hr className="lg:w-[40%] w-[90%] mx-auto md:mx-0" />
             <p className="text-white hidden lg:block py-10 text-3xl font-semibold text-left">
               KÊNH LIÊN HỆ
             </p>

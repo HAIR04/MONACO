@@ -10,7 +10,7 @@ import Subscribe_Responsive from "../button/Subscribe_Responsive";
 const Footer = () => {
   return (
     <div className="w-full bg-footer">
-      <div className="mx-auto py-10 w-[90%] 2xl:w-[90%] xl:w-[90%]">
+      <div className="mx-auto py-10 w-[95%] 2xl:w-[90%] xl:w-[90%]">
         <div className="flex flex-col lg:flex-row justify-between gap-8">
           <div className="flex flex-col gap-5 2xl:w-[45%] xl:w-[45%]">
             <a href="#" className="flex  gap-3 2xl:w-full xl:w-full">
@@ -18,14 +18,14 @@ const Footer = () => {
                 src="/assets/Logo/logo.png"
                 className="2xl:w-[25%] md:w-[25%] xl:w-[25%] rounded-full w-[30%]"
               />
-              <h1 className="text-white flex items-center lg:items-start  xl:mt-8 text-lg text-center md:text-left md:text-2xl font-semibold xl:font-semibold tracking-wider">
-                MONACO - MASSAGE QUÝ ÔNG
+              <h1 className="text-white flex items-center lg:items-start  xl:mt-8 text-2xl text-center md:text-left md:text-2xl font-semibold xl:font-semibold tracking-wider">
+                MASSAGE QUÝ ÔNG
               </h1>
             </a>
-            <p className="text-white font-semibold  text-center md:text-left text-sm md:text-xl md:tracking-wide w-full 2xl:w-[100%] xl:w-[100%]">
+            <h1 className="text-white font-semibold  text-center md:text-left text-base md:text-xl md:tracking-wide w-full 2xl:w-[100%] xl:w-[100%]">
               NÂNG TẦM QUÝ ÔNG - KHẲNG ĐỊNH PHONG ĐỘ
-            </p>
-            <p className="text-white opacity-80 font-normal text-sm md:text-base py-5 md:py-0 tracking-wide w-full 2xl:w-[90%] xl:w-[90%]">
+            </h1>
+            <p className="text-white opacity-80 font-normal text-base md:text-base py-5 md:py-0 tracking-wide w-full 2xl:w-[90%] xl:w-[90%]">
               Địa chỉ : Số 28 – 30 Lê Đức Thọ, Mỹ Đình, Nam Từ Liêm, Hà Nội.
             </p>
             <div>
@@ -61,17 +61,17 @@ const Footer = () => {
             <p className="text-white text-xl font-extrabold tracking-wider">
               LIÊN HỆ
             </p>
-            <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide">
-              Hotline : +84912302830
+            <p className="text-white opacity-80 font-normal text-base md:text-base tracking-wide">
+              Hotline : 0912.30.28.30 - 098.656.2830
             </p>
-            <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide">
+            <p className="text-white opacity-80 font-normal text-base md:text-base tracking-wide">
               Facebook : Massage Quý Ông
             </p>
-            <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide">
-              Zalo : +84912302830
+            <p className="text-white opacity-80 font-normal text-base md:text-base tracking-wide">
+              Zalo : 0912.30.28.30 - 098.656.2830
             </p>
-            <p className="text-white opacity-80 font-normal text-sm md:text-base tracking-wide">
-              Telegram : +84912302830
+            <p className="text-white opacity-80 font-normal text-base md:text-base tracking-wide">
+              Telegram :0912.30.28.30
             </p>
           </div>
 

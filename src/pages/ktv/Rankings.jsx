@@ -2,16 +2,34 @@ import { Member_Ship } from "../../components/data/KTV";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import ReactPaginate from "react-paginate";
 
 const Rankings = () => {
-  const getVisibleImagesCount = () => {
-    if (window.innerWidth >= 1280) return 99;
-    if (window.innerWidth >= 768) return 100;
-    return 100;
-  };
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 12;
 
-  const visibleImagesCount = getVisibleImagesCount();
+  // Cuộn lên đầu trang khi currentPage thay đổi
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Cuộn mượt
+    });
+  }, [currentPage]);
+
+  // Lấy danh sách data của trang hiện tại
+  const pageData = Member_Ship.slice(
+    currentPage * itemsPerPage,
+    (currentPage + 1) * itemsPerPage
+  );
+
+  // Số lượng trang
+  const pageCount = Math.ceil(Member_Ship.length / itemsPerPage);
+
+  // Xử lý khi chuyển trang
+  const handlePageClick = ({ selected }) => {
+    setCurrentPage(selected);
+  };
 
   return (
     <>
@@ -28,7 +46,7 @@ const Rankings = () => {
         </div>
 
         <div className="xl:w-[80%] w-[95%] mx-auto grid grid-cols-2 sm:grid-cols-2 gap-2 xl:grid-cols-4 md:grid-cols-3 md:gap-7">
-          {Member_Ship.slice(0, visibleImagesCount).map((item, index) => (
+          {pageData.map((item, index) => (
             <React.Fragment key={index}>
               <Link
                 to={`/girl/${item.id}`}
@@ -43,25 +61,24 @@ const Rankings = () => {
                   <p className="md:text-2xl text-md pt-4 bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text text-center font-bold">
                     {item.name}
                   </p>
-                  <p className="md:text-base  text-xs text-white text-center font-bold py-2">
+                  <p className="md:text-base text-xs text-white text-center font-bold py-2">
                     {item.desc}
                   </p>
                   <p className="text-xs text-white text-center flex items-center lg:items-end justify-between w-[95%] mx-auto pb-4">
-                    <p className="text-xs font-semibold italic text-yellow-600">
+                    <span className="text-xs font-semibold italic text-yellow-600">
                       ĐÁNH GIÁ :{" "}
-                    </p>
+                    </span>
                     {[...Array(5)].map((_, index) => (
                       <FontAwesomeIcon
                         key={index}
                         icon={faStar}
-                        className="text-red-700  lg:text-xl text-xs"
+                        className="text-red-700 lg:text-xl text-xs"
                       />
                     ))}
                     <div className="hidden md:block"> ( {item.vote} VOTE )</div>
                   </p>
-
                   <div
-                    className="absolute hidden  left-0 bottom-0 w-full bg-red-900 text-white text-lg font-semibold md:flex items-center justify-center py-3
+                    className="absolute hidden left-0 bottom-0 w-full bg-red-900 text-white text-lg font-semibold md:flex items-center justify-center py-3
                          translate-y-full group-hover:translate-y-0 transition-all duration-500"
                   >
                     Xem chi tiết
@@ -71,6 +88,26 @@ const Rankings = () => {
             </React.Fragment>
           ))}
         </div>
+
+        {/* Phân trang */}
+        <div className="mt-5 flex justify-center">
+  <ReactPaginate
+    previousLabel={"<"}
+    nextLabel={">"}
+    breakLabel={"..."}
+    pageCount={pageCount}
+    marginPagesDisplayed={2}
+    pageRangeDisplayed={5}
+    onPageChange={handlePageClick}
+    containerClassName={"pagination"}
+    activeClassName={"active"}
+    previousClassName={"prev-page"}
+    nextClassName={"next-page"}
+    pageClassName={"page-item"}
+    pageLinkClassName={"page-link"}
+  />
+</div>
+
       </div>
     </>
   );

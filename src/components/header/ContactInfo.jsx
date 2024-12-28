@@ -10,7 +10,7 @@ const ContactInfo = () => {
       </p>
       <p className="hidden items-center lg:text-xs xl:text-base lg:flex">
         <FontAwesomeIcon icon={faPhone} className="mr-2 text-black" />
-        Liên Hệ : 0912.30.28.30
+        Liên Hệ : 0912.30.28.30 - 098.656.2830
       </p>
     </div>
   );

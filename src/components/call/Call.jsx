@@ -21,7 +21,7 @@ const CallNowButton = () => {
       <h2
         className="fixed bottom-5 z-10 italic  text-center right-5 flex items-center justify-center 
                  bg-red-700 rounded-full border-2  text-white text-md font-bold h-20 w-20 p-5 cursor-pointer 
-                 shadow-lg  animate-shake  hover:animate-shake hover:text-customRed  hover:bg-white hover:border-4 hover:border-customRed transition-all duration-800"
+                 shadow-lg   hover:text-customRed  hover:bg-white hover:border-4 hover:border-customRed transition-all duration-800"
         onClick={toggleOverlay}
       >
        ĐẶT NGAY

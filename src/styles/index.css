@@ -50,6 +50,68 @@ input[type="date"]:focus,
 input[type="date"]:valid {
   color: #000; /* Hiện màu chữ khi có dữ liệu */
 }
+.pagination {
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination .page-item {
+  list-style: none;
+}
+
+.pagination .page-link {
+  font-family: "Roboto", serif;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #333;
+  border: 2px solid #555;
+ 
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pagination .page-link:hover {
+  background-color: gray; /* Màu vàng ánh kim */
+  color: white;
+  border-color: gray;
+}
+
+.pagination .active .page-link {
+  background-color: gray; /* Màu đỏ nổi bật */
+  color: white;
+  border-color: gray;
+  
+}
+
+.prev-page, .next-page {
+ display: none;
+  color: white;
+  background-color: #333;
+  border: 2px solid #555;
+  
+  padding: 0 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.prev-page:hover, .next-page:hover {
+  background-color: gray; /* Màu vàng ánh kim */
+  color: white;
+  border-color: gray;
+}
+
+
 
 
 

@@ -12,6 +12,18 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const DetailSercive = () => {
+  // Đảm bảo các hooks được gọi ở đầu component
+  const { id } = useParams();
+  const product = Products_Service.find((item) => item.id === parseInt(id));
+
+  // Chuyển tất cả các useState lên đầu
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const [visibleStartIndex, setVisibleStartIndex] = useState(0);
+  const [showAllImages, setShowAllImages] = useState(false); // Đảm bảo gọi useState ở đây
+
+  // Cấu hình slider (có thể giữ như cũ)
   const settingsAutoPlay = {
     dots: false,
     infinite: true,
@@ -43,7 +55,6 @@ const DetailSercive = () => {
           slidesToScroll: 1,
         },
       },
-      
     ],
   };
 
@@ -73,27 +84,18 @@ const DetailSercive = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
     ],
   };
 
-  const { id } = useParams();
-  const product = Products_Service.find((item) => item.id === parseInt(id));
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
-  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
-  const [visibleStartIndex, setVisibleStartIndex] = useState(0);
-
-  const MAX_VISIBLE_IMAGES = 4;
-
   if (!product) {
     return <p className="text-center text-red-600">Sản phẩm không tồn tại!</p>;
   }
 
+  // Các hàm xử lý khác
   const toggleOverlay = () => setIsOverlayVisible(!isOverlayVisible);
   const handleImageClick = (index) => setSelectedImageIndex(index);
 
@@ -129,7 +131,7 @@ const DetailSercive = () => {
             <div className="md:py-5 ">
               <Slider
                 {...settingsNoAutoPlay}
-                className="md:w-[95%] w-full mx-auto"
+                className="md:w-[96%] w-[90%] lg:w-[100%] mx-auto"
               >
                 {product.sub_images.map((subImage, index) => (
                   <div
@@ -139,7 +141,7 @@ const DetailSercive = () => {
                   >
                     <img
                       src={subImage.url}
-                      className=" w-full 3xl:w-[220px]  border border-yellow-600  md:h-[150px] hover:scale-110  transition-all duration-500 h-[90px] object-cover cursor-pointer"
+                      className=" w-[90%] md:w-[95%] mx-auto 3xl:w-[220px]  border border-yellow-600  md:h-[150px] hover:scale-110  transition-all duration-500 h-[90px] object-cover cursor-pointer"
                     />
                   </div>
                 ))}
@@ -202,29 +204,75 @@ const DetailSercive = () => {
         <span className="lg:text-2xl text-lg  font-bold text-white flex justify-center pt-10">
           ________THÔNG TIN CHI TIẾT________
         </span>
-
         <div className="py-5">
-          <Slider {...settingsAutoPlay} className="flex gap-4">
-            {product.sub_images.map((subImage, index) => (
-              <div
-                key={index}
-                className="text-center border border-yellow-600 rounded-lg p-2"
-              >
-                <h4 className="text-xl text-red-600 font-bold">
-                  LIỆU TRÌNH {index + 1}
-                </h4>
-                <p className="text-lg text-white h-[70px] flex items-center justify-center">
-                  {subImage.title || `Ảnh phụ ${index + 1}`}
-                </p>
-                <img
-                  src={subImage.url}
-                  alt={subImage.title || `Ảnh phụ ${index + 1}`}
-                  className="w-full md:h-[200px] lg:h-[200px] 3xl:h-[250px] h-[200px] object-cover rounded-md"
-                />
-              </div>
-            ))}
-          </Slider>
-        </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+    {/* Display only 3 titles on smaller screens, all on larger screens */}
+    {(showAllImages || window.innerWidth >= 768 ? product.sub_images : product.sub_images.slice(0, 3)).map((subImage, index) => (
+      <div
+        key={index}
+        className="flex items-center justify-center border border-white p-3 bg-black rounded-md"
+      >
+        <h4 className="text-lg text-white font-semibold text-center">
+          {index + 1}. {subImage.title || `Ảnh phụ ${index + 1}`}
+        </h4>
+      </div>
+    ))}
+  </div>
+
+  {/* Toggle button for small screens */}
+  {!showAllImages && window.innerWidth < 768 && (
+    <div className="text-center pt-3">
+      <button
+        onClick={() => setShowAllImages(true)}
+        className="text-sm text-white italic underline font-semibold "
+      >
+        Xem thêm
+      </button>
+    </div>
+  )}
+
+  {/* Button to collapse the image list on small screens */}
+  {showAllImages && window.innerWidth < 768 && (
+    <div className="text-center pt-3">
+      <button
+        onClick={() => setShowAllImages(false)}
+        className="text-sm text-white underline italic font-semibold "
+      >
+        Thu gọn
+      </button>
+    </div>
+  )}
+</div>
+
+
+
+
+{/* Slider */}
+<div className="py-5">
+  <Slider {...settingsAutoPlay} className="flex ">
+    {product.sub_images.map((subImage, index) => (
+      <div
+        key={index}
+        className="text-center border border-yellow-600 rounded-lg p-2"
+        onClick={() => handleImageClick(index)} // Thêm sự kiện click
+      >
+        <h4 className="text-xl text-red-600 mt-5 font-bold">
+          LIỆU TRÌNH {index + 1}
+        </h4>
+        <p className="text-lg text-white h-[70px] flex items-center justify-center">
+          {subImage.title || `Ảnh phụ ${index + 1}`}
+        </p>
+        <img
+          src={subImage.url}
+          alt={subImage.title || `Ảnh phụ ${index + 1}`}
+          className="w-full md:h-[200px] lg:h-[200px] 3xl:h-[250px] h-[200px] object-cover rounded-md cursor-pointer"
+        />
+      </div>
+    ))}
+  </Slider>
+</div>
+
+
 
         <Review_PR />
       </div>
