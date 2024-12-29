@@ -10,7 +10,7 @@ import Subscribe_Responsive from "../button/Subscribe_Responsive";
 const Footer = () => {
   return (
     <div className="w-full bg-footer">
-      <div className="mx-auto py-10 w-[95%] 2xl:w-[90%] xl:w-[90%]">
+      <div className="mx-auto py-10 w-[90%] 2xl:w-[90%] xl:w-[90%]">
         <div className="flex flex-col lg:flex-row justify-between gap-8">
           <div className="flex flex-col gap-5 2xl:w-[45%] xl:w-[45%]">
             <a href="#" className="flex  gap-3 2xl:w-full xl:w-full">
@@ -18,11 +18,11 @@ const Footer = () => {
                 src="/assets/Logo/logo.png"
                 className="2xl:w-[25%] md:w-[25%] xl:w-[25%] rounded-full w-[30%]"
               />
-              <h1 className="text-white flex items-center lg:items-start  xl:mt-8 text-2xl text-center md:text-left md:text-2xl font-semibold xl:font-semibold tracking-wider">
+              <h1 className="text-white flex items-center lg:items-start  xl:mt-8 text-xl text-center md:text-left md:text-2xl font-semibold xl:font-semibold tracking-wider">
                 MASSAGE QUÝ ÔNG
               </h1>
             </a>
-            <h1 className="text-white font-semibold  text-center md:text-left text-base md:text-xl md:tracking-wide w-full 2xl:w-[100%] xl:w-[100%]">
+            <h1 className="text-white font-bold  text-center md:text-left text-sm md:text-xl tracking-wide w-full 2xl:w-[100%] xl:w-[100%]">
               NÂNG TẦM QUÝ ÔNG - KHẲNG ĐỊNH PHONG ĐỘ
             </h1>
             <p className="text-white opacity-80 font-normal text-base md:text-base py-5 md:py-0 tracking-wide w-full 2xl:w-[90%] xl:w-[90%]">

@@ -2,6 +2,8 @@ import { Member_Ship } from "../../components/data/KTV";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 
@@ -38,7 +40,7 @@ const Rankings = () => {
           <img
             className="md:h-[200px] h-[150px] w-full opacity-15 object-cover"
             src="/assets/GioiThieu/Be2.jpg"
-            alt="Background"
+            alt="Lady Loading"
           />
           <h1 className="md:text-2xl text-base tracking-widest text-white font-bold italic text-center absolute inset-0 flex items-center justify-center">
             KỸ THUẬT VIÊN / MASSAGE THERAPIST
@@ -54,7 +56,7 @@ const Rankings = () => {
               >
                 <img
                   src={item.url}
-                  alt={item.name}
+                  alt="Lady Loading"
                   className="md:w-full object-cover lg:h-[500px] md:h-[400px] w-full h-[250px]"
                 />
                 <div className="relative overflow-hidden">

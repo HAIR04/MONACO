@@ -160,13 +160,13 @@ const Header = () => {
         )}
 
         {/* Logo (tách biệt và căn giữa màn hình) */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <Link to="/" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <img
             src="/assets/Logo/logo.png"
             alt="Logo"
             className="h-[150px]" // Chiều cao logo
           />
-        </div>
+        </Link>
         
         {open && (
         <div   onClick={() => setOpen(false)} className=" h-[20000px] w-[40%]">

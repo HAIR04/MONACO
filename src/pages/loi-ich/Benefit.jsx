@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
 import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 const LoiIch = () => {
   const itemsPerPage = 4; // Số lượng mục hiển thị trên mỗi trang
   const [currentPage, setCurrentPage] = useState(0);
@@ -49,7 +50,7 @@ const LoiIch = () => {
         <img
           className="md:h-[200px] h-[150px] w-full opacity-15 object-cover"
           src="/assets/GioiThieu/Be2.jpg"
-          alt="Background"
+          alt="Lady Loading"
         />
         <h1 className="md:text-2xl text-base tracking-widest text-white font-bold italic absolute inset-0 flex items-center justify-center">
           LỢI ÍCH / BENEFIT
@@ -71,7 +72,7 @@ const LoiIch = () => {
               <div className="relative md:p-5 p-2 w-full md:w-[30%]">
                 <img
                   src={item.url}
-                  alt={item.name}
+                  alt="Lady Loading"
                   className="w-full object-cover h-[200px]"
                 />
                 <div className="absolute italic inset-0 bg-black bg-opacity-60 text-white text-lg font-semibold flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">

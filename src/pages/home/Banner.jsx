@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Banner = () => {
   const settings = {
@@ -23,22 +25,22 @@ const Banner = () => {
         <Slider {...settings}>
           <div>
             <img
-              src="/assets/GioiThieu/Banner1.jpg"
-              alt="Slide 1"
+              src="/assets/GioiThieu/Banner1.webp"
+              alt="Lady Loading"
               className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover "
             />
           </div>
           <div>
           <img
-              src="/assets/GioiThieu/Banner2.jpg"
-              alt="Slide 1"
+              src="/assets/GioiThieu/Banner2.webp"
+              alt="Lady Loading"
               className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover"
             />
           </div>
           <div>
           <img
-              src="/assets/GioiThieu/Banner3.jpg"
-              alt="Slide 1"
+              src="/assets/GioiThieu/Banner3.webp"
+              alt="Lady Loading"
               className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover"
             />
           </div>

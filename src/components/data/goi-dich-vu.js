@@ -115,7 +115,7 @@ export const Products_Service = [
       },
       {
         url: "/assets/GoiCombo/combo2.jpg",
-        title: "Thư giãn cùng KTV)",
+        title: "Thư giãn cùng KTV",
       },
     ],
     
