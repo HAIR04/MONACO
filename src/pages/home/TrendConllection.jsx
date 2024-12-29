@@ -9,7 +9,15 @@ const TrendingCollection = () => {
   const [showFullText, setShowFullText] = useState(isLargeScreen);
 
   const textContent = `
-    Hệ thống Massage Quý Ông đạt tiêu chuẩn quốc tế, Trung tâm massage đầu tiên được thành lập vào năm 2016 tại khu vực Mỹ Đình, trung tâm đắc địa của thủ đô Hà Nội. Massage Quý Ông được thiết kế theo phong cách kết hợp Á - Âu sang trọng, cùng trang thiết bị hiện đại và nội thất cao cấp. Không gian trung tâm sử dụng gam màu nâu trầm làm điểm nhấn, tạo cảm giác ấm cúng và lịch lãm ngay từ lần đầu bước chân đến. Bên cạnh đó, sự kết hợp giữa tông màu trắng tinh tế và ánh sáng dịu nhẹ giúp không gian trở nên trẻ trung, hiện đại và sang trọng. Với đội ngũ kỹ thuật viên massage chuyên nghiệp, được đào tạo bài bản cùng các liệu pháp chăm sóc sức khỏe đẳng cấp, chúng tôi cam kết mang đến cho quý ông những trải nghiệm thư giãn tuyệt vời nhất. Đây chính là không gian lý tưởng để quý khách tận hưởng sự thoải mái, tái tạo năng lượng và khẳng định phong cách đẳng cấp của mình.
+    Hệ thống Massage Quý Ông đạt tiêu chuẩn quốc tế, 
+    Trung tâm massage đầu tiên được thành lập vào năm 2016 tại khu vực Mỹ Đình,
+     trung tâm đắc địa của thủ đô Hà Nội. Massage Quý Ông được thiết kế theo phong cách kết hợp Á - Âu sang trọng,
+      cùng trang thiết bị hiện đại và nội thất cao cấp. Không gian trung tâm sử dụng gam màu nâu trầm làm điểm nhấn, 
+      tạo cảm giác ấm cúng và lịch lãm ngay từ lần đầu bước chân đến. Bên cạnh đó, sự kết hợp giữa tông màu trắng tinh tế 
+      và ánh sáng dịu nhẹ giúp không gian trở nên trẻ trung, hiện đại và sang trọng. Với đội ngũ kỹ thuật viên massage chuyên nghiệp,
+       được đào tạo bài bản cùng các liệu pháp chăm sóc sức khỏe đẳng cấp, chúng tôi cam kết mang đến cho quý ông những trải nghiệm thư 
+       giãn tuyệt vời nhất. Đây chính là không gian lý tưởng để quý khách tận hưởng sự thoải mái, tái tạo năng lượng và khẳng định phong
+        cách đẳng cấp của mình.
   `;
 
   // Lắng nghe thay đổi kích thước màn hình
@@ -27,7 +35,9 @@ const TrendingCollection = () => {
     };
   }, []);
 
-  const displayedText = showFullText ? textContent : textContent.slice(0, 150) + (textContent.length > 300 ? "..." : "");
+  const displayedText = showFullText
+    ? textContent
+    : textContent.slice(0, 150) + (textContent.length > 300 ? "..." : "");
 
   return (
     <div className="lg:w-[90%] w-[100%] mx-auto bg-header">

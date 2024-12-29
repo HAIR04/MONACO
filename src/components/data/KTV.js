@@ -1,10 +1,14 @@
+//danh sách ktv
 export const Member_Ship = [
   {
     id: 1,
-    url: "/assets/NhanVien/nv1.jpeg",
+    url: "/assets/NhanVien/nv8.jpeg",
     img_data: [
-      { url: "/assets/NhanVien/nv1.jpeg" },
-      { url: "/assets/NhanVien/nv1.jpeg" },
+      { url: "/assets/NhanVien/nv8.jpeg" },
+      { url: "/assets/NhanVien/nv8.jpeg" },
+      { url: "/assets/NhanVien/nv8.jpeg" },
+      { url: "/assets/NhanVien/nv8.jpeg" },
+      
     ],
     name: "KHÁNH LINH",
     age: "2000",

@@ -78,6 +78,7 @@ const JoinDigest = () => {
       </div>
 
       <div className="pt-5">
+         {/* Ảnh cuối */}
         <img
           className="w-full mx-auto h-[150px] sm:h-[300px] lg:h-[400px] object-cover transform hover:scale-105 transition-all duration-300 ease-in-out"
           src="/assets/GioiThieu/Banner1.webp"

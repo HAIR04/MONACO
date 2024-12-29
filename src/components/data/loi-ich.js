@@ -1,3 +1,4 @@
+//bài viết lợi ích
 export const massage_data = [
   {
     id: 1,
@@ -5,8 +6,8 @@ export const massage_data = [
     img_data: [
       { url: "/assets/LieuTrinh/LieuTrinh1.jpg" },
       { url: "/assets/LieuTrinh/LieuTrinh2.jpg" },
-      { url: "/assets/LieuTrinh/LieuTrinh1.jpg" },
-      { url: "/assets/LieuTrinh/LieuTrinh2.jpg" },
+      { url: "/assets/LieuTrinh/LieuTrinh3.jpg" },
+      { url: "/assets/LieuTrinh/LieuTrinh4.jpg" },
     ],
     name: "CÁC LỢI ÍCH TUYỆT VỜI CỦA MASSAGE BODY TỚI CƠ THỂ",
     desc: "Dịch vụ massage body từ lâu đã được yêu thích và sử dụng bởi rất nhiều khách hàng, kể cả nam giới lẫn nữ giới. Với việc thực hiện một liệu trình chăm sóc cơ thể và sức khỏe đều đặn, quý bạn đọc sẽ cảm nhận được sự khác biệt trong cơ thể và tinh thần của mình. Do đó, dịch vụ massage luôn là thiết yếu và không thể vắng mặt trong đời sống hiện tại.",

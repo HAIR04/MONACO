@@ -43,12 +43,21 @@ const Review_PR = () => {
         "Chuyên viên massage rất chuyên nghiệp và tận tâm. Sau khi massage, tôi cảm thấy cơ thể nhẹ nhõm và thoải mái hơn rất nhiều. Dịch vụ tuyệt vời!",
       vote: 4,
     },
+    {
+      id: 6,
+      name: "ThangPham",
+      date: "2024-07-11",
+      comment: "Rất đáng để trải nghiệm",
+      vote: 5,
+    },
   ];
 
   // Format ngày thángđ
   const formatDate = (dateString) => {
     const options = { day: "2-digit", month: "2-digit", year: "numeric" };
-    return new Intl.DateTimeFormat("vi-VN", options).format(new Date(dateString));
+    return new Intl.DateTimeFormat("vi-VN", options).format(
+      new Date(dateString)
+    );
   };
 
   // Kiểm tra xem reviews có tồn tại và là một mảng hợp lệ không
