@@ -10,7 +10,7 @@ import Subscribe_Responsive from "../button/Subscribe_Responsive";
 const Footer = () => {
   return (
     <div className="w-full bg-footer">
-      <div className="mx-auto py-10 w-[90%] 2xl:w-[90%] xl:w-[90%]">
+      <div className="mx-auto py-10 w-[95%] 2xl:w-[90%] xl:w-[90%]">
         <div className="flex flex-col lg:flex-row justify-between gap-8">
           <div className="flex flex-col gap-5 2xl:w-[45%] xl:w-[45%]">
             <a href="#" className="flex  gap-3 2xl:w-full xl:w-full">
@@ -22,17 +22,17 @@ const Footer = () => {
                 MASSAGE QUÝ ÔNG
               </h1>
             </a>
-            <h1 className="text-white font-bold  text-center md:text-left text-sm md:text-xl tracking-wide w-full 2xl:w-[100%] xl:w-[100%]">
+            <h1 className="text-white font-semibold  text-center md:text-left text-sm md:text-xl tracking-wide w-full 2xl:w-[100%] xl:w-[100%]">
               NÂNG TẦM QUÝ ÔNG - KHẲNG ĐỊNH PHONG ĐỘ
             </h1>
-            <p className="text-white opacity-80 font-normal text-base md:text-base py-5 md:py-0 tracking-wide w-full 2xl:w-[90%] xl:w-[90%]">
+            <p className="text-white opacity-80 font-normal text-base text-center md:text-left md:text-base py-5 md:py-0 tracking-wide w-[90%] md:w-full mx-auto ">
               Địa chỉ : Số 28 – 30 Lê Đức Thọ, Mỹ Đình, Nam Từ Liêm, Hà Nội.
             </p>
             <div>
-              <p className="text-white   mb-5 font-medium text-left text-sm md:text-base tracking-wide">
+              <p className="text-white w-[90%] mx-auto md:w-full  mb-5 font-medium text-center md:text-left text-sm md:text-base tracking-wide">
                 CÁC PHƯƠNG TIỆN TRUYỀN THÔNG
               </p>
-              <ul className="flex text-white  gap-5 justify-start  opacity-30 text-3xl xl:text-3xl leading-loose">
+              <ul className="flex text-white  gap-5 w-[90%] mx-auto md:w-full md:justify-start justify-center opacity-30 text-3xl xl:text-3xl leading-loose">
                 <li>
                   <a href="https://s.net.vn/5eJU">
                     <FontAwesomeIcon icon={faFacebook} />
@@ -57,7 +57,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="w-full xl:w-[25%] xl:mt-8 flex flex-col gap-3  xl:gap-5 tracking-wide">
+          <div className="xl:w-[25%] w-[90%] mx-auto md:w-full xl:mt-8 flex flex-col gap-3 text-center md:text-left xl:gap-5 tracking-wide">
             <p className="text-white text-xl font-extrabold tracking-wider">
               LIÊN HỆ
             </p>
@@ -75,8 +75,8 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="w-full xl:w-[40%] mt-5 lg:mt-0 xl:mt-8  flex flex-col gap-5">
-            <p className="text-white text-xl font-extrabold tracking-wider">
+          <div className="w-full xl:w-[40%] mt-5 lg:mt-0 xl:mt-8 text-center md:text-left  flex flex-col gap-5">
+            <p className="text-white w-[90%] mx-auto md:w-full text-xl font-extrabold tracking-wider">
               VỊ TRÍ TRÊN GOOLGE MAP
             </p>
             <iframe
