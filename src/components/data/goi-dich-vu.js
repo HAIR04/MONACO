@@ -1,96 +1,93 @@
-//gói dịch vụ
+//danh sách gói dịch vụ
 export const Products_Service = [
- 
-    {
-      id: 1,
-      url: "/assets/GoiCombo/combo1.jpg",
-      sub_images: [
-        {
-          url: "/assets/GoiCombo/combo1.jpg",
-          title: "Xông hơi thảo dược",
-        },
-        {
-          url: "/assets/GoiCombo/combo2.jpg",
-          title: "Ngâm lá người Da Đỏ",
-        },
-        {
-          url: "/assets/GoiCombo/combo1.jpg",
-          title: "Tắm chung bồn cùng KTV",
-        },
-        {
-          url: "/assets/GoiCombo/combo2.jpg",
-          title: "Trườn NURU",
-        },
-        {
-          url: "/assets/GoiCombo/combo1.jpg",
-          title: "Massager Body",
-        },
-        {
-          url: "/assets/GoiCombo/combo2.jpg",
-          title: "Thư giãn đạt chuẩn (HJ,BJ)",
-        },
-        
-      ],
-      name: "QUÝ ÔNG HOÀN HẢO",
-      desc: "Pool Bar + Thư giãn cơ bản 70 phút",
-      time: "70",
-      space: "Pool Bar",
-      service: "Rượu vang + Trái cây",
-      price: "1.500.000",
-      price_sale: "2.999.000",
-      user: "500",
-      vote: "98",
-    },
-  
-  
-    {
-      id: 2,
-      url: "/assets/GoiCombo/combo2.jpg",
-      sub_images: [
-        {
-          url: "/assets/GoiCombo/combo1.jpg",
-          title: "Xông hơi thảo dược",
-        },
-        {
-          url: "/assets/GoiCombo/combo2.jpg",
-          title: "Ngâm lá người Da Đỏ",
-        },
-        {
-          url: "/assets/GoiCombo/combo1.jpg",
-          title: "Tắm chung bồn cùng KTV",
-        },
-        {
-          url: "/assets/GoiCombo/combo2.jpg",
-          title: "Thăng hoa tại bồn Jacuzzi",
-        },
-        {
-          url: "/assets/GoiCombo/combo1.jpg",
-          title: "Trườn NURU nghệ thuật",
-        },
-        {
-          url: "/assets/GoiCombo/combo2.jpg",
-          title: "Massager Body",
-        },
-        {
-          url: "/assets/GoiCombo/combo1.jpg",
-          title: "Thư giãn thăng hoa (HJ,BJ,CIA)",
-        },
-        {
-          url: "/assets/GoiCombo/combo2.jpg",
-          title: "Free đồ uống bất kì ",
-        },
-      ],
-      name: "QUÝ ÔNG ĐẲNG CẤP",
-      desc: "Pool Bar + Thư giãn cơ bản 90 phút",
-      time: "90",
-      space: "Pool Bar",
-      service: "Rượu vang + Trái cây",
-      price: "2.000.000",
-      price_sale: "3.999.000",
-      user: "500",
-      vote: "98",
-    },
-    
+  {
+    id: 1,
+    url: "/assets/GoiCombo/combo1.jpg",
+    sub_images: [
+      {
+        url: "/assets/GoiCombo/combo1.jpg",
+        title: "Xông hơi thảo dược",
+      },
+      {
+        url: "/assets/GoiCombo/combo2.jpg",
+        title: "Ngâm lá người Da Đỏ",
+      },
+      {
+        url: "/assets/GoiCombo/combo1.jpg",
+        title: "Tắm chung bồn cùng KTV",
+      },
+      {
+        url: "/assets/GoiCombo/combo2.jpg",
+        title: "Trườn NURU",
+      },
+      {
+        url: "/assets/GoiCombo/combo1.jpg",
+        title: "Massager Body",
+      },
+      {
+        url: "/assets/GoiCombo/combo2.jpg",
+        title: "Thư giãn đạt chuẩn (HJ,BJ)",
+      },
+    ],
+    name: "QUÝ ÔNG HOÀN HẢO",
+    desc: "Pool Bar + Thư giãn cơ bản 70 phút",
+    time: "70",
+    space: "Pool Bar",
+    service: "Rượu vang + Trái cây",
+    price: "1.500.000",
+    price_sale: "2.999.000",
+    user: "500",
+    vote: "98",
+  },
+
+  {
+    id: 2,
+    url: "/assets/GoiCombo/combo2.jpg",
+    sub_images: [
+      {
+        url: "/assets/GoiCombo/combo1.jpg",
+        title: "Xông hơi thảo dược",
+      },
+      {
+        url: "/assets/GoiCombo/combo2.jpg",
+        title: "Ngâm lá người Da Đỏ",
+      },
+      {
+        url: "/assets/GoiCombo/combo1.jpg",
+        title: "Tắm chung bồn cùng KTV",
+      },
+      {
+        url: "/assets/GoiCombo/combo2.jpg",
+        title: "Thăng hoa tại bồn Jacuzzi",
+      },
+      {
+        url: "/assets/GoiCombo/combo1.jpg",
+        title: "Trườn NURU nghệ thuật",
+      },
+      {
+        url: "/assets/GoiCombo/combo2.jpg",
+        title: "Massager Body",
+      },
+      {
+        url: "/assets/GoiCombo/combo1.jpg",
+        title: "Thư giãn thăng hoa (HJ,BJ,CIA)",
+      },
+      {
+        url: "/assets/GoiCombo/combo2.jpg",
+        title: "Free đồ uống bất kì ",
+      },
+    ],
+    name: "QUÝ ÔNG ĐẲNG CẤP",
+    desc: "Pool Bar + Thư giãn cơ bản 90 phút",
+    time: "90",
+    space: "Pool Bar",
+    service: "Rượu vang + Trái cây",
+    price: "2.000.000",
+    price_sale: "3.999.000",
+    user: "500",
+    vote: "98",
+  },
+
   {
     id: 3,
     url: "/assets/GoiCombo/combo3.jpg",
@@ -120,12 +117,12 @@ export const Products_Service = [
         title: "Thư giãn cùng KTV",
       },
     ],
-    
+
     name: "QUÝ ÔNG HỘI TỤ",
     desc: " Pool Bar + Thư giãn cơ bản 100 phút ",
     time: "100",
-    space : "Pool Bar",
-    service : "Rượu vang + Trái cây",
+    space: "Pool Bar",
+    service: "Rượu vang + Trái cây",
     price: "2.300.000",
     price_sale: "4.599.000",
     user: "500",
@@ -186,5 +183,4 @@ export const Products_Service = [
     user: "500",
     vote: "98",
   },
-  
 ];

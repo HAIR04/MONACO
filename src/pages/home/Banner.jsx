@@ -1,4 +1,3 @@
-
 import React from "react";
 import Slider from "react-slick";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,47 +14,52 @@ const Banner = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000, 
-    pauseOnHover: true
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
   };
 
   return (
     <div className="w-[100%] md:w-[100%] mx-auto flex flex-col pb-6  xl:py-10 text-white gap-5 lg:w-[100%] overflow-hidden">
       <div className="slider-container">
         <Slider {...settings}>
- {/*_________________________________________________________________________________________*/}
+          {/*_________________________________________________________________________________________*/}
           <div>
             {/*Ảnh banner 1*/}
             <img
-              src="/assets/GioiThieu/Banner1.webp"
+              src="/assets/GioiThieu/Banner4.jpg"
               alt="Lady Loading"
               className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover "
             />
           </div>
- {/*_________________________________________________________________________________________*/}
+          {/*_________________________________________________________________________________________*/}
           <div>
-             {/*Ảnh banner 2*/}
-          <img
+            {/*Ảnh banner 2*/}
+            <img
               src="/assets/GioiThieu/Banner2.webp"
               alt="Lady Loading"
               className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover"
             />
           </div>
- {/*_________________________________________________________________________________________*/}
+          {/*_________________________________________________________________________________________*/}
           <div>
-             {/*Ảnh banner 3*/}
-          <img
+            {/*Ảnh banner 3*/}
+            <img
               src="/assets/GioiThieu/Banner3.webp"
               alt="Lady Loading"
               className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover"
             />
           </div>
- {/*_________________________________________________________________________________________*/}
- 
+          {/*_________________________________________________________________________________________*/}
+          <div>
+            {/*Ảnh banner 3*/}
+            <img
+              src="/assets/GioiThieu/Banner1.webp"
+              alt="Lady Loading"
+              className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover"
+            />
+          </div>
         </Slider>
       </div>
-
-   
     </div>
   );
 };

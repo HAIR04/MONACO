@@ -2,14 +2,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const Review_PR = () => {
+  {
+    /*Danh sách đánh giá */
+  }
   const reviews = [
     {
       id: 1,
-      name: "Nguyễn Minh Tú",
-      date: "2024-08-11", // Định dạng ISO
+      name: "AdamMR",
+      date: "2024-08-11",
       comment:
         "Dịch vụ massage rất tuyệt vời! Cảm giác thư giãn hoàn toàn sau khi kết thúc liệu trình, kỹ thuật massage rất chuyên nghiệp và nhẹ nhàng.",
-      vote: 4,
+      vote: 5,
     },
     {
       id: 2,
@@ -17,7 +20,7 @@ const Review_PR = () => {
       date: "2024-02-07",
       comment:
         "Mình rất hài lòng với dịch vụ ở đây, massage cổ vai gáy giúp mình giảm đau nhức rất hiệu quả. Tuy nhiên, thời gian hơi ngắn.",
-      vote: 3,
+      vote: 4,
     },
     {
       id: 3,
@@ -50,9 +53,15 @@ const Review_PR = () => {
       comment: "Rất đáng để trải nghiệm",
       vote: 5,
     },
+    {
+      id: 7,
+      name: "HaiLong",
+      date: "2024-12-09",
+      comment: "Nhân viên tận tình , dịch vụ tốt",
+      vote: 5,
+    },
   ];
 
-  // Format ngày thángđ
   const formatDate = (dateString) => {
     const options = { day: "2-digit", month: "2-digit", year: "numeric" };
     return new Intl.DateTimeFormat("vi-VN", options).format(
@@ -60,9 +69,8 @@ const Review_PR = () => {
     );
   };
 
-  // Kiểm tra xem reviews có tồn tại và là một mảng hợp lệ không
   if (!reviews || !Array.isArray(reviews) || reviews.length === 0) {
-    return <p>No reviews available.</p>; // Hiển thị thông báo nếu không có đánh giá
+    return <p>No reviews available.</p>;
   }
 
   return (

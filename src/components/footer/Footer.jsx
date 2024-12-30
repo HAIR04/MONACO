@@ -23,7 +23,7 @@ const Footer = () => {
               </h1>
             </a>
             <h1 className="text-white font-semibold  text-center md:text-left text-sm md:text-xl tracking-wide w-full 2xl:w-[100%] xl:w-[100%]">
-              NÂNG TẦM QUÝ ÔNG - KHẲNG ĐỊNH PHONG ĐỘ
+              NÂNG TẦM QUÝ ÔNG - KHẲNG ĐỊNH PHONG ĐỘ VIPPRO
             </h1>
             <p className="text-white opacity-80 font-normal text-base text-center md:text-left md:text-base py-5 md:py-0 tracking-wide w-[90%] md:w-full mx-auto ">
               Địa chỉ : Số 28 – 30 Lê Đức Thọ, Mỹ Đình, Nam Từ Liêm, Hà Nội.
