@@ -23,27 +23,35 @@ const Banner = () => {
     <div className="w-[100%] md:w-[100%] mx-auto flex flex-col pb-6  xl:py-10 text-white gap-5 lg:w-[100%] overflow-hidden">
       <div className="slider-container">
         <Slider {...settings}>
+ {/*_________________________________________________________________________________________*/}
           <div>
+            {/*Ảnh banner 1*/}
             <img
               src="/assets/GioiThieu/Banner1.webp"
               alt="Lady Loading"
               className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover "
             />
           </div>
+ {/*_________________________________________________________________________________________*/}
           <div>
+             {/*Ảnh banner 2*/}
           <img
               src="/assets/GioiThieu/Banner2.webp"
               alt="Lady Loading"
               className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover"
             />
           </div>
+ {/*_________________________________________________________________________________________*/}
           <div>
+             {/*Ảnh banner 3*/}
           <img
               src="/assets/GioiThieu/Banner3.webp"
               alt="Lady Loading"
               className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover"
             />
           </div>
+ {/*_________________________________________________________________________________________*/}
+ 
         </Slider>
       </div>
 

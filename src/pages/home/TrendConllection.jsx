@@ -8,6 +8,7 @@ const TrendingCollection = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
   const [showFullText, setShowFullText] = useState(isLargeScreen);
 
+{/* Tiêu đề Welcome to Massage Quý Ông*/}
   const textContent = `
     Hệ thống Massage Quý Ông đạt tiêu chuẩn quốc tế, 
     Trung tâm massage đầu tiên được thành lập vào năm 2016 tại khu vực Mỹ Đình,
@@ -20,12 +21,12 @@ const TrendingCollection = () => {
         cách đẳng cấp của mình.
   `;
 
-  // Lắng nghe thay đổi kích thước màn hình
+
   useEffect(() => {
     const handleResize = () => {
       const lgScreen = window.innerWidth >= 1024;
       setIsLargeScreen(lgScreen);
-      setShowFullText(lgScreen); // Hiển thị đầy đủ trên màn hình lớn
+      setShowFullText(lgScreen); 
     };
 
     window.addEventListener("resize", handleResize);
@@ -41,7 +42,7 @@ const TrendingCollection = () => {
 
   return (
     <div className="lg:w-[90%] w-[100%] mx-auto bg-header">
-      {/* Tiêu đề */}
+     
       <div className="w-full mx-auto py-5 mb-10 flex items-center justify-between relative">
         <div className="xl:text-5xl md:text-2xl text-xl w-full uppercase font-semibold leading-loose text-center text-white absolute md:left-1/2 transform md:-translate-x-1/2">
           <h1 className="block md:hidden text-white italic w-[100%] text-center">
@@ -60,20 +61,21 @@ const TrendingCollection = () => {
         </Link>
       </div>
 
-      {/* Ảnh cố định */}
+     
       <div className="lg:w-[100%] w-full mx-auto flex justify-center">
         <div className="w-full flex flex-col gap-5 relative group">
+          {/* Ảnh Welcome to Massage Quý Ông*/}
           <img
             src="/assets/GioiThieu/Banner1.webp"
             alt="Lady Loading"
             className="w-full h-auto object-cover hover:scale-[0.95] transition-transform duration-500"
           />
 
-          {/* Hiển thị đoạn text */}
+         
           <div className="text-white md:text-xl text-base px-4 lg:px-0 tracking-tight">
             <p>{displayedText}</p>
 
-            {/* Nút Xem thêm / Thu gọn */}
+           
             {!isLargeScreen && (
               <button
                 onClick={() => setShowFullText(!showFullText)}
@@ -84,7 +86,7 @@ const TrendingCollection = () => {
             )}
           </div>
 
-          {/* Video thay thế hình ảnh cuối */}
+          {/* Video*/}
           <div>
             <ReactPlayer
               url="https://www.youtube.com/watch?v=eF7eRpLivSg"
