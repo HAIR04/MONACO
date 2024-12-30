@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Products_Service } from "../../components/data/goi-dich-vu";
-import { useParams,Link  } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Booking from "../../components/button/Subscribe";
 import Desc_RV from "./Desc";
 import Review_PR from "../../components/review/Review";
@@ -28,7 +28,7 @@ const DetailSercive = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4, 
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -137,7 +137,7 @@ const DetailSercive = () => {
                   <div
                     key={index}
                     className=""
-                    onClick={() => handleImageClick(index)} 
+                    onClick={() => handleImageClick(index)}
                   >
                     <img
                       src={subImage.url}
@@ -165,7 +165,7 @@ const DetailSercive = () => {
               <p className="lg:text-3xl md:text-lg text-xl bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text font-bold lg:font-semibold">
                 {product.price} VNĐ
               </p>
-              <p className="lg:text-sm xl:text-lg text-lg md:text-sm text-white line-through">
+              <p className="lg:text-sm xl:text-lg text-sm italic md:text-sm text-white line-through">
                 {product.price_sale} VNĐ
               </p>
             </div>
@@ -205,74 +205,72 @@ const DetailSercive = () => {
           ________THÔNG TIN CHI TIẾT________
         </span>
         <div className="py-5">
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-    {/* Display only 3 titles on smaller screens, all on larger screens */}
-    {(showAllImages || window.innerWidth >= 768 ? product.sub_images : product.sub_images.slice(0, 3)).map((subImage, index) => (
-      <div
-        key={index}
-        className="flex items-center justify-center border border-white p-3 bg-black rounded-md"
-      >
-        <h4 className="text-lg text-white font-semibold text-center">
-          {index + 1}. {subImage.title || `Ảnh phụ ${index + 1}`}
-        </h4>
-      </div>
-    ))}
-  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+            {/* Display only 3 titles on smaller screens, all on larger screens */}
+            {(showAllImages || window.innerWidth >= 768
+              ? product.sub_images
+              : product.sub_images.slice(0, 3)
+            ).map((subImage, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center border border-white p-3 bg-black rounded-md"
+              >
+                <h4 className="text-lg text-white font-semibold text-center">
+                  {index + 1}. {subImage.title || `Ảnh phụ ${index + 1}`}
+                </h4>
+              </div>
+            ))}
+          </div>
 
-  {/* Toggle button for small screens */}
-  {!showAllImages && window.innerWidth < 768 && (
-    <div className="text-center pt-3">
-      <button
-        onClick={() => setShowAllImages(true)}
-        className="text-sm text-white italic underline font-semibold "
-      >
-        Xem thêm
-      </button>
-    </div>
-  )}
+          {/* Toggle button for small screens */}
+          {!showAllImages && window.innerWidth < 768 && (
+            <div className="text-center pt-3">
+              <button
+                onClick={() => setShowAllImages(true)}
+                className="text-sm text-white italic underline font-semibold "
+              >
+                Xem thêm
+              </button>
+            </div>
+          )}
 
-  {/* Button to collapse the image list on small screens */}
-  {showAllImages && window.innerWidth < 768 && (
-    <div className="text-center pt-3">
-      <button
-        onClick={() => setShowAllImages(false)}
-        className="text-sm text-white underline italic font-semibold "
-      >
-        Thu gọn
-      </button>
-    </div>
-  )}
-</div>
+          {/* Button to collapse the image list on small screens */}
+          {showAllImages && window.innerWidth < 768 && (
+            <div className="text-center pt-3">
+              <button
+                onClick={() => setShowAllImages(false)}
+                className="text-sm text-white underline italic font-semibold "
+              >
+                Thu gọn
+              </button>
+            </div>
+          )}
+        </div>
 
-
-
-
-{/* Slider */}
-<div className="py-5">
-  <Slider {...settingsAutoPlay} className="flex ">
-    {product.sub_images.map((subImage, index) => (
-      <div
-        key={index}
-        className="text-center border border-yellow-600 rounded-lg p-2"
-        onClick={() => handleImageClick(index)} // Thêm sự kiện click
-      >
-        <h4 className="text-xl text-red-600 mt-5 font-bold">
-          LIỆU TRÌNH {index + 1}
-        </h4>
-        <p className="text-lg text-white h-[70px] flex items-center justify-center">
-          {subImage.title || `Ảnh phụ ${index + 1}`}
-        </p>
-        <img
-          src={subImage.url}
-          alt={subImage.title || `Ảnh phụ ${index + 1}`}
-          className="w-full md:h-[200px] lg:h-[200px] 3xl:h-[250px] h-[200px] object-cover rounded-md cursor-pointer"
-        />
-      </div>
-    ))}
-  </Slider>
-</div>
-
-
+        {/* Slider */}
+        <div className="py-5">
+          <Slider {...settingsAutoPlay} className="flex ">
+            {product.sub_images.map((subImage, index) => (
+              <div
+                key={index}
+                className="text-center border border-yellow-600 rounded-lg p-2"
+                onClick={() => handleImageClick(index)} // Thêm sự kiện click
+              >
+                <h4 className="text-xl text-red-600 mt-5 font-bold">
+                  LIỆU TRÌNH {index + 1}
+                </h4>
+                <p className="text-lg text-white h-[70px] flex items-center justify-center">
+                  {subImage.title || `Ảnh phụ ${index + 1}`}
+                </p>
+                <img
+                  src={subImage.url}
+                  alt={subImage.title || `Ảnh phụ ${index + 1}`}
+                  className="w-full md:h-[200px] lg:h-[200px] 3xl:h-[250px] h-[200px] object-cover rounded-md cursor-pointer"
+                />
+              </div>
+            ))}
+          </Slider>
+        </div>
 
         <Review_PR />
       </div>
@@ -313,48 +311,51 @@ const DetailSercive = () => {
       )}
 
       {/* Dịch vụ liên quan */}
-     
-<div className="py-10">
-  <span className="text-2xl font-semibold text-white py-5 flex justify-center">
-    DỊCH VỤ LIÊN QUAN
-  </span>
-  <div className="md:flex-row flex-col flex gap-5 overflow-x-auto w-[90%] md:w-[95%] xl:w-[80%] mx-auto">
-    {relatedServices.map((relatedItem) => (
-      <div key={relatedItem.id} className="w-[100%] md:w-[35%] mx-auto">
-        {/* Sử dụng Link thay vì a */}
-        <Link to={`/service/${relatedItem.id}`}  className="flex relative flex-col gap-2 hover:scale-[0.95] transition-all duration-500 group"
-              style={{
-                borderWidth: "2px",
-                borderImage: "linear-gradient(90deg, #FFD700, #A37D2B) 1",
-                borderStyle: "solid",
-              }}>
-          <img
-            src={relatedItem.url}
-            alt={relatedItem.name}
-            className="w-full h-[250px] object-cover border border-yellow-600 mb-5"
-          />
-          <div className="absolute italic inset-0 bg-black bg-opacity-60 text-white text-lg font-semibold flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+
+      <div className="py-10">
+        <span className="text-2xl font-semibold text-white py-5 flex justify-center">
+          DỊCH VỤ LIÊN QUAN
+        </span>
+        <div className="md:flex-row flex-col flex gap-5 overflow-x-auto w-[90%] md:w-[95%] xl:w-[80%] mx-auto">
+          {relatedServices.map((relatedItem) => (
+            <div key={relatedItem.id} className="w-[100%] md:w-[35%] mx-auto">
+              {/* Sử dụng Link thay vì a */}
+              <Link
+                to={`/service/${relatedItem.id}`}
+                className="flex relative flex-col gap-2 hover:scale-[0.95] transition-all duration-500 group"
+                style={{
+                  borderWidth: "2px",
+                  borderImage: "linear-gradient(90deg, #FFD700, #A37D2B) 1",
+                  borderStyle: "solid",
+                }}
+              >
+                <img
+                  src={relatedItem.url}
+                  alt={relatedItem.name}
+                  className="w-full h-[250px] object-cover border border-yellow-600 mb-5"
+                />
+                <div className="absolute italic inset-0 bg-black bg-opacity-60 text-white text-lg font-semibold flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
                   Xem chi tiết
                 </div>
-          <p className="xl:text-2xl text-xl text-center  font-bold bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text">
-                {relatedItem.name}
-              </p>
-              <p className="lg:text-base text-sm text-white text-center py-2 font-semibold">
-                {relatedItem.desc}
-              </p>
-          <div className="flex justify-center gap-3  items-center pb-5">
-                <p className="xl:text-2xl lg:text-xl text-lg bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text font-bold lg:font-semibold">
-                  {relatedItem.price} VNĐ
+                <p className="xl:text-2xl text-xl text-center  font-bold bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text">
+                  {relatedItem.name}
                 </p>
-                <p className="xl:text-lg text-sm italic text-white line-through">
-                  {relatedItem.price_sale} VNĐ
+                <p className="lg:text-base text-sm text-white text-center py-2 font-semibold">
+                  {relatedItem.desc}
                 </p>
-              </div>
-        </Link>
+                <div className="flex justify-center gap-3  items-center pb-5">
+                  <p className="xl:text-2xl lg:text-xl text-lg bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text font-bold lg:font-semibold">
+                    {relatedItem.price} VNĐ
+                  </p>
+                  <p className="xl:text-lg text-sm italic text-white line-through">
+                    {relatedItem.price_sale} VNĐ
+                  </p>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
-</div>
     </div>
   );
 };
