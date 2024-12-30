@@ -3,13 +3,13 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const Review_PR = () => {
   {
-    /*Danh sách đánh giá */
+    /*Danh sách đánh giá .*/
   }
   const reviews = [
     {
       id: 1,
       name: "AdamMR",
-      date: "2024-08-11",
+      date: "2024-08-12",
       comment:
         "Dịch vụ massage rất tuyệt vời! Cảm giác thư giãn hoàn toàn sau khi kết thúc liệu trình, kỹ thuật massage rất chuyên nghiệp và nhẹ nhàng.",
       vote: 5,

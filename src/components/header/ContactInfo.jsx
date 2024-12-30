@@ -8,6 +8,7 @@ const ContactInfo = () => {
         <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2 lg:text-xs xl:text-base text-black" />
         Địa chỉ : Số 28 – 30 Lê Đức Thọ, Mỹ Đình, Nam Từ Liêm, Hà Nội
       </p>
+      
       <p className="hidden items-center lg:text-xs xl:text-base lg:flex">
         <FontAwesomeIcon icon={faPhone} className="mr-2 text-black" />
         Liên Hệ : 0912.30.28.30 - 098.656.2830
