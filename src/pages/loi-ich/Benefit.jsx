@@ -47,7 +47,7 @@ const LoiIch = () => {
   return (
     <div className="py-5 mt-24 lg:mt-0">
       <div className="py-5 relative">
-        <img
+        <LazyLoadImage
           className="md:h-[200px] h-[150px] w-full opacity-15 object-cover"
           src="/assets/GioiThieu/Be2.jpg"
           alt="Lady Loading"
@@ -70,7 +70,7 @@ const LoiIch = () => {
             >
               {/* Hình ảnh */}
               <div className="relative md:p-5 p-2 w-full md:w-[30%]">
-                <img
+                <LazyLoadImage
                   src={item.url}
                   alt="Lady Loading"
                   className="w-full object-cover h-[200px]"
