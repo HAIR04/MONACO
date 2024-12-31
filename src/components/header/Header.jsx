@@ -19,7 +19,7 @@ const Header = () => {
     <div className="mx-auto justify-between flex items-center overflow-hidden md:flex-col bg-black border-opacity-15 w-[95%] md:w-[100%] 2xl:w-[100%] xl:w-[100%] px-3">
       <ContactInfo />
 
-      <div  className="md:w-[100%] xl:w-[90%] mx-auto hidden lg:flex justify-between items-center md:pr-12 lg:pr-0 xl:ml-10">
+      <div className="md:w-[100%] xl:w-[90%] mx-auto hidden lg:flex justify-between items-center md:pr-12 lg:pr-0 xl:ml-10">
         <div className="md:w-[20%] xl:w-[25%] w-[25%]">
           <Link
             to="/"
@@ -91,10 +91,7 @@ const Header = () => {
         )}
       </div>
 
-      <div
-       
-        className="fixed lg:hidden top-0 left-0 w-full bg-black z-10 flex items-center justify-between h-[120px]"
-      >
+      <div className="fixed lg:hidden top-0 left-0 w-full bg-black z-50 flex items-center justify-between h-[120px]">
         {/* Button Icon */}
         <button
           onClick={() => setOpen(!open)}
@@ -105,7 +102,7 @@ const Header = () => {
 
         {/* Menu khi mở */}
         {open && (
-          <div  className="fixed w-[60%] top-0 left-0 bottom-0 bg-black z-50 flex flex-col">
+          <div className="fixed w-[60%] top-0 left-0 bottom-0 bg-black z-50 flex flex-col">
             <div className="bg-body py-3 text-right flex items-center justify-between px-4">
               <span className="text-gray-300 font-semibold text-lg">MENU</span>
               <FontAwesomeIcon
@@ -145,7 +142,10 @@ const Header = () => {
               LIÊN HỆ
             </Link>
 
-            <div className="w-[100%] flex justify-center my-5" onClick={toggleOverlay}>
+            <div
+              className="w-[100%] flex justify-center my-5"
+              onClick={toggleOverlay}
+            >
               <Booking />
             </div>
             {isOverlayVisible && (
@@ -160,36 +160,32 @@ const Header = () => {
         )}
 
         {/* Logo (tách biệt và căn giữa màn hình) */}
-        <Link to="/" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <Link
+          to="/"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        >
           <img
             src="/assets/Logo/logo.png"
             alt="Logo"
             className="h-[150px]" // Chiều cao logo
           />
         </Link>
-        
-        {open && (
-        <div   onClick={() => setOpen(false)} className=" h-[20000px] w-[40%]">
-          
-        </div>
-        )}
-        <Link 
-  to="/rankings" 
-  className="absolute top-1/2 bg-customRed italic rounded-full right-3 border border-white hover:scale-105 transition-all duration-500 transform -translate-y-1/2 w-[65px] h-[65px] flex flex-col items-center justify-center text-center"
->
-  <h1 className="text-white text-xs">
-    KỸ
-  </h1>
-  <h1 className="text-white text-xs">
-    THUẬT
-  </h1>
-  <h1 className="text-white text-xs">
-    VIÊN
-  </h1>
-</Link>
 
+        {open && (
+          <div
+            onClick={() => setOpen(false)}
+            className=" h-[20000px] w-[40%]"
+          ></div>
+        )}
+        <Link
+          to="/rankings"
+          className="absolute top-1/2 bg-customRed italic rounded-full right-3 border border-white hover:scale-105 transition-all duration-500 transform -translate-y-1/2 w-[65px] h-[65px] flex flex-col items-center justify-center text-center"
+        >
+          <h1 className="text-white text-xs">KỸ</h1>
+          <h1 className="text-white text-xs">THUẬT</h1>
+          <h1 className="text-white text-xs">VIÊN</h1>
+        </Link>
       </div>
-      
     </div>
   );
 };

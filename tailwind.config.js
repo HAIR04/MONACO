@@ -10,6 +10,9 @@ module.exports = {
         goldLight: "#FFD700", // Vàng sáng
          customRed: '#92171a',
       },
+      scale: {
+        '500': '12',
+      },
       borderRadius: {
         "2.5xl": "20px",
       },

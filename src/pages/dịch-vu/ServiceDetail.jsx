@@ -165,7 +165,7 @@ const DetailSercive = () => {
               <p className="lg:text-3xl md:text-lg text-xl bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text font-bold lg:font-semibold">
                 {product.price} VNĐ
               </p>
-              <p className="lg:text-sm xl:text-lg text-sm italic md:text-sm text-white line-through">
+              <p className="lg:text-sm xl:text-xl text-sm italic md:text-sm text-white line-through">
                 {product.price_sale} VNĐ
               </p>
             </div>
@@ -205,29 +205,74 @@ const DetailSercive = () => {
           ________THÔNG TIN CHI TIẾT________
         </span>
         <div className="py-5">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-            {/* Display only 3 titles on smaller screens, all on larger screens */}
-            {(showAllImages || window.innerWidth >= 768
-              ? product.sub_images
-              : product.sub_images.slice(0, 3)
-            ).map((subImage, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center border border-white p-3 bg-black rounded-md"
-              >
-                <h4 className="text-lg text-white font-semibold text-center">
-                  {index + 1}. {subImage.title || `Ảnh phụ ${index + 1}`}
-                </h4>
-              </div>
-            ))}
+          <div className="flex justify-between md:w-[80%] w-full flex-col md:flex-row mx-auto items-center">
+          <p className="w-[100%] justify-center items-center flex  md:hidden mb-5 text-xl  text-yellow-500  font-semibold">
+              {product.id === 2 || product.id === 4 ? (
+                <>
+                  <img
+                    src={
+                      product.id === 2
+                        ? "/assets/Logo/Seller.png"
+                        : "/assets/Logo/Vip.png"
+                    }
+                    alt={product.id === 2 ? "Seller Logo" : "VIP Logo"}
+                    className="inline-block mr-2 w-[30%]"
+                  />
+                  {product.time} phút
+                </>
+              ) : (
+                `${product.time} phút`
+              )}
+            </p>
+            <div className="grid md:justify-start justify-center gap-4 md:w-[45%] w-full ">
+              {/* Display only 3 titles on smaller screens, all on larger screens */}
+              {(showAllImages || window.innerWidth >= 768
+                ? product.sub_images
+                : product.sub_images.slice(0, 3)
+              ).map((subImage, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-between md:p-3 p-0 bg-black rounded-md"
+                >
+                  <div className="flex justify-center w-[100%] mx-auto">
+                    <h4 className="text-xl md:text-lg bg-gradient-to-t from-yellow-500  to-yellow-100 text-transparent bg-clip-text font-semibold text-center ">
+                      - {subImage.title || `Ảnh phụ ${index + 1}`}
+                    </h4>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-yellow-400 text-4xl transform mb-11 font-bold md:scale-150 md:scale-y-500 hidden md:block ">
+              &#124;
+            </p>
+
+            <p className="w-[45%]  flex-col items-center hidden md:flex  lg:text-base xl:text-3xl text-sm text-yellow-500 mb-28  font-semibold">
+              {product.id === 2 || product.id === 4 ? (
+                <>
+                  <img
+                    src={
+                      product.id === 2
+                        ? "/assets/Logo/Seller.png"
+                        : "/assets/Logo/Vip.png"
+                    }
+                    alt={product.id === 2 ? "Seller Logo" : "VIP Logo"}
+                    className="inline-block mr-2 w-[50%]"
+                  />
+                  {product.time} phút
+                </>
+              ) : (
+                `${product.time} phút`
+              )}
+            </p>
           </div>
 
           {/* Toggle button for small screens */}
           {!showAllImages && window.innerWidth < 768 && (
-            <div className="text-center pt-3">
+            <div className="text-center w-full ">
               <button
                 onClick={() => setShowAllImages(true)}
-                className="text-sm text-white italic underline font-semibold "
+                className="text-sm text-white  italic underline font-semibold "
               >
                 Xem thêm
               </button>
@@ -236,10 +281,10 @@ const DetailSercive = () => {
 
           {/* Button to collapse the image list on small screens */}
           {showAllImages && window.innerWidth < 768 && (
-            <div className="text-center pt-3">
+            <div className="flex ">
               <button
                 onClick={() => setShowAllImages(false)}
-                className="text-sm text-white underline italic font-semibold "
+                className="text-sm text-white underline italic flex justify-center w-full font-semibold "
               >
                 Thu gọn
               </button>
@@ -253,7 +298,7 @@ const DetailSercive = () => {
             {product.sub_images.map((subImage, index) => (
               <div
                 key={index}
-                className="text-center border border-yellow-600 rounded-lg p-2"
+                className="text-center cursor-pointer border border-yellow-600 rounded-lg p-2"
                 onClick={() => handleImageClick(index)} // Thêm sự kiện click
               >
                 <h4 className="text-xl text-red-600 mt-5 font-bold">

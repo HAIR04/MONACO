@@ -1,6 +1,7 @@
 import { Member_Ship } from "../../components/data/KTV";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -37,24 +38,31 @@ const Rankings = () => {
     <>
       <div className="py-5 mt-24 lg:mt-0">
         <div className="py-5 relative">
-          <img
+          <LazyLoadImage
             className="md:h-[200px] h-[150px] w-full opacity-15 object-cover"
             src="/assets/GioiThieu/Be2.jpg"
             alt="Lady Loading"
           />
-          <h1 className="md:text-2xl text-base tracking-widest text-white font-bold italic text-center absolute inset-0 flex items-center justify-center">
+          <h1 className="md:text-2xl text-base tracking-widest text-white font-boFld italic text-center absolute inset-0 flex items-center justify-center">
             KỸ THUẬT VIÊN / MASSAGE THERAPIST
           </h1>
         </div>
-
         <div className="xl:w-[80%] w-[95%] mx-auto grid grid-cols-2 sm:grid-cols-2 gap-2 xl:grid-cols-4 md:grid-cols-3 md:gap-7">
           {pageData.map((item, index) => (
             <React.Fragment key={index}>
               <Link
                 to={`/girl/${item.id}`}
-                className="w-full mx-auto flex flex-col border-2 border-red-500 hover:scale-[0.95] transition-all duration-500 group"
+                className="w-full mx-auto flex flex-col border-2 border-red-500 hover:scale-[0.95] transition-all duration-500 group relative"
               >
-                <img
+                {/* Thêm chữ UY TÍN với icon React */}
+                <div className="absolute top-2 left-2 bg-green-600 text-white text-xs font-bold py-1 px-2 rounded-sm z-10 flex items-center gap-1">
+                  <FontAwesomeIcon
+                    icon={faCircleCheck}
+                    className="text-white"
+                  />
+                  UY TÍN
+                </div>
+                <LazyLoadImage
                   src={item.url}
                   alt="Lady Loading"
                   className="md:w-full object-cover lg:h-[500px] md:h-[400px] w-full h-[250px]"
@@ -66,8 +74,8 @@ const Rankings = () => {
                   <p className="md:text-base text-xs text-white text-center font-bold py-2">
                     {item.desc}
                   </p>
-                  <p className="text-xs text-white text-center flex items-center lg:items-end justify-between w-[95%] mx-auto pb-4">
-                    <span className="text-xs font-semibold italic text-yellow-600">
+                  <p className="text-xs text-white text-center flex items-center lg:items-end justify-center gap-2 md:gap-0 w-[95%] mx-auto pb-4">
+                    <span className="text-xs hidden md:block font-semibold italic text-yellow-600">
                       ĐÁNH GIÁ :{" "}
                     </span>
                     {[...Array(5)].map((_, index) => (
@@ -93,23 +101,22 @@ const Rankings = () => {
 
         {/* Phân trang */}
         <div className="mt-5 flex justify-center">
-  <ReactPaginate
-    previousLabel={"<"}
-    nextLabel={">"}
-    breakLabel={"..."}
-    pageCount={pageCount}
-    marginPagesDisplayed={2}
-    pageRangeDisplayed={5}
-    onPageChange={handlePageClick}
-    containerClassName={"pagination"}
-    activeClassName={"active"}
-    previousClassName={"prev-page"}
-    nextClassName={"next-page"}
-    pageClassName={"page-item"}
-    pageLinkClassName={"page-link"}
-  />
-</div>
-
+          <ReactPaginate
+            previousLabel={"<"}
+            nextLabel={">"}
+            breakLabel={"..."}
+            pageCount={pageCount}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={5}
+            onPageChange={handlePageClick}
+            containerClassName={"pagination"}
+            activeClassName={"active"}
+            previousClassName={"prev-page"}
+            nextClassName={"next-page"}
+            pageClassName={"page-item"}
+            pageLinkClassName={"page-link"}
+          />
+        </div>
       </div>
     </>
   );

@@ -3,6 +3,7 @@ import Booking from "../../components/button/Subscribe";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 import Review_PR from "../../components/review/Review";
 import Subscribe_Responsive from "../../components/button/Subscribe_Responsive";
 import { useParams } from "react-router-dom";
@@ -31,7 +32,7 @@ const Girl_Detail = () => {
     <div className="py-5 mt-28 lg:mt-0">
       <div className=" md:w-[100%] w-[90%] mx-auto sm:grid-cols-2 gap-7">
         <div className="flex w-full justify-center group flex-col md:flex-row">
-          <div className="md:w-[65%] lg:w-[75%] xl:w-[65%] w-full items-center flex-col gap-5">
+          <div className="md:w-[95%] lg:w-[75%] xl:w-[60%] w-full items-center flex-col gap-5">
             <div className="overflow-hidden flex border-2 border-yellow-600 text-white">
               <img
                 src={member.url}
@@ -69,23 +70,35 @@ const Girl_Detail = () => {
                     </span>
                     : {member.roud}
                   </p>
+                  <p className="xl:text-base text-base text-white text-center">
+                    <span className="xl:text-base flex items-center gap-3 md:text-sm font-semibold">
+                      KIỂM ĐỊNH :{" "}
+                      <p className="bg-green-600 font-medium text-sm py-1 px-2 rounded-lg flex gap-2 items-center">
+                        {" "}
+                        <FontAwesomeIcon
+                          icon={faCircleCheck}
+                          className="text-white"
+                        />
+                        Đã kiểm tra sức khỏe định kỳ
+                      </p>
+                    </span>
+                  </p>
                 </div>
 
-            
                 <div className=" w-full" onClick={toggleOverlay}>
-                <p className="text-xs  text-white text-center flex items-center pt-3 xl:pt-0 xl:items-end justify-between w-[100%] mx-auto pb-4">
-                  <p className="lg:text-base text-xs font-bold italic ">
-                    ĐÁNH GIÁ :{" "}
+                  <p className="text-xs  text-white text-center flex items-end pt-3 xl:pt-0 xl:items-end justify-between w-[100%] mx-auto pb-4">
+                    <p className="lg:text-base text-xs font-bold italic ">
+                      ĐÁNH GIÁ :{" "}
+                    </p>
+                    {[...Array(5)].map((_, index) => (
+                      <FontAwesomeIcon
+                        key={index}
+                        icon={faStar}
+                        className="text-yellow-500 ml-1 text-2xl xl:text-3xl "
+                      />
+                    ))}
+                    ( {member.vote} VOTE {""})
                   </p>
-                  {[...Array(5)].map((_, index) => (
-                    <FontAwesomeIcon
-                      key={index}
-                      icon={faStar}
-                      className="text-yellow-500 ml-1 lg:text-2xl xl:text-3xl "
-                    />
-                  ))}
-                  ( {member.vote} VOTE {""})
-                </p>
                   <Booking />
                 </div>
                 {isOverlayVisible && (
@@ -98,9 +111,9 @@ const Girl_Detail = () => {
                 )}
               </div>
             </div>
-            <div className="flex md:hidden flex-col text-white mx-auto justify-between w-full p-5">
+            <div className="flex md:hidden flex-col text-white mx-auto justify-between w-full ">
               <div className="flex flex-col gap-5">
-                <p className="text-2xl md:hidden  bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text text-center font-semibold">
+                <p className="text-2xl md:hidden  bg-gradient-to-t from-yellow-900 pt-5 to-yellow-300 text-transparent bg-clip-text text-center font-semibold">
                   {member.name}
                 </p>
                 <p>
@@ -121,17 +134,28 @@ const Girl_Detail = () => {
                   <span className="text-sm font-semibold">SỐ ĐO BA VÒNG</span>:{" "}
                   {member.roud}
                 </p>
+                <p className="text-sm text-white text-center">
+                  <span className="text-sm flex items-center md:text-base gap-3 font-semibold">
+                    KIỂM ĐỊNH :{" "}
+                    <p className="bg-green-600 font-medium text-sm py-1 px-2 rounded-lg flex gap-2 items-center">
+                      {" "}
+                      <FontAwesomeIcon
+                        icon={faCircleCheck}
+                        className="text-white"
+                      />
+                      Đã kiểm tra sức khỏe định kỳ
+                    </p>
+                  </span>
+                </p>
               </div>
 
               <p className="text-xs text-white text-center py-5 md:py-0 flex items-end justify-between w-[95%] mx-auto pb-4">
-                <p className="text-xs font-bold italic ">
-                  ĐÁNH GIÁ :{" "}
-                </p>
+                <p className="text-xs font-bold italic ">ĐÁNH GIÁ : </p>
                 {[...Array(5)].map((_, index) => (
                   <FontAwesomeIcon
                     key={index}
                     icon={faStar}
-                    className="text-yellow-400 ml-1 md:text-xl text-xl"
+                    className="text-yellow-400 ml-1 md:text-xl text-2xl"
                   />
                 ))}
                 ( {member.vote} VOTE {""})

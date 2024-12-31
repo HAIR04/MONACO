@@ -33,7 +33,7 @@ const ServicePR = () => {
                 borderStyle: "solid",
               }}
             >
-              <div className="overflow-hidden w-[100%] flex ">
+              <div className="overflow-hidden relative w-[100%] flex ">
                 <img
                   src={item.url}
                   alt={item.name}
@@ -44,7 +44,14 @@ const ServicePR = () => {
                   <img
                     src="/assets/Logo/Seller.png"
                     alt="Logo"
-                    className="absolute  top-0 right-0 lg:w-40 lg:h-40 w-20 h-20 opacity-90"
+                    className="absolute  lg:-top-10 lg:-right-1 -top-4 right-0 lg:w-40 lg:h-52 w-20 h-28 "
+                  />
+                )}
+                {index === 3 && (
+                  <img
+                    src="/assets/Logo/Vip.png"
+                    alt="Logo"
+                    className="absolute  lg:-top-10 lg:-right-1 -top-3 right-0 lg:w-40 lg:h-52 w-20 h-28"
                   />
                 )}
                 <div className="absolute italic inset-0 bg-black bg-opacity-60 text-white text-lg font-semibold flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
