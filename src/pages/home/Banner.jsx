@@ -25,7 +25,7 @@ const Banner = () => {
           {/*_________________________________________________________________________________________*/}
           <div>
             {/*Ảnh banner 1*/}
-            <img
+            <LazyLoadImage
               src="/assets/GioiThieu/Banner4.jpg"
               alt="Lady Loading"
               className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover "
@@ -34,7 +34,7 @@ const Banner = () => {
           {/*_________________________________________________________________________________________*/}
           <div>
             {/*Ảnh banner 2*/}
-            <img
+            <LazyLoadImage
               src="/assets/GioiThieu/Banner2.webp"
               alt="Lady Loading"
               className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover"
@@ -43,7 +43,7 @@ const Banner = () => {
           {/*_________________________________________________________________________________________*/}
           <div>
             {/*Ảnh banner 3*/}
-            <img
+            <LazyLoadImage
               src="/assets/GioiThieu/Banner3.webp"
               alt="Lady Loading"
               className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover"
@@ -52,7 +52,7 @@ const Banner = () => {
           {/*_________________________________________________________________________________________*/}
           <div>
             {/*Ảnh banner 3*/}
-            <img
+            <LazyLoadImage
               src="/assets/GioiThieu/Banner1.webp"
               alt="Lady Loading"
               className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover"
