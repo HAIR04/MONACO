@@ -60,7 +60,7 @@ const Rankings = () => {
                     icon={faCircleCheck}
                     className="text-white"
                   />
-                  UY TÍN
+                  ĐÃ KIỂM ĐỊNH
                 </div>
                 <LazyLoadImage
                   src={item.url}
