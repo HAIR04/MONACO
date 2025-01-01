@@ -112,30 +112,35 @@ const Header = () => {
               />
             </div>
             <Link
+             onClick={() => setOpen(!open)}
               to="/"
               className="text-lg border-b text-red-600 border-white border-opacity-30 p-3 w-full text-left font-semibold"
             >
               TRANG CHỦ
             </Link>
             <Link
+             onClick={() => setOpen(!open)}
               to="/service"
               className="text-lg border-b border-white bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text font-semibold transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-left"
             >
               DỊCH VỤ
             </Link>
             <Link
+             onClick={() => setOpen(!open)}
               to="/rankings"
               className="text-lg border-b border-white bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text font-semibold transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-left"
             >
               KỸ THUẬT VIÊN
             </Link>
             <Link
+             onClick={() => setOpen(!open)}
               to="/benefit"
               className="text-lg border-b border-white bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text font-semibold transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-left"
             >
               LỢI ÍCH
             </Link>
             <Link
+             onClick={() => setOpen(!open)}
               to="/wallet"
               className="text-lg border-b border-white bg-gradient-to-t from-yellow-900 to-yellow-300 text-transparent bg-clip-text font-semibold transition-all duration-300 after:bg-yellow-600 after:transition-all after:duration-300 hover:after:w-full border-opacity-30 p-3 w-full text-left"
             >

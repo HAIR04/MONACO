@@ -28,7 +28,7 @@ const Wallet = () => {
       <div className="w-[95%] lg:w-[90%] mx-auto">
         {/* Bản đồ */}
         <iframe
-          src="https://s.net.vn/XRVt"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.8060420477377!2d105.7670537750248!3d21.031445187686828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134559621a35069%3A0xa132d48a3f0b7897!2zTWFzc2FnZSBRdcO9IMOUbmc!5e1!3m2!1svi!2s!4v1735723198564!5m2!1svi!2s"
           className="w-full lg:h-[400px] h-[150px]"
           allowFullScreen=""
           loading="lazy"
@@ -39,18 +39,18 @@ const Wallet = () => {
         <div className="flex flex-wrap py-10">
           <div className="w-full lg:w-1/2">
             <p className="text-white lg:text-3xl text-xl text-center font-semibold lg:text-left pb-5">
-             MASSAGE QUÝ ÔNG
+              MASSAGE QUÝ ÔNG
             </p>
             <hr className="lg:w-[55%] w-[70%] mx-auto md:mx-0" />
             <p className="text-white lg:w-[70%] w-full lg:text-xl text-sm  flex py-5 italic font-medium">
               <FontAwesomeIcon
                 icon={faMapMarkerAlt}
-                className="mr-2 text-white"
+                className="mr-2 text-white mt-1"
               />
               Địa chỉ: Số 28 – 30 Lê Đức Thọ, Mỹ Đình, Nam Từ Liêm, Hà Nội
             </p>
             <p className="text-white lg:text-xl text-sm  flex items-center italic pb-5 font-medium">
-              <FontAwesomeIcon icon={faPhone} className="mr-2 text-white" />
+              <FontAwesomeIcon icon={faPhone} className="mr-2  text-white" />
               Điện thoại: 0912.30.28.30 - 098.656.2830
             </p>
             <hr className="lg:w-[40%] w-[90%] mx-auto md:mx-0" />
