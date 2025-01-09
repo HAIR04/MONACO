@@ -62,6 +62,8 @@ input[type="date"]:valid {
   align-items: center;
   gap: 10px;
   margin-top: 20px;
+  width: 100%; /* Đảm bảo pagination chiếm toàn bộ chiều rộng */
+  position: relative; /* Để có thể xử lý sự kiện hiển thị ẩn các phần tử */
 }
 
 .page-item {
@@ -109,7 +111,7 @@ input[type="date"]:valid {
   font-weight: bold;
   transition: all 0.3s ease;
   cursor: pointer;
-  visibility: hidden;
+  visibility: hidden; /* Ẩn theo mặc định */
 }
 
 .prev-page.show,
@@ -122,4 +124,39 @@ input[type="date"]:valid {
   background-color: gray;
   color: white;
   border-color: gray;
+}
+
+.pagination .prev-page.show {
+  margin-left: 15%;
+}
+
+.pagination .next-page.show {
+  margin-right: 15%;
+}
+@media (min-width: 1024px)  and (min-width: 1536px){
+  .pagination .prev-page.show {
+    margin-left: 3.5%;
+  }
+
+  .pagination .next-page.show {
+    margin-right: 3.5%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .pagination .prev-page.show {
+    margin-left: 5%; /* Điều chỉnh cho màn hình tablet */
+  }
+
+  .pagination .next-page.show {
+    margin-right: 5%; /* Điều chỉnh cho màn hình tablet */
+  }
+}
+@media (min-width: 1536px) {
+  .pagination .prev-page.show {
+    margin-left: 3%;
+  }
+
+  .pagination .next-page.show {
+    margin-right: 3%;
+  }
 }

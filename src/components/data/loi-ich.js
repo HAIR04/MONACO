@@ -406,7 +406,7 @@ export const massage_data = [
     vote: "99",
   },
   {
-    id: 16,
+    id: 17,
     url: "/assets/LieuTrinh/LieuTrinh4.jpg",
     img_data: [
       { url: "/assets/LieuTrinh/LieuTrinh1.jpg" },
@@ -433,7 +433,7 @@ export const massage_data = [
     vote: "99",
   },
   {
-    id: 16,
+    id: 18,
     url: "/assets/LieuTrinh/LieuTrinh4.jpg",
     img_data: [
       { url: "/assets/LieuTrinh/LieuTrinh1.jpg" },
@@ -460,7 +460,7 @@ export const massage_data = [
     vote: "99",
   },
   {
-    id: 16,
+    id: 19,
     url: "/assets/LieuTrinh/LieuTrinh4.jpg",
     img_data: [
       { url: "/assets/LieuTrinh/LieuTrinh1.jpg" },
