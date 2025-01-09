@@ -127,13 +127,13 @@ input[type="date"]:valid {
 }
 
 .pagination .prev-page.show {
-  margin-left: 15%;
+  margin-left:13%;
 }
 
 .pagination .next-page.show {
-  margin-right: 15%;
+  margin-right: 13%;
 }
-@media (min-width: 1024px)  and (min-width: 1536px){
+@media (min-width: 1024px) and (min-width: 1536px) {
   .pagination .prev-page.show {
     margin-left: 3.5%;
   }
