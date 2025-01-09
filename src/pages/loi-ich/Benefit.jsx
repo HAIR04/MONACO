@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+
 const LoiIch = () => {
   const itemsPerPage = 4; // Số lượng mục hiển thị trên mỗi trang
   const [currentPage, setCurrentPage] = useState(0);
@@ -42,6 +43,17 @@ const LoiIch = () => {
       );
     }
     return text;
+  };
+
+  // Tính toán phạm vi trang cần hiển thị
+  const getPageRange = () => {
+    if (currentPage === 0 || currentPage === 1) {
+      return [0, 1, 2]; // Hiển thị trang 1, 2, 3 khi ở trang 1 hoặc 2
+    } else if (currentPage === 2) {
+      return [1, 2, 3]; // Nếu ở trang 2, chỉ hiển thị 1, 2, 3
+    } else {
+      return [currentPage - 1, currentPage, currentPage + 1]; // Các trang còn lại
+    }
   };
 
   return (
@@ -101,19 +113,22 @@ const LoiIch = () => {
       {/* Phân trang */}
       <div className="mt-5 flex justify-center">
         <ReactPaginate
-          previousLabel={"<"}
-          nextLabel={">"}
-          breakLabel={"..."}
+          previousLabel={currentPage > 0 ? "<" : null}
+          nextLabel={currentPage < pageCount - 1 ? ">" : null}
+          breakLabel={null}
           pageCount={pageCount}
-          marginPagesDisplayed={2}
-          pageRangeDisplayed={5}
+          marginPagesDisplayed={null} 
+          pageRangeDisplayed={currentPage === 1 ? 2 : 3} 
           onPageChange={handlePageClick}
-          containerClassName={"pagination"}
+          containerClassName={"pagination"} 
           activeClassName={"active"}
-          previousClassName={"prev-page"}
-          nextClassName={"next-page"}
+          previousClassName={currentPage > 1 ? "prev-page show" : "prev-page"}
+          nextClassName={
+            currentPage < pageCount - 1 ? "next-page show" : "next-page"
+          }
           pageClassName={"page-item"}
           pageLinkClassName={"page-link"}
+          forcePage={currentPage} // Chỉ định trang hiện tại
         />
       </div>
     </div>

@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { Member_Ship } from "../../components/data/KTV";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -5,7 +6,6 @@ import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 
 const Rankings = () => {
@@ -26,8 +26,8 @@ const Rankings = () => {
     (currentPage + 1) * itemsPerPage
   );
 
-  // Số lượng trang
-  const pageCount = Math.ceil(Member_Ship.length / itemsPerPage);
+  // Số lượng trang (giới hạn tối đa là 3)
+  const pageCount = Math.min(Math.ceil(Member_Ship.length / itemsPerPage), 4);
 
   // Xử lý khi chuyển trang
   const handlePageClick = ({ selected }) => {
@@ -82,7 +82,7 @@ const Rankings = () => {
                       <FontAwesomeIcon
                         key={index}
                         icon={faStar}
-                        className="text-red-700 lg:text-xl text-xs"
+                        className="text-red-700 lg:text-xl xl:ml-1 text-xs"
                       />
                     ))}
                     <div className="hidden md:block"> ( {item.vote} VOTE )</div>
@@ -102,20 +102,24 @@ const Rankings = () => {
         {/* Phân trang */}
         <div className="mt-5 flex justify-center">
           <ReactPaginate
-            previousLabel={"<"}
-            nextLabel={">"}
-            breakLabel={"..."}
-            pageCount={pageCount}
-            marginPagesDisplayed={2}
-            pageRangeDisplayed={5}
-            onPageChange={handlePageClick}
-            containerClassName={"pagination"}
-            activeClassName={"active"}
-            previousClassName={"prev-page"}
-            nextClassName={"next-page"}
-            pageClassName={"page-item"}
-            pageLinkClassName={"page-link"}
-          />
+             previousLabel={currentPage > 0 ? "<" : null}
+             nextLabel={currentPage < pageCount - 1 ? ">" : null}
+             breakLabel={null}
+             pageCount={pageCount}
+             marginPagesDisplayed={null} // Hiển thị trang đầu và cuối
+             pageRangeDisplayed={currentPage === 1 ? 2 : 3} // Hiển thị 3 trang gần nhau
+             onPageChange={handlePageClick}
+             containerClassName={"pagination"} 
+             activeClassName={"active"}
+             previousClassName={currentPage > 1 ? "prev-page show" : "prev-page"}
+             nextClassName={
+               currentPage < pageCount - 1 ? "next-page show" : "next-page"
+             }
+             pageClassName={"page-item"}
+             pageLinkClassName={"page-link"}
+             forcePage={currentPage} // Chỉ định trang hiện tại
+           />
+          
         </div>
       </div>
     </>
