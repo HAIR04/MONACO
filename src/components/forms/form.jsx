@@ -83,7 +83,7 @@ const ContactForm = () => {
           Swal.fire({
             icon: "success",
             title: "Thành công!",
-            html: "Yêu cầu của bạn đã được gửi thành công!<br>Chúng tôi sẽ phản hồi trong thời gian sớm nhất!",
+            html: "Yêu cầu của bạn đã được gửi thành công!<br> <br>Chúng tôi sẽ sớm phản hồi cho bạn!",
             confirmButtonText: "Xác nhận",
             confirmButtonColor: "#4f46e5",
           });

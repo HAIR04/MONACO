@@ -42,7 +42,7 @@ const Wallet = () => {
               MASSAGE QUÝ ÔNG
             </p>
             <hr className="lg:w-[55%] w-[70%] mx-auto md:mx-0" />
-            <p className="text-white lg:w-[70%] w-full lg:text-xl text-sm  flex py-5 italic font-medium">
+             <p className="text-white lg:w-[70%] w-full lg:text-xl text-sm  flex py-5 italic font-medium">
               <FontAwesomeIcon
                 icon={faMapMarkerAlt}
                 className="mr-2 text-white mt-1"
@@ -57,7 +57,7 @@ const Wallet = () => {
             <p className="text-white hidden lg:block py-10 text-3xl font-semibold text-left">
               KÊNH LIÊN HỆ
             </p>
-            <div className="lg:grid grid-cols-2 hidden gap-6 w-[80%]">
+            <div className="lg:grid grid-cols-2 hidden gap-6 lg:w-[95%] xl:w-[80%] w-[80%]">
               <div className="transform transition-all duration-300 hover:scale-105">
                 <FB />
               </div>

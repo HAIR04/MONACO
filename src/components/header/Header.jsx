@@ -182,14 +182,7 @@ const Header = () => {
             className=" h-[20000px] w-[40%]"
           ></div>
         )}
-        <Link
-          to="/rankings"
-          className="absolute top-1/2 bg-customRed italic rounded-full right-3 border border-white hover:scale-105 transition-all duration-500 transform -translate-y-1/2 w-[65px] h-[65px] flex flex-col items-center justify-center text-center"
-        >
-          <h1 className="text-white text-xs">KỸ</h1>
-          <h1 className="text-white text-xs">THUẬT</h1>
-          <h1 className="text-white text-xs">VIÊN</h1>
-        </Link>
+       
       </div>
     </div>
   );
