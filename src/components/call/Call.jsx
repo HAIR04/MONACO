@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+
 import Subscribe_Responsive from "../button/Subscribe_Responsive";
-import { Link } from "react-router-dom";
 
 const CallNowButton = () => {
-  const location = useLocation();
-  
   // State management
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
@@ -32,18 +29,6 @@ const CallNowButton = () => {
       )}
 
       {/* Ẩn <Link> ở trang /rankings */}
-      {location.pathname !== "/rankings" && (
-        <Link
-          to="/rankings"
-          className="top-16 fixed lg:hidden z-50 bg-customRed italic rounded-full right-3 border border-white 
-                   hover:scale-105 transition-all duration-500 transform -translate-y-1/2 w-[65px] h-[65px] 
-                   flex flex-col items-center justify-center text-center"
-        >
-          <h1 className="text-white text-xs">KỸ</h1>
-          <h1 className="text-white text-xs">THUẬT</h1>
-          <h1 className="text-white text-xs">VIÊN</h1>
-        </Link>
-      )}
     </div>
   );
 };

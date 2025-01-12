@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import ContactInfo from "./ContactInfo";
@@ -10,10 +10,12 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const location = useLocation(); // Sử dụng useLocation để lấy thông tin location
 
   const toggleOverlay = () => {
     setIsOverlayVisible(!isOverlayVisible);
   };
+
 
   return (
     <div className="mx-auto justify-between flex items-center overflow-hidden md:flex-col bg-black border-opacity-15 w-[95%] md:w-[100%] 2xl:w-[100%] xl:w-[100%] px-3">
@@ -175,7 +177,18 @@ const Header = () => {
             className="h-[150px]" // Chiều cao logo
           />
         </Link>
-
+        {location.pathname !== "/rankings" && (
+        <Link
+          to="/rankings"
+          className="top-1/2 absolute lg:hidden z-50 bg-customRed italic rounded-full right-3 border border-white 
+                   hover:scale-105 transition-all duration-500 transform -translate-y-1/2 w-[65px] h-[65px] 
+                   flex flex-col items-center justify-center text-center"
+        >
+          <h1 className="text-white text-xs">KỸ</h1>
+          <h1 className="text-white text-xs">THUẬT</h1>
+          <h1 className="text-white text-xs">VIÊN</h1>
+        </Link>
+      )}
         {open && (
           <div
             onClick={() => setOpen(false)}
@@ -184,6 +197,7 @@ const Header = () => {
         )}
        
       </div>
+     
     </div>
   );
 };
