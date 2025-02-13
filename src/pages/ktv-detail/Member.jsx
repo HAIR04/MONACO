@@ -183,11 +183,11 @@ const Girl_Detail = () => {
             _________MÔ TẢ CHI TIẾT_________
           </span>
           <div className="text-2xl text-center py-3"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 p-5 w-full gap-5 py-5 justify-center    md:w-[80%]  mx-auto xl:w-[65%]">
+          <div className="grid grid-cols-1 md:grid-cols-2 p-5 w-full gap-5 py-5 justify-center md:w-[80%] mx-auto xl:w-[65%]">
             {member.img_data.map((subImage, subIndex) => (
               <div
                 key={subIndex}
-                className={`snap-item w-[100%] ${
+                className={`snap-item w-full h-[700px] md:h-[700px] flex justify-center items-center ${
                   subIndex === selectedImageIndex
                     ? "border-2 border-red-700"
                     : "border-2 border-red-700"
@@ -197,11 +197,12 @@ const Girl_Detail = () => {
                 <img
                   src={subImage.url}
                   alt={member.name + " - Ảnh phụ " + (subIndex + 1)}
-                  className="w-full object-cover h-auto"
+                  className="w-full h-full object-cover"
                 />
               </div>
             ))}
           </div>
+
           <div className="md:w-[80%] xl:w-[60%] w-full py-5 mx-auto md:text-lg text-base">
             <p>
               Em ấy là một chuyên viên massage với hơn 5 năm kinh nghiệm trong
