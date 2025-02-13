@@ -187,7 +187,7 @@ const Girl_Detail = () => {
             {member.img_data.map((subImage, subIndex) => (
               <div
                 key={subIndex}
-                className={`snap-item w-full h-[700px] md:h-[700px] flex justify-center items-center ${
+                className={`snap-item w-full h-[400px] md:h-[700px] flex justify-center items-center ${
                   subIndex === selectedImageIndex
                     ? "border-2 border-red-700"
                     : "border-2 border-red-700"
