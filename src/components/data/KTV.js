@@ -6,8 +6,6 @@ export const Member_Ship = [
     img_data: [
       { url: "/assets/NhanVien/03.jpg" },
       { url: "/assets/NhanVien/05_4.jpg" },
-
-      
     ],
     name: "MS_03",
     age: "2000",
@@ -22,7 +20,7 @@ export const Member_Ship = [
     id: 2,
     url: "/assets/NhanVien/05_1.jpg",
     img_data: [
-      { url: "/assets/NhanVien/05_2.jpeg"},
+      { url: "/assets/NhanVien/05_2.jpeg" },
       { url: "/assets/NhanVien/05_3.jpg" },
       { url: "/assets/NhanVien/05_4.jpg" },
       { url: "/assets/NhanVien/05_5.jpg" },
@@ -92,7 +90,6 @@ export const Member_Ship = [
     img_data: [
       { url: "/assets/NhanVien/10_2.jpg" },
       { url: "/assets/NhanVien/10_3.jpg" },
-  
     ],
     name: "MS_10",
     age: "2002",
@@ -108,7 +105,7 @@ export const Member_Ship = [
     url: "/assets/NhanVien/11_1.jpg",
     img_data: [
       { url: "/assets/NhanVien/11_2.jpg" },
-      {url: "/assets/NhanVien/11_1.jpg" },
+      { url: "/assets/NhanVien/11_1.jpg" },
     ],
     name: "MS_11",
     age: "2002",
@@ -202,9 +199,7 @@ export const Member_Ship = [
   {
     id: 13,
     url: "/assets/NhanVien/38.jpg",
-    img_data: [
-    
-    ],
+    img_data: [],
     name: "MS_38",
     age: "2002",
     desc: "Chuyên viên massage",
@@ -462,7 +457,6 @@ export const Member_Ship = [
     img_data: [
       { url: "/assets/NhanVien/79.jpg" },
       { url: "/assets/NhanVien/79.jpg" },
-      
     ],
     name: "MS_79",
     age: "2002",
@@ -479,7 +473,6 @@ export const Member_Ship = [
     img_data: [
       { url: "/assets/NhanVien/80.jpg" },
       { url: "/assets/NhanVien/80.jpg" },
-     
     ],
     name: "MS_80",
     age: "2002",
@@ -496,7 +489,6 @@ export const Member_Ship = [
     img_data: [
       { url: "/assets/NhanVien/86_1.jpg" },
       { url: "/assets/NhanVien/86.jpg" },
-      
     ],
     name: "MS_86",
     age: "2002",
@@ -513,7 +505,6 @@ export const Member_Ship = [
     img_data: [
       { url: "/assets/NhanVien/88.jpg" },
       { url: "/assets/NhanVien/88_1.jpg" },
-
     ],
     name: "MS_88",
     age: "2002",
@@ -530,7 +521,6 @@ export const Member_Ship = [
     img_data: [
       { url: "/assets/NhanVien/89.jpg" },
       { url: "/assets/NhanVien/89_1.jpg" },
-      
     ],
     name: "MS_89",
     age: "2002",
@@ -547,7 +537,6 @@ export const Member_Ship = [
     img_data: [
       { url: "/assets/NhanVien/92.jpg" },
       { url: "/assets/NhanVien/92_1.jpg" },
-
     ],
     name: "MS_92",
     age: "2002",
@@ -560,11 +549,26 @@ export const Member_Ship = [
   },
   {
     id: 35,
+    url: "/assets/NhanVien/93_1.jpg",
+    img_data: [
+      { url: "/assets/NhanVien/93_.jpg" },
+      { url: "/assets/NhanVien/93.jpg" },
+    ],
+    name: "MS_93",
+    age: "2002",
+    desc: "Chuyên viên massage",
+    vote: "99",
+    ex: "5 năm kinh nghiệm - Đào tạo bới Massage AIB",
+    country: "Miền Bắc",
+    kg: "41",
+    roud: "80-60-90",
+  },
+  {
+    id: 36,
     url: "/assets/NhanVien/94.jpg",
     img_data: [
       { url: "/assets/NhanVien/94.jpg" },
       { url: "/assets/NhanVien/94_1.jpg" },
-   
     ],
     name: "MS_94",
     age: "2002",
@@ -575,5 +579,5 @@ export const Member_Ship = [
     kg: "41",
     roud: "80-60-90",
   },
- 
+
 ];
