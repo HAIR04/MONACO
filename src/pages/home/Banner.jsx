@@ -29,7 +29,7 @@ const Banner = () => {
               src="/assets/GioiThieu/Banner4.jpg"
               alt="Lady Loading"
               className="w-full h-[200px] md:h-[350px] lg:h-[600px] object-cover "
-            />
+            />+-
           </div>
           {/*_________________________________________________________________________________________*/}
           <div>
